@@ -1,0 +1,1608 @@
+{
+	"info": {
+		"_postman_id": "b7a70d40-4639-4115-8d49-9362acbc3d50",
+		"name": "All Endponts for QA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "LOGIN ADMIN TYPES",
+					"item": [
+						{
+							"name": "SUPER_ADMIN - Admin Login",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "96fbe3d3-9481-45d4-b757-53d5cbb2e47e",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Successful login details are returned\", function () {",
+											"    pm.environment.set(\"Super_admin_token\", resp.data.token);",
+											"    pm.expect(resp.message).to.eql(\"Login successful\");",
+											"    pm.expect(resp.success).to.eql(true);",
+											"    pm.expect(resp.token).is.not.null;",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "9fa48910-5c5f-42e9-9b6d-55d82bacaa4b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 7257390,\n  \"password\": \"Testing001!\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseurl}}/admin/login"
+							},
+							"response": []
+						},
+						{
+							"name": "ADMIN - Admin Login",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "96fbe3d3-9481-45d4-b757-53d5cbb2e47e",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Successful login details are returned\", function () {",
+											"    pm.environment.set(\"admin_token\", resp.data.token);",
+											"    pm.expect(resp.message).to.eql(\"Login successful\");",
+											"    pm.expect(resp.success).to.eql(true);",
+											"    pm.expect(resp.token).is.not.null;",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "593dc01b-ce81-428c-8168-426487e361c2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 725739,\n  \"password\": \"Testing001!\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseurl}}/admin/login"
+							},
+							"response": []
+						},
+						{
+							"name": "VIEWER - Admin Login",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "96fbe3d3-9481-45d4-b757-53d5cbb2e47e",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Successful login details are returned\", function () {",
+											"    pm.environment.set(\"admin_token\", resp.data.token);",
+											"    pm.expect(resp.message).to.eql(\"Login successful\");",
+											"    pm.expect(resp.success).to.eql(true);",
+											"    pm.expect(resp.token).is.not.null;",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "5b7983f6-fc12-4139-8635-1791c2344e02",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 724275,\n  \"password\": \"Testing001!\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseurl}}/admin/login"
+							},
+							"response": []
+						}
+					],
+					"id": "3a11d68e-a089-4f8d-9a6c-b80847451350"
+				},
+				{
+					"name": "Admin Login - Invalid credentials",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "67b61cd5-dc94-4a6d-8909-9a84268d7979",
+								"exec": [
+									"var resp = pm.response.json();",
+									"",
+									"pm.test(\"Status code should be 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});",
+									"",
+									"pm.test(\"Authentication error message is returned\", function () {",
+									"    pm.expect(resp.message).to.eql(\"Invalid credentials\");",
+									"    pm.expect(resp.success).to.eql(false);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "71892248-16db-420b-8454-a478fb7e0c4f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 123456,\n  \"password\": \"AdminPass123!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/admin/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Login - No ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "96fbe3d3-9481-45d4-b757-53d5cbb2e47e",
+								"exec": [
+									"var resp = pm.response.json();",
+									"",
+									"pm.test(\"Status code should be 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									"",
+									"pm.test(\"An empty ID error is returned\", function () {",
+									"    pm.expect(resp.message).to.eql(\"ID is required\");",
+									"    pm.expect(resp.success).to.eql(false);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "bd641ac5-c6f0-4213-91f5-edc1511cc3e5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"\",\n  \"password\": \"AdminPass123!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/admin/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Login - No ID Password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "96fbe3d3-9481-45d4-b757-53d5cbb2e47e",
+								"exec": [
+									"var resp = pm.response.json();",
+									"",
+									"pm.test(\"Status code should be 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									"",
+									"pm.test(\"An empty password message is returned\", function () {",
+									"    pm.expect(resp.message).to.eql(\"Password is required\");",
+									"    pm.expect(resp.success).to.eql(false);",
+									"    ",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "65d681af-5daa-4bae-9054-a801597920b6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 123456,\n  \"password\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/admin/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Login - Invalid ID data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "96fbe3d3-9481-45d4-b757-53d5cbb2e47e",
+								"exec": [
+									"var resp = pm.response.json();",
+									"",
+									"pm.test(\"Status code should be 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									"",
+									"pm.test(\"Invalid ID error message is returned\", function () {",
+									"    pm.expect(resp.message).to.eql(\"ID can only be numbers\");",
+									"    pm.expect(resp.success).to.eql(false);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "28ff2f8d-6a93-49b6-b7f3-46145e935763",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"*&^&*\",\n  \"password\": \"AdminPass123!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/admin/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Login - Short Password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "96fbe3d3-9481-45d4-b757-53d5cbb2e47e",
+								"exec": [
+									"var resp = pm.response.json();",
+									"",
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									"",
+									"pm.test(\"Invalid error message is returned\", function () {",
+									"    pm.expect(resp.message).to.eql(\"Invalid credentials\");",
+									"    pm.expect(resp.success).to.eql(false);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "f23c6695-3e46-4c17-9cbb-5a963ed796c0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 123456,\n  \"password\": \"234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/admin/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Login - Long Password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "96fbe3d3-9481-45d4-b757-53d5cbb2e47e",
+								"exec": [
+									"var resp = pm.response.json();",
+									"",
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									"",
+									"pm.test(\"Invalid error message is returned\", function () {",
+									"    pm.expect(resp.message).to.eql(\"Invalid credentials\");",
+									"    pm.expect(resp.success).to.eql(false);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "68d8f9a0-c265-447d-a635-3604ae5cc071",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 123456,\n  \"password\": \"123434567890-0987654321\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/admin/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Login - Successful",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "96fbe3d3-9481-45d4-b757-53d5cbb2e47e",
+								"exec": [
+									"var resp = pm.response.json();",
+									"",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Successful login details are returned\", function () {",
+									"    pm.environment.set(\"admin_token\", resp.data.token);",
+									"    pm.expect(resp.message).to.eql(\"Login successful\");",
+									"    pm.expect(resp.success).to.eql(true);",
+									"    pm.expect(resp.token).is.not.null;",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "7898d3a8-8dc5-434b-9db2-1e7549d312b8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "// local\n{\n  \"id\": 961701,\n  \"password\": \"Aszxaszx123!\"\n}\n\n// staging\n// {\n//   \"id\": 7257390,\n//   \"password\": \"Testing001!\"\n// }\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/admin/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Admin - Not Authenticated",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9f7707fe-c142-4bef-b922-925d5179353e",
+								"exec": [
+									"var resp = pm.response.json();",
+									"",
+									"pm.test(\"Status code should be 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									"",
+									"pm.test(\"Empty email error message is returned\", function () {",
+									"    pm.expect(resp.message).to.eql(\"Provide a valid email\");",
+									"    pm.expect(resp.success).to.eql(false);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "ee831466-949f-494c-bdf3-842ae9fd3c19",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"\",\n    \"role\": \"ADMIN\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/creator/admin"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Admin - No email",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9f7707fe-c142-4bef-b922-925d5179353e",
+								"exec": [
+									"var resp = pm.response.json();",
+									"",
+									"pm.test(\"Status code should be 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									"",
+									"pm.test(\"Empty email error message is returned\", function () {",
+									"    pm.expect(resp.message).to.eql(\"Provide a valid email\");",
+									"    pm.expect(resp.success).to.eql(false);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "d17e503a-2e55-488a-a5d9-fbfce6247d04",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"\",\n  \"role\": \"ADMIN\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/creator/admin"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Admin - Invalid email",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "57e4c2f9-b5d7-4248-9d9a-44e5cf129888",
+								"exec": [
+									"var resp = pm.response.json();",
+									"",
+									"pm.test(\"Status code should be 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									"",
+									"pm.test(\"Invalid email error message is returned\", function () {",
+									"    pm.expect(resp.message).to.eql(\"Provide a valid email\");",
+									"    pm.expect(resp.success).to.eql(false);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "3ccdf92a-698f-447f-9ee4-5661837e32ff",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"admin@.com\",\n  \"password\": \"AdminPass123!\",\n  \"role\": \"ADMIN\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/creator/admin"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Admin - No role",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2c033784-29bb-4c07-9527-dbf0838a35c3",
+								"exec": [
+									"var resp = pm.response.json();",
+									"",
+									"pm.test(\"Status code should be 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									"",
+									"pm.test(\"Empty role error message is returned\", function () {",
+									"    pm.expect(resp.message).to.eql(\"Admin Role is required\");",
+									"    pm.expect(resp.success).to.eql(false);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "42f0f4d7-31bd-4d2c-9a1b-faf1c1d7ffba",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"admin@yemert.co\",\n  \"role\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/creator/admin"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Admin - user already exists",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2c033784-29bb-4c07-9527-dbf0838a35c3",
+								"exec": [
+									"var resp = pm.response.json();",
+									"",
+									"pm.test(\"Status code should be 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									"",
+									"pm.test(\"Invalid ID error message is returned\", function () {",
+									"    pm.expect(resp.message).to.eql(\"Admin with email already exists\");",
+									"    pm.expect(resp.success).to.eql(false);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "29a79da1-d16b-496d-9ac0-6ec8350d9963",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"admin@yemert.co\",\n  \"role\": \"ADMIN\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/creator/admin"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Admin - Successful",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2c033784-29bb-4c07-9527-dbf0838a35c3",
+								"exec": [
+									"var resp = pm.response.json();",
+									"",
+									"pm.test(\"Status code should be 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									"",
+									"pm.test(\"Invalid ID error message is returned\", function () {",
+									"    pm.expect(resp.message).to.eql(\"Admin with email already exists\");",
+									"    pm.expect(resp.success).to.eql(false);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "89fa886d-edd4-4451-84c6-ba4941c86e98",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"admin02@yemert.co\",\n  \"role\": \"ADMIN\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/creator/admin"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Admin details - no authentication",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3f0e4a32-ab7c-4401-8ded-64120d491741",
+								"exec": [
+									"var resp = pm.response.json();",
+									"",
+									"pm.test(\"Status code should be 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});",
+									"",
+									"pm.test(\"An authentication error is returned\", function () {",
+									"    pm.expect(resp.message).to.eql(\"User must be logged in\");",
+									"    pm.expect(resp.success).to.eql(\"false\");",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "6a933955-ca4f-4abe-9d48-553855ce1662",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "token=",
+								"type": "text"
+							}
+						],
+						"url": "{{baseurl}}/admin"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Admin details - successful",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2a779a39-4925-471e-866f-f64d7eb4ef98",
+								"exec": [
+									"var resp = pm.response.json();",
+									"",
+									"pm.test(\"Status code should be 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Admin details are returned\", function () {",
+									"    pm.expect(resp.data.id).to.eql(\"725739\");",
+									"    pm.expect(resp.success).to.eql(\"true\");",
+									"});",
+									"",
+									"// There is no information on how to pass the token",
+									"",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "7db53596-2915-4c01-b7a2-6cffeb115dc3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"type": "text"
+							}
+						],
+						"url": "{{baseurl}}/admin"
+					},
+					"response": []
+				}
+			],
+			"id": "6504ec7b-f33a-4c40-8a68-a7e139163a34"
+		},
+		{
+			"name": "Farmer",
+			"item": [
+				{
+					"name": "Single Farmer Registration - All Fields Passed - Successful",
+					"id": "7444cf94-1370-4e9a-98f7-aa0ebc2b806a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"{{$randomFullName}}\",\r\n    \"gender\": \"male\",\r\n    \"ageRange\": \"{{$randomInt}}-{{$randomInt}}\",\r\n    \"nationalIdNumber\": \"{{$randomInt}}{{$randomInt}}{{$randomInt}}{{$randomInt}}\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"phoneNumber\": \"+1234567890\",\r\n    \"whatsappNumber\": \"+{{$randomPhoneNumber}}\",\r\n    \"homeAddress\": \"{{$randomStreetAddress}}\",\r\n    \"countyDistrict\": \"{{$randomCountry}}\",\r\n    \"country\": \"{{$randomCountry}}\",\r\n    \"farmLocation\": \"{{$randomCity}}\",\r\n    \"farmSize\": 5.2,\r\n    \"actualFarmSize\": \"5.2 hectares\",\r\n    \"landOwnershipStatus\": \"Owned\",\r\n    \"yearsFarmingExperience\": \"10\",\r\n    \"crops\": [\r\n        {\r\n            \"cropName\": \"{{$randomProductMaterial}}\"\r\n        },\r\n        {\r\n            \"cropName\": \"{{$randomProductMaterial}}\"\r\n        }\r\n    ],\r\n    \"averageAnnualYield\": \"20 tons\",\r\n    \"farmingPractices\": \"Organic farming, Mixed cropping\",\r\n    \"annualFarmingRevenue\": \"₦3,000,000\",\r\n    \"accessToCredit\": \"Yes\",\r\n    \"previousInsurance\": \"No\",\r\n    \"produceSaleLocation\": \"Local market\",\r\n    \"financialChallenge\": \"High input cost\",\r\n    \"recentChallenges\": \"Flooding, Pest invasion\",\r\n    \"soilManagement\": \"Crop rotation, Compost use\",\r\n    \"irrigationAccess\": true,\r\n    \"climateResilientProgram\": true,\r\n    \"sustainablePractices\": \"Use of compost, minimal tillage\",\r\n    \"carbonCreditProgram\": false,\r\n    \"cropInsuranceInterest\": true,\r\n    \"paymentFrequency\": \"Quarterly\",\r\n    \"insuranceConcerns\": \"High premium cost\",\r\n    \"recommendInsurance\": \"Yes, to fellow farmers\",\r\n    \"farmPhotos\": [\r\n        {\r\n            \"photoUrl\": \"https://example.com/farm1.jpg\"\r\n        },\r\n        {\r\n            \"photoUrl\": \"https://example.com/farm2.jpg\"\r\n        }\r\n    ],\r\n    \"dataConsent\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/farmers"
+					},
+					"response": []
+				},
+				{
+					"name": "Single Farmer Registration - Required fields only Successful",
+					"id": "1864a171-36cb-4a38-9712-470b90bff207",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"{{$randomFullName}}\",\r\n    \"crops\": [\r\n        {\r\n            \"cropName\": \"{{$randomProductMaterial}}\"\r\n        },\r\n        {\r\n            \"cropName\": \"{{$randomProductMaterial}}\"\r\n        }\r\n    ],\r\n    \"farmPhotos\": [\r\n        {\r\n            \"photoUrl\": \"https://example.com/farm1.jpg\"\r\n        },\r\n        {\r\n            \"photoUrl\": \"https://example.com/farm2.jpg\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/farmers"
+					},
+					"response": []
+				},
+				{
+					"name": "Register a single Farmer",
+					"id": "81da38c5-aa89-4f68-89a0-caab6e169c62",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/farmers"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Farmers",
+					"id": "732a488b-4fd0-46c5-9928-7c8ce98d6893",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": "{{baseurl}}/farmers"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Farmers - With pagination",
+					"id": "e54cdc83-8c47-4232-95ce-bca47762c9d9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/farmers?page=1&limit=2",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"farmers"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Farmer by YEMERT ID",
+					"id": "78a242d9-cccc-4d61-8475-1173c3c1e825",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/farmers/:id",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"farmers",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "27623"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bulk register farmers",
+					"id": "ddd0adc5-adf2-4a60-a2b1-4b3cda609ee6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"fullName\": \"{{$randomFullName}}\",\r\n        \"gender\": \"male\",\r\n        \"ageRange\": \"{{$randomInt}}-{{$randomInt}}\",\r\n        \"nationalIdNumber\": \"{{$randomInt}}{{$randomInt}}{{$randomInt}}{{$randomInt}}\",\r\n        \"email\": \"{{$randomEmail}}\",\r\n        \"phoneNumber\": \"+{{$randomPhoneNumber}}\",\r\n        \"whatsappNumber\": \"+{{$randomPhoneNumber}}\",\r\n        \"homeAddress\": \"{{$randomStreetAddress}}\",\r\n        \"countyDistrict\": \"{{$randomCountry}}\",\r\n        \"country\": \"{{$randomCountry}}\",\r\n        \"farmLocation\": \"{{$randomCity}}\",\r\n        \"farmSize\": 5.2,\r\n        \"actualFarmSize\": \"5.2 hectares\",\r\n        \"landOwnershipStatus\": \"Owned\",\r\n        \"yearsFarmingExperience\": \"10\",\r\n        \"crops\": [\r\n            {\r\n                \"cropName\": \"{{$randomProductMaterial}}\"\r\n            },\r\n            {\r\n                \"cropName\": \"{{$randomProductMaterial}}\"\r\n            }\r\n        ],\r\n        \"averageAnnualYield\": \"20 tons\",\r\n        \"farmingPractices\": \"Organic farming, Mixed cropping\",\r\n        \"annualFarmingRevenue\": \"₦3,000,000\",\r\n        \"accessToCredit\": \"Yes\",\r\n        \"previousInsurance\": \"No\",\r\n        \"produceSaleLocation\": \"Local market\",\r\n        \"financialChallenge\": \"High input cost\",\r\n        \"recentChallenges\": \"Flooding, Pest invasion\",\r\n        \"soilManagement\": \"Crop rotation, Compost use\",\r\n        \"irrigationAccess\": true,\r\n        \"climateResilientProgram\": true,\r\n        \"sustainablePractices\": \"Use of compost, minimal tillage\",\r\n        \"carbonCreditProgram\": false,\r\n        \"cropInsuranceInterest\": true,\r\n        \"paymentFrequency\": \"Quarterly\",\r\n        \"insuranceConcerns\": \"High premium cost\",\r\n        \"recommendInsurance\": \"Yes, to fellow farmers\",\r\n        \"farmPhotos\": [\r\n            {\r\n                \"photoUrl\": \"https://example.com/farm1.jpg\"\r\n            },\r\n            {\r\n                \"photoUrl\": \"https://example.com/farm2.jpg\"\r\n            }\r\n        ],\r\n        \"dataConsent\": true\r\n    },\r\n    {\r\n        \"fullName\": \"{{$randomFullName}}\",\r\n        \"gender\": \"male\",\r\n        \"ageRange\": \"{{$randomInt}}-{{$randomInt}}\",\r\n        \"nationalIdNumber\": \"{{$randomInt}}{{$randomInt}}{{$randomInt}}{{$randomInt}}\",\r\n        \"email\": \"{{$randomEmail}}\",\r\n        \"phoneNumber\": \"+{{$randomPhoneNumber}}\",\r\n        \"whatsappNumber\": \"+{{$randomPhoneNumber}}\",\r\n        \"homeAddress\": \"{{$randomStreetAddress}}\",\r\n        \"countyDistrict\": \"{{$randomCountry}}\",\r\n        \"country\": \"{{$randomCountry}}\",\r\n        \"farmLocation\": \"{{$randomCity}}\",\r\n        \"farmSize\": 5.2,\r\n        \"actualFarmSize\": \"5.2 hectares\",\r\n        \"landOwnershipStatus\": \"Owned\",\r\n        \"yearsFarmingExperience\": \"10\",\r\n        \"crops\": [\r\n            {\r\n                \"cropName\": \"{{$randomProductMaterial}}\"\r\n            },\r\n            {\r\n                \"cropName\": \"{{$randomProductMaterial}}\"\r\n            }\r\n        ],\r\n        \"averageAnnualYield\": \"20 tons\",\r\n        \"farmingPractices\": \"Organic farming, Mixed cropping\",\r\n        \"annualFarmingRevenue\": \"₦3,000,000\",\r\n        \"accessToCredit\": \"Yes\",\r\n        \"previousInsurance\": \"No\",\r\n        \"produceSaleLocation\": \"Local market\",\r\n        \"financialChallenge\": \"High input cost\",\r\n        \"recentChallenges\": \"Flooding, Pest invasion\",\r\n        \"soilManagement\": \"Crop rotation, Compost use\",\r\n        \"irrigationAccess\": true,\r\n        \"climateResilientProgram\": true,\r\n        \"sustainablePractices\": \"Use of compost, minimal tillage\",\r\n        \"carbonCreditProgram\": false,\r\n        \"cropInsuranceInterest\": true,\r\n        \"paymentFrequency\": \"Quarterly\",\r\n        \"insuranceConcerns\": \"High premium cost\",\r\n        \"recommendInsurance\": \"Yes, to fellow farmers\",\r\n        \"farmPhotos\": [\r\n            {\r\n                \"photoUrl\": \"https://example.com/farm1.jpg\"\r\n            },\r\n            {\r\n                \"photoUrl\": \"https://example.com/farm2.jpg\"\r\n            }\r\n        ],\r\n        \"dataConsent\": true\r\n    },\r\n    {\r\n        \"fullName\": \"{{$randomFullName}}\",\r\n        \"gender\": \"male\",\r\n        \"ageRange\": \"{{$randomInt}}-{{$randomInt}}\",\r\n        \"nationalIdNumber\": \"{{$randomInt}}{{$randomInt}}{{$randomInt}}{{$randomInt}}\",\r\n        \"email\": \"{{$randomEmail}}\",\r\n        \"phoneNumber\": \"+{{$randomPhoneNumber}}\",\r\n        \"whatsappNumber\": \"+{{$randomPhoneNumber}}\",\r\n        \"homeAddress\": \"{{$randomStreetAddress}}\",\r\n        \"countyDistrict\": \"{{$randomCountry}}\",\r\n        \"country\": \"{{$randomCountry}}\",\r\n        \"farmLocation\": \"{{$randomCity}}\",\r\n        \"farmSize\": 5.2,\r\n        \"actualFarmSize\": \"5.2 hectares\",\r\n        \"landOwnershipStatus\": \"Owned\",\r\n        \"yearsFarmingExperience\": \"10\",\r\n        \"crops\": [\r\n            {\r\n                \"cropName\": \"{{$randomProductMaterial}}\"\r\n            },\r\n            {\r\n                \"cropName\": \"{{$randomProductMaterial}}\"\r\n            }\r\n        ],\r\n        \"averageAnnualYield\": \"20 tons\",\r\n        \"farmingPractices\": \"Organic farming, Mixed cropping\",\r\n        \"annualFarmingRevenue\": \"₦3,000,000\",\r\n        \"accessToCredit\": \"Yes\",\r\n        \"previousInsurance\": \"No\",\r\n        \"produceSaleLocation\": \"Local market\",\r\n        \"financialChallenge\": \"High input cost\",\r\n        \"recentChallenges\": \"Flooding, Pest invasion\",\r\n        \"soilManagement\": \"Crop rotation, Compost use\",\r\n        \"irrigationAccess\": true,\r\n        \"climateResilientProgram\": true,\r\n        \"sustainablePractices\": \"Use of compost, minimal tillage\",\r\n        \"carbonCreditProgram\": false,\r\n        \"cropInsuranceInterest\": true,\r\n        \"paymentFrequency\": \"Quarterly\",\r\n        \"insuranceConcerns\": \"High premium cost\",\r\n        \"recommendInsurance\": \"Yes, to fellow farmers\",\r\n        \"farmPhotos\": [\r\n            {\r\n                \"photoUrl\": \"https://example.com/farm1.jpg\"\r\n            },\r\n            {\r\n                \"photoUrl\": \"https://example.com/farm2.jpg\"\r\n            }\r\n        ],\r\n        \"dataConsent\": true\r\n    },\r\n    {\r\n        \"fullName\": \"{{$randomFullName}}\",\r\n        \"gender\": \"male\",\r\n        \"ageRange\": \"{{$randomInt}}-{{$randomInt}}\",\r\n        \"nationalIdNumber\": \"{{$randomInt}}{{$randomInt}}{{$randomInt}}{{$randomInt}}\",\r\n        \"email\": \"{{$randomEmail}}\",\r\n        \"phoneNumber\": \"+{{$randomPhoneNumber}}\",\r\n        \"whatsappNumber\": \"+{{$randomPhoneNumber}}\",\r\n        \"homeAddress\": \"{{$randomStreetAddress}}\",\r\n        \"countyDistrict\": \"{{$randomCountry}}\",\r\n        \"country\": \"{{$randomCountry}}\",\r\n        \"farmLocation\": \"{{$randomCity}}\",\r\n        \"farmSize\": 5.2,\r\n        \"actualFarmSize\": \"5.2 hectares\",\r\n        \"landOwnershipStatus\": \"Owned\",\r\n        \"yearsFarmingExperience\": \"10\",\r\n        \"crops\": [\r\n            {\r\n                \"cropName\": \"{{$randomProductMaterial}}\"\r\n            },\r\n            {\r\n                \"cropName\": \"{{$randomProductMaterial}}\"\r\n            }\r\n        ],\r\n        \"averageAnnualYield\": \"20 tons\",\r\n        \"farmingPractices\": \"Organic farming, Mixed cropping\",\r\n        \"annualFarmingRevenue\": \"₦3,000,000\",\r\n        \"accessToCredit\": \"Yes\",\r\n        \"previousInsurance\": \"No\",\r\n        \"produceSaleLocation\": \"Local market\",\r\n        \"financialChallenge\": \"High input cost\",\r\n        \"recentChallenges\": \"Flooding, Pest invasion\",\r\n        \"soilManagement\": \"Crop rotation, Compost use\",\r\n        \"irrigationAccess\": true,\r\n        \"climateResilientProgram\": true,\r\n        \"sustainablePractices\": \"Use of compost, minimal tillage\",\r\n        \"carbonCreditProgram\": false,\r\n        \"cropInsuranceInterest\": true,\r\n        \"paymentFrequency\": \"Quarterly\",\r\n        \"insuranceConcerns\": \"High premium cost\",\r\n        \"recommendInsurance\": \"Yes, to fellow farmers\",\r\n        \"farmPhotos\": [\r\n            {\r\n                \"photoUrl\": \"https://example.com/farm1.jpg\"\r\n            },\r\n            {\r\n                \"photoUrl\": \"https://example.com/farm2.jpg\"\r\n            }\r\n        ],\r\n        \"dataConsent\": true\r\n    },\r\n    {\r\n        \"fullName\": \"{{$randomFullName}}\",\r\n        \"gender\": \"male\",\r\n        \"ageRange\": \"{{$randomInt}}-{{$randomInt}}\",\r\n        \"nationalIdNumber\": \"{{$randomInt}}{{$randomInt}}{{$randomInt}}{{$randomInt}}\",\r\n        \"email\": \"{{$randomEmail}}\",\r\n        \"phoneNumber\": \"+{{$randomPhoneNumber}}\",\r\n        \"whatsappNumber\": \"+{{$randomPhoneNumber}}\",\r\n        \"homeAddress\": \"{{$randomStreetAddress}}\",\r\n        \"countyDistrict\": \"{{$randomCountry}}\",\r\n        \"country\": \"{{$randomCountry}}\",\r\n        \"farmLocation\": \"{{$randomCity}}\",\r\n        \"farmSize\": 5.2,\r\n        \"actualFarmSize\": \"5.2 hectares\",\r\n        \"landOwnershipStatus\": \"Owned\",\r\n        \"yearsFarmingExperience\": \"10\",\r\n        \"crops\": [\r\n            {\r\n                \"cropName\": \"{{$randomProductMaterial}}\"\r\n            },\r\n            {\r\n                \"cropName\": \"{{$randomProductMaterial}}\"\r\n            }\r\n        ],\r\n        \"averageAnnualYield\": \"20 tons\",\r\n        \"farmingPractices\": \"Organic farming, Mixed cropping\",\r\n        \"annualFarmingRevenue\": \"₦3,000,000\",\r\n        \"accessToCredit\": \"Yes\",\r\n        \"previousInsurance\": \"No\",\r\n        \"produceSaleLocation\": \"Local market\",\r\n        \"financialChallenge\": \"High input cost\",\r\n        \"recentChallenges\": \"Flooding, Pest invasion\",\r\n        \"soilManagement\": \"Crop rotation, Compost use\",\r\n        \"irrigationAccess\": true,\r\n        \"climateResilientProgram\": true,\r\n        \"sustainablePractices\": \"Use of compost, minimal tillage\",\r\n        \"carbonCreditProgram\": false,\r\n        \"cropInsuranceInterest\": true,\r\n        \"paymentFrequency\": \"Quarterly\",\r\n        \"insuranceConcerns\": \"High premium cost\",\r\n        \"recommendInsurance\": \"Yes, to fellow farmers\",\r\n        \"farmPhotos\": [\r\n            {\r\n                \"photoUrl\": \"https://example.com/farm1.jpg\"\r\n            },\r\n            {\r\n                \"photoUrl\": \"https://example.com/farm2.jpg\"\r\n            }\r\n        ],\r\n        \"dataConsent\": true\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/farmers/batch"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete farmer",
+					"id": "f3238db3-e7b8-4723-a2c5-1d80f8c8db22",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/farmers/:id",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"farmers",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2824"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete all farmers",
+					"id": "d06b821c-ec5b-4a72-829c-10348899ea8e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{baseurl}}/farmers"
+					},
+					"response": []
+				}
+			],
+			"id": "083a3e6f-5e0d-44c8-b335-d5eb8837312c"
+		},
+		{
+			"name": "USSD",
+			"item": [
+				{
+					"name": "Handle Session Requests",
+					"id": "db70ce4e-619e-487e-a5d3-678017805b33",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"sessionId\": \"ATUid_12345\",\n  \"serviceCode\": \"*384*96#\",\n  \"phoneNumber\": \"+234810008999\",\n  \"text\": \"\",\n  \"networkCode\": \"63902\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/ussd"
+					},
+					"response": []
+				}
+			],
+			"id": "e84fb072-5ca5-4732-8987-0031ad8ff77c"
+		},
+		{
+			"name": "Secure",
+			"item": [
+				{
+					"name": "Insurance",
+					"item": [
+						{
+							"name": "Get Insurance - All",
+							"id": "63e79cab-7568-4542-9c54-7718b4a681eb",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": "{{baseurl}}/yemert/secure/insurance"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Insurance - For Single Farmer",
+							"id": "b669c30d-9b8b-49a5-8c9d-eff65ba0833f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": "{{baseurl}}/yemert/secure/insurance/YM-7213"
+							},
+							"response": []
+						},
+						{
+							"name": "Create  Insurance",
+							"id": "852239dd-928f-4ee0-89bc-ec8f281dd843",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"farmerId\": 3887,\r\n    \"plan\": \"starter\",\r\n    \"costOfProduction\": \"100000\",\r\n    //   \"paid\": false,\r\n      \"amountPaid\": \"1\",\r\n    //   \"mobileMoney\": false,\r\n    \"cropName\": \"maize\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseurl}}/yemert/secure/insurance"
+							},
+							"response": []
+						},
+						{
+							"name": "Update a specific Insurance for a farmer",
+							"id": "3b01eede-3f00-4bc1-b117-76a6badf38c5",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"insuranceId\": 23,\r\n    \"plan\": \"starter\",\r\n    \"costOfProduction\": \"100000\",\r\n    \"amountPaid\": \"3\",\r\n    \"cropName\": \"maize\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseurl}}/yemert/secure/insurance/7213"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete insurance records for a specific farmer Copy",
+							"id": "27e8e4a9-2c15-41b8-b594-181fa2307852",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseurl}}/yemert/secure/insurance/farmer/7213"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete a specific insurance record Copy",
+							"id": "34bb017d-03a2-4ec6-a147-1f0b9aa71c8f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseurl}}/yemert/secure/insurance/7213"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete all insurance records Copy",
+							"id": "d0b6e314-2365-4b18-b673-b76bb54eb29b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseurl}}/yemert/secure/insurance/all"
+							},
+							"response": []
+						}
+					],
+					"id": "5b8aff45-306f-4f4b-8601-d9bd93bff7ec"
+				},
+				{
+					"name": "Claim",
+					"item": [
+						{
+							"name": "Get Claims - All",
+							"id": "07e5d0b1-c8c9-4b51-a5ec-22c9bec58ef2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{baseurl}}/yemert/secure/claims"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Claim - For Single Farmer",
+							"id": "4dd0fb2d-c480-46fa-9df2-7473d82ad0ab",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": "{{baseurl}}/yemert/secure/claims/YM-7213"
+							},
+							"response": []
+						},
+						{
+							"name": "Create  Claim",
+							"id": "55716022-e8bb-4b44-a7dc-6b79e9836e1f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"farmerId\": 3641,\r\n  \"type\": \"floods\"\r\n//   \"whatsapp\": true,\r\n//   \"number\": \"08100000012\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseurl}}/yemert/secure/claims"
+							},
+							"response": []
+						},
+						{
+							"name": "Update a specific claim for a farmer Copy",
+							"id": "0b1963e0-1c32-4aa4-8324-3c87bc7f40ec",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"claimId\": 8,\r\n  \"type\": \"pests\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseurl}}/yemert/secure/claims/7213"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete claim records for a specific farmer",
+							"id": "5926398b-bdfb-4889-8c7c-ba5db48a8dac",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseurl}}/yemert/secure/claims/farmer/7213"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete a specific claim record",
+							"id": "4252a93f-3a8f-49b3-9eb6-417cd065f538",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseurl}}/yemert/secure/claims/10"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete all claim records",
+							"id": "bc01c1ed-bcdd-4e99-a321-d3d886f44db8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseurl}}/yemert/secure/claims/all"
+							},
+							"response": []
+						}
+					],
+					"id": "9ab218e6-073d-4f23-b607-5a28b6bd463c"
+				},
+				{
+					"name": "Market",
+					"item": [
+						{
+							"name": "Get Market - All",
+							"id": "781b654b-19b8-4a86-ab1d-6ffb3ee7b44d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{baseurl}}/yemert/secure/market"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Market - For Single Farmer",
+							"id": "5b2027fe-b8eb-4815-b4c6-1cc0d5dd692b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": "{{baseurl}}/yemert/secure/market/YM-7213"
+							},
+							"response": []
+						},
+						{
+							"name": "Create  Market",
+							"id": "76427181-4b74-475d-84c3-57a787a9e084",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"farmerId\": 7213,\r\n  \"cropName\": \"peas\",\r\n  \"pricePerKG\": 500,\r\n  \"postNow\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseurl}}/yemert/secure/market"
+							},
+							"response": []
+						},
+						{
+							"name": "Update a specific market for a farmer Copy",
+							"id": "62b4d58a-d8df-4cd2-9194-95402fbe533b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"marketId\": 4,\r\n  \"cropName\": \"gold egg plants\"\r\n//   \"pricePerKG\": \"600\",\r\n//   \"postNow\": false,\r\n//   \"isActive\": false,\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseurl}}/yemert/secure/market/7213"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete market records for a specific farmer",
+							"id": "eafc7e04-bf5e-4cb8-82ef-29776e87b867",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseurl}}/yemert/secure/market/farmer/7213"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete a specific market record",
+							"id": "b4a06423-1ffc-4390-97b1-e7de99ee42bb",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"cropName\": \"beans\",\r\n  \"acresPlots\": \"2.4\",\r\n  \"plan\": \"biannual\",\r\n  \"insuranceId\": 1,\r\n  \"isActive\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseurl}}/yemert/secure/market/3690"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete all market records",
+							"id": "74f1d51f-2631-479e-97ff-c8b43f0b49aa",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseurl}}/yemert/secure/market/all"
+							},
+							"response": []
+						}
+					],
+					"id": "8cc2f8c9-1428-427e-b080-0a648f12043a"
+				}
+			],
+			"id": "2c75f443-2949-4183-95df-48e8ff1b2a8b"
+		},
+		{
+			"name": "A request with out Request Authorization",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2a779a39-4925-471e-866f-f64d7eb4ef98",
+						"exec": [
+							"var resp = pm.response.json();",
+							"",
+							"pm.test(\"Status code should be 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Admin details are returned\", function () {",
+							"    pm.expect(resp.data.id).to.eql(\"725739\");",
+							"    pm.expect(resp.success).to.eql(\"true\");",
+							"});",
+							"",
+							"// There is no information on how to pass the token",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"id": "d84585ff-5ca8-4d63-9f2c-901ee25f0226",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{admin_token}}",
+						"type": "text"
+					}
+				],
+				"url": "{{baseurl}}/admin"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "{{bearerToken}}"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "7bb00c91-f06d-4173-ba21-4d22ed2564ef",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "9c126d83-ca39-4f0d-8bcf-0c497a4fa39c",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
