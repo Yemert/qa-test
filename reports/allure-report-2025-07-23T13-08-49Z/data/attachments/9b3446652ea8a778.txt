@@ -1,0 +1,19 @@
+{
+    "fullName": "Erika Bogan II",
+    "crops": [
+        {
+            "cropName": "Soft"
+        },
+        {
+            "cropName": "Wooden"
+        }
+    ],
+    "farmPhotos": [
+        {
+            "photoUrl": "https://example.com/farm1.jpg"
+        },
+        {
+            "photoUrl": "https://example.com/farm2.jpg"
+        }
+    ]
+}
