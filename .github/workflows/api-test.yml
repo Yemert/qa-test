@@ -1,0 +1,62 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Staging API Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:  # Manual trigger support
+
+jobs:
+  postman-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Newman and Allure Reporter
+        run: |
+          npm install -g newman
+          npm install -g newman-reporter-allure
+
+      - name: Run Newman tests with Allure reporter
+        run: |
+          mkdir -p newman/allure-results
+          newman run postman-api/yemert-collection.json \
+            --environment postman-api/staging.postman_environment.json \
+            --reporters cli,allure \
+            --reporter-allure-export newman/allure-results
+
+      - name: Install Allure CLI
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y default-jre
+          wget https://github.com/allure-framework/allure2/releases/download/2.27.0/allure-2.27.0.tgz
+          tar -xvzf allure-2.27.0.tgz
+          sudo mv allure-2.27.0 /opt/allure
+          sudo ln -s /opt/allure/bin/allure /usr/bin/allure
+
+      - name: Get timestamp
+        id: vars
+        run: echo "timestamp=$(date -u +'%Y-%m-%dT%H-%M-%SZ')" >> $GITHUB_OUTPUT
+
+      - name: Generate Allure HTML report
+        run: |
+          allure generate newman/allure-results --clean -o newman/allure-report
+
+      - name: Deploy timestamped Allure report to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: newman/allure-report
+          destination_dir: reports/allure-report-${{ steps.vars.outputs.timestamp }}
+          publish_branch: gh-pages
+          keep_files: true
