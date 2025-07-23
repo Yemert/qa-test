@@ -61,3 +61,9 @@ jobs:
           destination_dir: reports/allure-report-${{ steps.vars.outputs.timestamp }}
           publish_branch: gh-pages
           keep_files: true
+
+      - name: Output GitHub Pages URL
+        run: |
+          echo "Allure Report URL:"
+          echo "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/reports/allure-report-${{ steps.vars.outputs.timestamp }}"
+
