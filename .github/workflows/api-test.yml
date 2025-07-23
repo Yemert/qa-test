@@ -26,6 +26,7 @@ jobs:
         run: |
           npm install -g newman
           npm install -g newman-reporter-allure
+          npm install -g allure-commandline
 
       - name: Run Newman tests with Allure reporter
         continue-on-error: true
