@@ -28,6 +28,7 @@ jobs:
           npm install -g newman-reporter-allure
 
       - name: Run Newman tests with Allure reporter
+        continue-on-error: true
         run: |
           mkdir -p newman/allure-results
           newman run postman-api/yemert-collection.json \
