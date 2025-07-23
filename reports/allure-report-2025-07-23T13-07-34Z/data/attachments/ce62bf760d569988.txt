@@ -1,0 +1,1 @@
+{"success":true,"message":"Credentials valid","data":{"adminId":724275,"role":"VIEWER","access":true,"email":"emaissly@email.com","dateJoined":"2025-06-13T16:08:02.349Z","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjo3MjQyNzUsInJvbGUiOiJWSUVXRVIiLCJpYXQiOjE3NTMyNzYwNDgsImV4cCI6MTc1MzI4MzI0OH0.QAi865tPmlMzwvCxqxjII8RLEIDnsMGiDtQSr_0L3O4"}}
