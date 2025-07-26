@@ -36,22 +36,47 @@ jobs:
             --reporters cli,allure \
             --reporter-allure-export ./allure-results
 
+      - name: Load test report history
+        uses: actions/checkout@v3
+        if: always()
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Build test report
+        uses: simple-elf/allure-report-action@v1.7
+        if: always()
+        with:
+          gh_pages: gh-pages
+          allure_history: allure-history
+          allure_results: ./allure-results
+
       - name: Get timestamp
         id: vars
         run: echo "timestamp=$(date -u +'%Y-%m-%dT%H-%M-%SZ')" >> $GITHUB_OUTPUT
 
-      - name: Generate Allure HTML report
-        run: |
-           allure generate ./allure-results -o ./allure-report
-
-      - name: Deploy timestamped Allure report to GitHub Pages
+      - name: Publish test report
         uses: peaceiris/actions-gh-pages@v4
+        if: always()
         with:
           personal_token: ${{ secrets.GHP_TOKEN }}
-          publish_dir: ./allure-report
-          destination_dir: reports/allure-report-${{ steps.vars.outputs.timestamp }}
           publish_branch: gh-pages
-          keep_files: true
+          publish_dir: allure-history
+
+
+#      - name: Generate Allure HTML report
+#        run: |
+#           allure generate ./allure-results -o ./allure-report
+
+#      - name: Deploy timestamped Allure report to GitHub Pages
+#        uses: peaceiris/actions-gh-pages@v4
+#        with:
+#         personal_token: ${{ secrets.GHP_TOKEN }}
+#         publish_dir: ./allure-report
+#          destination_dir: reports/allure-report-${{ steps.vars.outputs.timestamp }}
+#          publish_branch: gh-pages
+#          keep_files: true
 
       - name: Output GitHub Pages URL
         run: |
