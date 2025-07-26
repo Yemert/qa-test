@@ -1,0 +1,1 @@
+{"success":true,"message":"Credentials valid","data":{"adminId":7257390,"role":"SUPER_ADMIN","access":true,"email":"admin@email.com","dateJoined":"2025-06-13T16:12:12.046Z","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjo3MjU3MzkwLCJyb2xlIjoiU1VQRVJfQURNSU4iLCJpYXQiOjE3NTM1NjU4OTEsImV4cCI6MTc1MzU3MzA5MX0.j6NVz99-iTLb1c1JUxQSy2Z8v_S0G3_RkURPSpVLy2k"}}
