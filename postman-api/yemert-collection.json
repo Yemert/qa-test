@@ -907,6 +907,32 @@
 				},
 				{
 					"name": "Get All Farmers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b7272380-fa9c-48c1-b4a6-f5946120368e",
+								"exec": [
+									"var resp = pm.response.json();",
+									"",
+									"pm.test(\"Status code should be 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Farmers details are returned\", function () {",
+									"    pm.expect(resp.data.farmers[0].id).is.not.null;",
+									"    pm.expect(resp.data.farmers[0].yemertId).is.not.null;",
+									"});",
+									"",
+									"// There is no information on how to pass the token",
+									"",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "732a488b-4fd0-46c5-9928-7c8ce98d6893",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
