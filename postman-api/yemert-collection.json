@@ -2172,6 +2172,51 @@
 					"response": []
 				},
 				{
+					"name": "Create a new insurance claim",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2c033784-29bb-4c07-9527-dbf0838a35c3",
+								"exec": [
+									"var resp = pm.response.json();",
+									"",
+									"pm.test(\"Status code should be 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									"",
+									"pm.test(\"Invalid ID error message is returned\", function () {",
+									"    pm.expect(resp.message).to.eql(\"Admin with email already exists\");",
+									"    pm.expect(resp.success).to.eql(false);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "dd64ab50-68fd-4e46-8616-84e7b27d03e1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/yemert/secure/claims"
+					},
+					"response": []
+				},
+				{
 					"name": "Update a single insurance record",
 					"event": [
 						{
@@ -2258,6 +2303,131 @@
 							}
 						},
 						"url": "{{baseurl}}/yemert/secure/insurance/all"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete all insurance records for a farmer",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2c033784-29bb-4c07-9527-dbf0838a35c3",
+								"exec": [
+									"var resp = pm.response.json();",
+									"",
+									"pm.test(\"Status code should be 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									"",
+									"pm.test(\"Invalid ID error message is returned\", function () {",
+									"    pm.expect(resp.message).to.eql(\"Admin with email already exists\");",
+									"    pm.expect(resp.success).to.eql(false);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "bb117b08-8d99-44dc-b9a8-b21ae4871f1c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/yemert/secure/insurance/farmer/:yemertId",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"yemert",
+								"secure",
+								"insurance",
+								"farmer",
+								":yemertId"
+							],
+							"variable": [
+								{
+									"key": "yemertId",
+									"value": "yemertId"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a single insurance record",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2c033784-29bb-4c07-9527-dbf0838a35c3",
+								"exec": [
+									"var resp = pm.response.json();",
+									"",
+									"pm.test(\"Status code should be 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									"",
+									"pm.test(\"Invalid ID error message is returned\", function () {",
+									"    pm.expect(resp.message).to.eql(\"Admin with email already exists\");",
+									"    pm.expect(resp.success).to.eql(false);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "4e272930-0a4e-4737-a9c0-204f0ac69da2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/yemert/secure/insurance/:insuranceId",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"yemert",
+								"secure",
+								"insurance",
+								":insuranceId"
+							],
+							"variable": [
+								{
+									"key": "insuranceId",
+									"value": "insuranceId"
+								}
+							]
+						}
 					},
 					"response": []
 				},
