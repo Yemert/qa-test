@@ -1847,6 +1847,33 @@
 					"item": [
 						{
 							"name": "Get Insurance - All",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "261e8f9c-ab71-4778-874f-134591f25421",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Admin details are returned\", function () {",
+											"    pm.expect(resp.data[0].id).is.not.null;",
+											"    pm.expect(resp.data[0].farmerId).is.not.null;",
+											"    pm.expect(resp.data[0].cropName).is.not.null;",
+											"    pm.expect(resp.data[0].plan).is.not.null;",
+											"    pm.expect(resp.data[0].mobileMoney).is.not.null;",
+											"    pm.expect(resp.data[0].startDate).is.not.null;",
+											"    pm.expect(resp.data[0].endDate).is.not.null;",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
 							"id": "63e79cab-7568-4542-9c54-7718b4a681eb",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
