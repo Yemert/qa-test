@@ -1240,7 +1240,7 @@
 							"response": []
 						},
 						{
-							"name": "Get Farmer by YEMERT ID",
+							"name": "Get Farmer by Yemert ID - ID does not exist",
 							"id": "78a242d9-cccc-4d61-8475-1173c3c1e825",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -1259,6 +1259,35 @@
 									],
 									"variable": [
 										{
+											"key": "id",
+											"value": "27623"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Farmer by Yemert ID - ID does not exist Copy",
+							"id": "5ba93f3a-4d9c-4a02-8df0-9cb4afc6ffc8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/farmers/:id",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"farmers",
+										":id"
+									],
+									"variable": [
+										{
+											"id": "ffd08fc9-1b26-405c-bda0-2f9de1835d6d",
 											"key": "id",
 											"value": "27623"
 										}
