@@ -1902,7 +1902,59 @@
 									"mode": "raw",
 									"raw": ""
 								},
-								"url": "{{baseurl}}/yemert/secure/insurance/YM-7213"
+								"url": {
+									"raw": "{{baseurl}}/yemert/secure/insurance/:yemertID",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"yemert",
+										"secure",
+										"insurance",
+										":yemertID"
+									],
+									"variable": [
+										{
+											"key": "yemertID",
+											"value": "1726"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Insurance - For Single Farmer Copy",
+							"id": "f8d0710a-5fd0-4dd8-b655-b7f5d88f7a32",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{baseurl}}/yemert/secure/insurance/:yemertID",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"yemert",
+										"secure",
+										"insurance",
+										":yemertID"
+									],
+									"variable": [
+										{
+											"id": "b119320c-a76e-4a70-ae6a-538d22778e16",
+											"key": "yemertID",
+											"value": "1726"
+										}
+									]
+								}
 							},
 							"response": []
 						},
