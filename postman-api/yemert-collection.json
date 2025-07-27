@@ -156,6 +156,11 @@
 					"id": "3a11d68e-a089-4f8d-9a6c-b80847451350"
 				},
 				{
+					"name": "Authentication",
+					"item": [],
+					"id": "49ab835d-0339-4300-b054-20bb59265361"
+				},
+				{
 					"name": "Admin Login - Invalid credentials",
 					"event": [
 						{
