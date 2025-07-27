@@ -1155,9 +1155,6 @@
 											"    pm.expect(resp.data.farmers[0].id).is.not.null;",
 											"    pm.expect(resp.data.farmers[0].yemertId).is.not.null;",
 											"});",
-											"",
-											"// There is no information on how to pass the token",
-											"",
 											""
 										],
 										"type": "text/javascript",
@@ -1185,6 +1182,34 @@
 						},
 						{
 							"name": "Get All Farmers - With pagination - successful",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "031cdc3c-86b8-400c-bec3-933829fc56e5",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Farmers details are returned\", function () {",
+											"    pm.expect(resp.data.farmers[0].id).is.not.null;",
+											"    pm.expect(resp.data.farmers[0].yemertId).is.not.null;",
+											"});",
+											"",
+											"pm.test(\"Correct pagination details are returned\", function () {",
+											"    pm.expect(resp.data.pagination.page).to.eql(\"2\");",
+											"    pm.expect(resp.data.pagination.limit).to.eql(\"15\");",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
 							"id": "e54cdc83-8c47-4232-95ce-bca47762c9d9",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -1193,7 +1218,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseurl}}/farmers?page=1&limit=2",
+									"raw": "{{baseurl}}/farmers?page=2&limit=15",
 									"host": [
 										"{{baseurl}}"
 									],
@@ -1203,11 +1228,11 @@
 									"query": [
 										{
 											"key": "page",
-											"value": "1"
+											"value": "2"
 										},
 										{
 											"key": "limit",
-											"value": "2"
+											"value": "15"
 										}
 									]
 								}
