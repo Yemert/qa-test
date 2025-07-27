@@ -1165,28 +1165,6 @@
 							"response": []
 						},
 						{
-							"name": "Register a single Farmer",
-							"id": "81da38c5-aa89-4f68-89a0-caab6e169c62",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{baseurl}}/farmers"
-							},
-							"response": []
-						},
-						{
 							"name": "Bulk register farmers",
 							"id": "ddd0adc5-adf2-4a60-a2b1-4b3cda609ee6",
 							"protocolProfileBehavior": {
