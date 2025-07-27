@@ -1241,6 +1241,28 @@
 						},
 						{
 							"name": "Get Farmer by Yemert ID - ID does not exist",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "215d2a16-3a84-4d3e-b23a-1b11de48cfba",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 400\", function () {",
+											"    pm.response.to.have.status(400);",
+											"});",
+											"",
+											"pm.test(\"Farmer not found error is returned\", function () {",
+											"    pm.expect(resp.success).to.eql(false);",
+											"    pm.expect(resp.message).to.eql(\"Farmer not found\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
 							"id": "78a242d9-cccc-4d61-8475-1173c3c1e825",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -1268,7 +1290,35 @@
 							"response": []
 						},
 						{
-							"name": "Get Farmer by Yemert ID - ID does not exist Copy",
+							"name": "Get Farmer by Yemert ID - ID exists",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "9541c43e-8cf6-4f3c-b201-b7ed88c40807",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Farmers details are returned\", function () {",
+											"    pm.expect(resp.data.farmers[0].id).is.not.null;",
+											"    pm.expect(resp.data.farmers[0].yemertId).is.not.null;",
+											"});",
+											"",
+											"pm.test(\"Correct pagination details are returned\", function () {",
+											"    pm.expect(resp.data.pagination.page).to.eql(\"2\");",
+											"    pm.expect(resp.data.pagination.limit).to.eql(\"15\");",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
 							"id": "5ba93f3a-4d9c-4a02-8df0-9cb4afc6ffc8",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -1287,9 +1337,8 @@
 									],
 									"variable": [
 										{
-											"id": "ffd08fc9-1b26-405c-bda0-2f9de1835d6d",
 											"key": "id",
-											"value": "27623"
+											"value": "2180"
 										}
 									]
 								}
