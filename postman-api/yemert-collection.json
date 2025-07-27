@@ -263,7 +263,7 @@
 											"});",
 											"",
 											"pm.test(\"An empty password message is returned\", function () {",
-											"    pm.expect(resp.message).to.eql(\"Password is required\");",
+											"    pm.expect(resp.message).to.eql(\"Your password is required\");",
 											"    pm.expect(resp.success).to.eql(false);",
 											"    ",
 											"});",
@@ -309,7 +309,7 @@
 											"});",
 											"",
 											"pm.test(\"Invalid ID error message is returned\", function () {",
-											"    pm.expect(resp.message).to.eql(\"ID can only be numbers\");",
+											"    pm.expect(resp.message).to.eql(\"Your Admin ID must be a number\");",
 											"    pm.expect(resp.success).to.eql(false);",
 											"});",
 											""
@@ -443,7 +443,7 @@
 											"    pm.response.to.have.status(200);",
 											"});",
 											"",
-											"pm.test(\"Successful login details are returned\", function () {",
+											"pm.test(\"Successful login information is returned\", function () {",
 											"    pm.environment.set(\"admin_token\", resp.data.token);",
 											"    pm.expect(resp.message).to.eql(\"Login successful\");",
 											"    pm.expect(resp.success).to.eql(true);",
@@ -465,7 +465,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "// local\n{\n  \"id\": 961701,\n  \"password\": \"Aszxaszx123!\"\n}\n\n// staging\n// {\n//   \"id\": 7257390,\n//   \"password\": \"Testing001!\"\n// }\n\n",
+									"raw": "// local\n//{\n//  \"id\": 961701,\n//  \"password\": \"Aszxaszx123!\"\n//}\n\n// staging\n {\n   \"id\": 7257390,\n   \"password\": \"Testing001!\"\n }\n\n",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2676,7 +2676,24 @@
 								"type": "text"
 							}
 						],
-						"url": "{{baseurl}}/yemert/secure/insurance"
+						"url": {
+							"raw": "{{baseurl}}/yemert/secure/insurance/:yemertId",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"yemert",
+								"secure",
+								"insurance",
+								":yemertId"
+							],
+							"variable": [
+								{
+									"key": "yemertId",
+									"value": "yemertId"
+								}
+							]
+						}
 					},
 					"response": []
 				}
