@@ -962,11 +962,7 @@
 											"    pm.expect(resp.data[0].access).is.not.null;",
 											"    pm.expect(resp.data[0].updatedAt).is.not.null;",
 											"    pm.expect(resp.data[0].dateJoined).is.not.null;",
-											"});",
-											"",
-											"// There is no information on how to pass the token",
-											"",
-											""
+											"});"
 										],
 										"type": "text/javascript",
 										"packages": {}
@@ -1070,6 +1066,7 @@
 											"    pm.expect(resp.data.yemertId).is.not.null;",
 											"    pm.expect(resp.data.fullName).is.not.null;",
 											"    pm.expect(resp.data.phoneNumber).is.not.null;",
+											"    pm.expect(resp.data.farmPhotos).is.not.empty;",
 											"});"
 										],
 										"type": "text/javascript",
@@ -1107,16 +1104,15 @@
 										"exec": [
 											"var resp = pm.response.json();",
 											"",
-											"pm.test(\"Status code should be 201\", function () {",
-											"    pm.response.to.have.status(201);",
+											"pm.test(\"Status code should be 409\", function () {",
+											"    pm.response.to.have.status(409);",
 											"});",
 											"",
-											"pm.test(\"Farmer details are created\", function () {",
-											"    pm.expect(resp.data.id).is.not.null;",
-											"    pm.expect(resp.data.yemertId).is.not.null;",
-											"    pm.expect(resp.data.fullName).is.not.null;",
-											"    pm.expect(resp.data.phoneNumber).is.not.null;",
-											"});"
+											"pm.test(\"Duplicate phone number error is returned\", function () {",
+											"    pm.expect(resp.success).to.eql(false);",
+											"    pm.expect(resp.message).to.eql(\"Phone number has already been registered\");",
+											"});",
+											""
 										],
 										"type": "text/javascript",
 										"packages": {}
