@@ -1,0 +1,10 @@
+{
+    "Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjo3MjU3MzksInJvbGUiOiJBRE1JTiIsImlhdCI6MTc1MzY1NDMxNSwiZXhwIjoxNzUzNjYxNTE1fQ.XZzkv-LmEmM7kL9RDO-RBzIdPt3AmIGM0vjtpbxZeUM",
+    "User-Agent": "PostmanRuntime/7.39.1",
+    "Accept": "*/*",
+    "Cache-Control": "no-cache",
+    "Postman-Token": "db6b88c5-522d-48e9-bb76-2d94c860f078",
+    "Host": "staging.yemert.co",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive"
+}
