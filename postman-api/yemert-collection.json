@@ -1925,6 +1925,29 @@
 						},
 						{
 							"name": "Get Insurance - For Single Farmer not found",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "abf8274a-c6ee-4aa4-b79b-6359372d5673",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 400\", function () {",
+											"    pm.response.to.have.status(400);",
+											"});",
+											"",
+											"pm.test(\"Farmer not found error is returned\", function () {",
+											"    pm.expect(resp.message).to.eql(\"Farmer not found\");",
+											"    pm.expect(resp.success).to.eql(false);",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
 							"id": "f8d0710a-5fd0-4dd8-b655-b7f5d88f7a32",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -1949,7 +1972,6 @@
 									],
 									"variable": [
 										{
-											"id": "b119320c-a76e-4a70-ae6a-538d22778e16",
 											"key": "yemertID",
 											"value": "1726"
 										}
