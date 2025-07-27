@@ -2156,7 +2156,7 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "DELETE",
+						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
@@ -2167,29 +2167,57 @@
 								}
 							}
 						},
-						"url": {
-							"raw": "{{baseurl}}/farmers/claims/:claimID",
-							"host": [
-								"{{baseurl}}"
-							],
-							"path": [
-								"farmers",
-								"claims",
-								":claimID"
-							],
-							"variable": [
-								{
-									"id": "32ccd668-f609-47d6-91e3-377c1425f00a",
-									"key": "claimID",
-									"value": "claimID"
-								}
-							]
-						}
+						"url": "{{baseurl}}/yemert/secure/insurance"
 					},
 					"response": []
 				},
 				{
-					"name": "Delete a single claim Copy 2",
+					"name": "Update a single insurance record",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2c033784-29bb-4c07-9527-dbf0838a35c3",
+								"exec": [
+									"var resp = pm.response.json();",
+									"",
+									"pm.test(\"Status code should be 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									"",
+									"pm.test(\"Invalid ID error message is returned\", function () {",
+									"    pm.expect(resp.message).to.eql(\"Admin with email already exists\");",
+									"    pm.expect(resp.success).to.eql(false);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "e52e8c48-88db-44c3-846f-9918a371f5f6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/yemert/secure/insurance"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete all insurance records",
 					"event": [
 						{
 							"listen": "test",
@@ -2229,24 +2257,7 @@
 								}
 							}
 						},
-						"url": {
-							"raw": "{{baseurl}}/farmers/claims/:claimID",
-							"host": [
-								"{{baseurl}}"
-							],
-							"path": [
-								"farmers",
-								"claims",
-								":claimID"
-							],
-							"variable": [
-								{
-									"id": "32ccd668-f609-47d6-91e3-377c1425f00a",
-									"key": "claimID",
-									"value": "claimID"
-								}
-							]
-						}
+						"url": "{{baseurl}}/yemert/secure/insurance/all"
 					},
 					"response": []
 				},
@@ -2316,7 +2327,7 @@
 			"id": "25ed69f8-113f-4cc2-890d-72cc76ae405e"
 		},
 		{
-			"name": "Get Insurance",
+			"name": "Get Insurance information",
 			"event": [
 				{
 					"listen": "test",
@@ -2344,6 +2355,54 @@
 				}
 			],
 			"id": "d84585ff-5ca8-4d63-9f2c-901ee25f0226",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{admin_token}}",
+						"type": "text"
+					}
+				],
+				"url": "{{baseurl}}/yemert/secure/insurance"
+			},
+			"response": []
+		},
+		{
+			"name": "Get single Insurance information",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2a779a39-4925-471e-866f-f64d7eb4ef98",
+						"exec": [
+							"var resp = pm.response.json();",
+							"",
+							"pm.test(\"Status code should be 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Admin details are returned\", function () {",
+							"    pm.expect(resp.data.id).to.eql(\"725739\");",
+							"    pm.expect(resp.success).to.eql(\"true\");",
+							"});",
+							"",
+							"// There is no information on how to pass the token",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"id": "45e59b0a-ac16-4ee5-ac27-7d653b254374",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
