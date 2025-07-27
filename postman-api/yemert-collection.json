@@ -1329,7 +1329,7 @@
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "POST",
+								"method": "PATCH",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -1340,7 +1340,254 @@
 										}
 									}
 								},
-								"url": "{{baseurl}}/creator/admin"
+								"url": {
+									"raw": "{{baseurl}}/farmers/claims/:yemertId",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"farmers",
+										"claims",
+										":yemertId"
+									],
+									"variable": [
+										{
+											"key": "yemertId",
+											"value": "yemertId"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Claims",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "2c033784-29bb-4c07-9527-dbf0838a35c3",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 400\", function () {",
+											"    pm.response.to.have.status(400);",
+											"});",
+											"",
+											"pm.test(\"Invalid ID error message is returned\", function () {",
+											"    pm.expect(resp.message).to.eql(\"Admin with email already exists\");",
+											"    pm.expect(resp.success).to.eql(false);",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "474c1cca-3895-4cea-b504-59b5870980dd",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"admin02@yemert.co\",\n  \"role\": \"ADMIN\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/farmers/claims/:yemertId",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"farmers",
+										"claims",
+										":yemertId"
+									],
+									"variable": [
+										{
+											"key": "yemertId",
+											"value": "yemertId"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete all claims",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "2c033784-29bb-4c07-9527-dbf0838a35c3",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 400\", function () {",
+											"    pm.response.to.have.status(400);",
+											"});",
+											"",
+											"pm.test(\"Invalid ID error message is returned\", function () {",
+											"    pm.expect(resp.message).to.eql(\"Admin with email already exists\");",
+											"    pm.expect(resp.success).to.eql(false);",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "47041e9b-7507-49be-b163-94d55bb2b857",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseurl}}/farmers/claims/all"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete all claims for a farmer",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "2c033784-29bb-4c07-9527-dbf0838a35c3",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 400\", function () {",
+											"    pm.response.to.have.status(400);",
+											"});",
+											"",
+											"pm.test(\"Invalid ID error message is returned\", function () {",
+											"    pm.expect(resp.message).to.eql(\"Admin with email already exists\");",
+											"    pm.expect(resp.success).to.eql(false);",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "a8f6843c-345e-4324-a8e0-5efcf90a3f95",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/farmers/claims/farmer/:yemertId",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"farmers",
+										"claims",
+										"farmer",
+										":yemertId"
+									],
+									"variable": [
+										{
+											"key": "yemertId",
+											"value": "yemertId"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete all claims for a farmer Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "2c033784-29bb-4c07-9527-dbf0838a35c3",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 400\", function () {",
+											"    pm.response.to.have.status(400);",
+											"});",
+											"",
+											"pm.test(\"Invalid ID error message is returned\", function () {",
+											"    pm.expect(resp.message).to.eql(\"Admin with email already exists\");",
+											"    pm.expect(resp.success).to.eql(false);",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "f93444c7-294a-4e33-8ea0-67dd0da59c65",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/farmers/claims/farmer/:yemertId",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"farmers",
+										"claims",
+										"farmer",
+										":yemertId"
+									],
+									"variable": [
+										{
+											"id": "63e7d036-9f2c-4b01-8f48-1504397e206c",
+											"key": "yemertId",
+											"value": "yemertId"
+										}
+									]
+								}
 							},
 							"response": []
 						}
