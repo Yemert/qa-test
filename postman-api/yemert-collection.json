@@ -1040,7 +1040,54 @@
 				},
 				{
 					"name": "Market",
-					"item": [],
+					"item": [
+						{
+							"name": "Get All Farmers Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b7272380-fa9c-48c1-b4a6-f5946120368e",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Farmers details are returned\", function () {",
+											"    pm.expect(resp.data.farmers[0].id).is.not.null;",
+											"    pm.expect(resp.data.farmers[0].yemertId).is.not.null;",
+											"});",
+											"",
+											"// There is no information on how to pass the token",
+											"",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "7edae2a9-a4bc-405c-a377-6be918894bf1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Cookie",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": "{{baseurl}}/farmers"
+							},
+							"response": []
+						}
+					],
 					"id": "8579e4b8-cb82-4651-bae3-00fe90968267"
 				}
 			],
@@ -1175,52 +1222,6 @@
 								}
 							],
 							"id": "732a488b-4fd0-46c5-9928-7c8ce98d6893",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Cookie",
-										"value": "",
-										"type": "text",
-										"disabled": true
-									}
-								],
-								"url": "{{baseurl}}/farmers"
-							},
-							"response": []
-						},
-						{
-							"name": "Get All Farmers Copy",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "b7272380-fa9c-48c1-b4a6-f5946120368e",
-										"exec": [
-											"var resp = pm.response.json();",
-											"",
-											"pm.test(\"Status code should be 200\", function () {",
-											"    pm.response.to.have.status(200);",
-											"});",
-											"",
-											"pm.test(\"Farmers details are returned\", function () {",
-											"    pm.expect(resp.data.farmers[0].id).is.not.null;",
-											"    pm.expect(resp.data.farmers[0].yemertId).is.not.null;",
-											"});",
-											"",
-											"// There is no information on how to pass the token",
-											"",
-											""
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								}
-							],
-							"id": "7edae2a9-a4bc-405c-a377-6be918894bf1",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1403,68 +1404,6 @@
 									],
 									"variable": [
 										{
-											"key": "yemertId",
-											"value": "yemertId"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Update Claims Copy",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "2c033784-29bb-4c07-9527-dbf0838a35c3",
-										"exec": [
-											"var resp = pm.response.json();",
-											"",
-											"pm.test(\"Status code should be 400\", function () {",
-											"    pm.response.to.have.status(400);",
-											"});",
-											"",
-											"pm.test(\"Invalid ID error message is returned\", function () {",
-											"    pm.expect(resp.message).to.eql(\"Admin with email already exists\");",
-											"    pm.expect(resp.success).to.eql(false);",
-											"});",
-											""
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								}
-							],
-							"id": "16ddcd21-3ef2-4b3a-b422-4a84ccde05f4",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "PATCH",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"email\": \"admin02@yemert.co\",\n  \"role\": \"ADMIN\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{baseurl}}/farmers/claims/:yemertId",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"farmers",
-										"claims",
-										":yemertId"
-									],
-									"variable": [
-										{
-											"id": "f4650c44-0415-49c8-8456-50ddae47cc45",
 											"key": "yemertId",
 											"value": "yemertId"
 										}
@@ -2186,11 +2125,136 @@
 		},
 		{
 			"name": "Insurance",
-			"item": [],
+			"item": [
+				{
+					"name": "Delete a single claim Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2c033784-29bb-4c07-9527-dbf0838a35c3",
+								"exec": [
+									"var resp = pm.response.json();",
+									"",
+									"pm.test(\"Status code should be 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									"",
+									"pm.test(\"Invalid ID error message is returned\", function () {",
+									"    pm.expect(resp.message).to.eql(\"Admin with email already exists\");",
+									"    pm.expect(resp.success).to.eql(false);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "9dcc26e8-3d66-40b0-b8fc-671db1d5e250",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/farmers/claims/:claimID",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"farmers",
+								"claims",
+								":claimID"
+							],
+							"variable": [
+								{
+									"id": "32ccd668-f609-47d6-91e3-377c1425f00a",
+									"key": "claimID",
+									"value": "claimID"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Claims Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2c033784-29bb-4c07-9527-dbf0838a35c3",
+								"exec": [
+									"var resp = pm.response.json();",
+									"",
+									"pm.test(\"Status code should be 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									"",
+									"pm.test(\"Invalid ID error message is returned\", function () {",
+									"    pm.expect(resp.message).to.eql(\"Admin with email already exists\");",
+									"    pm.expect(resp.success).to.eql(false);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "16ddcd21-3ef2-4b3a-b422-4a84ccde05f4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"admin02@yemert.co\",\n  \"role\": \"ADMIN\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/farmers/claims/:yemertId",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"farmers",
+								"claims",
+								":yemertId"
+							],
+							"variable": [
+								{
+									"id": "f4650c44-0415-49c8-8456-50ddae47cc45",
+									"key": "yemertId",
+									"value": "yemertId"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
 			"id": "25ed69f8-113f-4cc2-890d-72cc76ae405e"
 		},
 		{
-			"name": "A request with out Request Authorization",
+			"name": "Get Insurance",
 			"event": [
 				{
 					"listen": "test",
@@ -2225,7 +2289,7 @@
 				"auth": {
 					"type": "noauth"
 				},
-				"method": "GET",
+				"method": "DELETE",
 				"header": [
 					{
 						"key": "Authorization",
@@ -2233,7 +2297,7 @@
 						"type": "text"
 					}
 				],
-				"url": "{{baseurl}}/admin"
+				"url": "{{baseurl}}/yemert/secure/insurance"
 			},
 			"response": []
 		}
