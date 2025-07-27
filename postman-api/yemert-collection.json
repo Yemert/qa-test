@@ -2127,7 +2127,7 @@
 			"name": "Insurance",
 			"item": [
 				{
-					"name": "Delete a single claim Copy",
+					"name": "Create a single insurance record",
 					"event": [
 						{
 							"listen": "test",
@@ -2152,6 +2152,68 @@
 						}
 					],
 					"id": "9dcc26e8-3d66-40b0-b8fc-671db1d5e250",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/farmers/claims/:claimID",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"farmers",
+								"claims",
+								":claimID"
+							],
+							"variable": [
+								{
+									"id": "32ccd668-f609-47d6-91e3-377c1425f00a",
+									"key": "claimID",
+									"value": "claimID"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a single claim Copy 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2c033784-29bb-4c07-9527-dbf0838a35c3",
+								"exec": [
+									"var resp = pm.response.json();",
+									"",
+									"pm.test(\"Status code should be 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									"",
+									"pm.test(\"Invalid ID error message is returned\", function () {",
+									"    pm.expect(resp.message).to.eql(\"Admin with email already exists\");",
+									"    pm.expect(resp.success).to.eql(false);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "d8df9be3-fc29-4bee-a395-dbd441214ec2",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2289,7 +2351,7 @@
 				"auth": {
 					"type": "noauth"
 				},
-				"method": "DELETE",
+				"method": "GET",
 				"header": [
 					{
 						"key": "Authorization",
