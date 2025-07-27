@@ -1209,7 +1209,7 @@
 							"response": []
 						},
 						{
-							"name": "Bulk register farmers - successful Copy",
+							"name": "Bulk register farmers - validation error",
 							"event": [
 								{
 									"listen": "test",
