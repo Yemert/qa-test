@@ -26,7 +26,7 @@
 											"});",
 											"",
 											"pm.test(\"Successful login details are returned\", function () {",
-											"    pm.environment.set(\"Super_admin_token\", resp.data.token);",
+											"    pm.environment.set(\"super_admin_token\", resp.data.token);",
 											"    pm.expect(resp.message).to.eql(\"Login successful\");",
 											"    pm.expect(resp.success).to.eql(true);",
 											"    pm.expect(resp.token).is.not.null;",
@@ -120,7 +120,7 @@
 											"});",
 											"",
 											"pm.test(\"Successful login details are returned\", function () {",
-											"    pm.environment.set(\"admin_token\", resp.data.token);",
+											"    pm.environment.set(\"viewer_token\", resp.data.token);",
 											"    pm.expect(resp.message).to.eql(\"Login successful\");",
 											"    pm.expect(resp.success).to.eql(true);",
 											"    pm.expect(resp.token).is.not.null;",
@@ -2492,153 +2492,153 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Get Insurance information",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2a779a39-4925-471e-866f-f64d7eb4ef98",
+								"exec": [
+									"var resp = pm.response.json();",
+									"",
+									"pm.test(\"Status code should be 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Admin details are returned\", function () {",
+									"    pm.expect(resp.data.id).to.eql(\"725739\");",
+									"    pm.expect(resp.success).to.eql(\"true\");",
+									"});",
+									"",
+									"// There is no information on how to pass the token",
+									"",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "d84585ff-5ca8-4d63-9f2c-901ee25f0226",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{admin_token}}",
+								"type": "text"
+							}
+						],
+						"url": "{{baseurl}}/yemert/secure/insurance"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Insurance claims information",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2a779a39-4925-471e-866f-f64d7eb4ef98",
+								"exec": [
+									"var resp = pm.response.json();",
+									"",
+									"pm.test(\"Status code should be 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Admin details are returned\", function () {",
+									"    pm.expect(resp.data.id).to.eql(\"725739\");",
+									"    pm.expect(resp.success).to.eql(\"true\");",
+									"});",
+									"",
+									"// There is no information on how to pass the token",
+									"",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "4df7bcab-c275-4ce4-b74f-e0ab4be37379",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{admin_token}}",
+								"type": "text"
+							}
+						],
+						"url": "{{baseurl}}/yemert/secure/claims"
+					},
+					"response": []
+				},
+				{
+					"name": "Get single Insurance information",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2a779a39-4925-471e-866f-f64d7eb4ef98",
+								"exec": [
+									"var resp = pm.response.json();",
+									"",
+									"pm.test(\"Status code should be 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Admin details are returned\", function () {",
+									"    pm.expect(resp.data.id).to.eql(\"725739\");",
+									"    pm.expect(resp.success).to.eql(\"true\");",
+									"});",
+									"",
+									"// There is no information on how to pass the token",
+									"",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "45e59b0a-ac16-4ee5-ac27-7d653b254374",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{admin_token}}",
+								"type": "text"
+							}
+						],
+						"url": "{{baseurl}}/yemert/secure/insurance"
+					},
+					"response": []
 				}
 			],
 			"id": "25ed69f8-113f-4cc2-890d-72cc76ae405e"
-		},
-		{
-			"name": "Get Insurance information",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "2a779a39-4925-471e-866f-f64d7eb4ef98",
-						"exec": [
-							"var resp = pm.response.json();",
-							"",
-							"pm.test(\"Status code should be 200\", function () {",
-							"    pm.response.to.have.status(200);",
-							"});",
-							"",
-							"pm.test(\"Admin details are returned\", function () {",
-							"    pm.expect(resp.data.id).to.eql(\"725739\");",
-							"    pm.expect(resp.success).to.eql(\"true\");",
-							"});",
-							"",
-							"// There is no information on how to pass the token",
-							"",
-							""
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
-			"id": "d84585ff-5ca8-4d63-9f2c-901ee25f0226",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"auth": {
-					"type": "noauth"
-				},
-				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "{{admin_token}}",
-						"type": "text"
-					}
-				],
-				"url": "{{baseurl}}/yemert/secure/insurance"
-			},
-			"response": []
-		},
-		{
-			"name": "Get Insurance claims information",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "2a779a39-4925-471e-866f-f64d7eb4ef98",
-						"exec": [
-							"var resp = pm.response.json();",
-							"",
-							"pm.test(\"Status code should be 200\", function () {",
-							"    pm.response.to.have.status(200);",
-							"});",
-							"",
-							"pm.test(\"Admin details are returned\", function () {",
-							"    pm.expect(resp.data.id).to.eql(\"725739\");",
-							"    pm.expect(resp.success).to.eql(\"true\");",
-							"});",
-							"",
-							"// There is no information on how to pass the token",
-							"",
-							""
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
-			"id": "4df7bcab-c275-4ce4-b74f-e0ab4be37379",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"auth": {
-					"type": "noauth"
-				},
-				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "{{admin_token}}",
-						"type": "text"
-					}
-				],
-				"url": "{{baseurl}}/yemert/secure/claims"
-			},
-			"response": []
-		},
-		{
-			"name": "Get single Insurance information",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "2a779a39-4925-471e-866f-f64d7eb4ef98",
-						"exec": [
-							"var resp = pm.response.json();",
-							"",
-							"pm.test(\"Status code should be 200\", function () {",
-							"    pm.response.to.have.status(200);",
-							"});",
-							"",
-							"pm.test(\"Admin details are returned\", function () {",
-							"    pm.expect(resp.data.id).to.eql(\"725739\");",
-							"    pm.expect(resp.success).to.eql(\"true\");",
-							"});",
-							"",
-							"// There is no information on how to pass the token",
-							"",
-							""
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
-			"id": "45e59b0a-ac16-4ee5-ac27-7d653b254374",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"auth": {
-					"type": "noauth"
-				},
-				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "{{admin_token}}",
-						"type": "text"
-					}
-				],
-				"url": "{{baseurl}}/yemert/secure/insurance"
-			},
-			"response": []
 		}
 	],
 	"auth": {
