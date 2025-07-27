@@ -490,13 +490,14 @@
 										"exec": [
 											"var resp = pm.response.json();",
 											"",
-											"pm.test(\"Status code should be 400\", function () {",
-											"    pm.response.to.have.status(400);",
+											"pm.test(\"Status code should be 200\", function () {",
+											"    pm.response.to.have.status(200);",
 											"});",
 											"",
-											"pm.test(\"Invalid ID error message is returned\", function () {",
-											"    pm.expect(resp.message).to.eql(\"Admin with email already exists\");",
-											"    pm.expect(resp.success).to.eql(false);",
+											"pm.test(\"Logout successful\", function () {",
+											"    pm.expect(resp.message).to.eql(\"Logged out successfully\");",
+											"    pm.expect(resp.success).to.eql(true);",
+											"    pm.expect(resp.success).is.null;",
 											"});",
 											""
 										],
@@ -510,11 +511,17 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{admin_token}}"
+									}
+								},
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"email\": \"admin02@yemert.co\",\n  \"role\": \"ADMIN\"\n}",
+									"raw": "",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1004,9 +1011,6 @@
 											"    pm.expect(resp.success).to.eql(false);",
 											"    pm.expect(resp.message).to.eql(\"No authorization provided\");",
 											"});",
-											"",
-											"// There is no information on how to pass the token",
-											"",
 											""
 										],
 										"type": "text/javascript",
