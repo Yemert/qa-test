@@ -1298,7 +1298,53 @@
 				},
 				{
 					"name": "Claims",
-					"item": [],
+					"item": [
+						{
+							"name": "Update Claims",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "2c033784-29bb-4c07-9527-dbf0838a35c3",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 400\", function () {",
+											"    pm.response.to.have.status(400);",
+											"});",
+											"",
+											"pm.test(\"Invalid ID error message is returned\", function () {",
+											"    pm.expect(resp.message).to.eql(\"Admin with email already exists\");",
+											"    pm.expect(resp.success).to.eql(false);",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "a50aad1d-2dde-4a2e-b464-66289b1ea942",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"admin02@yemert.co\",\n  \"role\": \"ADMIN\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseurl}}/creator/admin"
+							},
+							"response": []
+						}
+					],
 					"id": "927eea1b-f48a-4e5c-a48d-3c7d7f3437b9"
 				}
 			],
