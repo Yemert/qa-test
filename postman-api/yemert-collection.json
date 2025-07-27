@@ -1066,6 +1066,9 @@
 											"    pm.expect(resp.data.yemertId).is.not.null;",
 											"    pm.expect(resp.data.fullName).is.not.null;",
 											"    pm.expect(resp.data.phoneNumber).is.not.null;",
+											"});",
+											"",
+											"pm.test(\"Farm photos are returned\", function () {",
 											"    pm.expect(resp.data.farmPhotos).is.not.empty;",
 											"});"
 										],
