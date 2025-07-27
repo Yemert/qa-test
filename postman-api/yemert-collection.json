@@ -1045,243 +1045,261 @@
 			"name": "Farmer",
 			"item": [
 				{
-					"name": "New Folder",
-					"item": [],
+					"name": "Register Farmer",
+					"item": [
+						{
+							"name": "Single Farmer Registration - All Fields Passed - Successful",
+							"id": "7444cf94-1370-4e9a-98f7-aa0ebc2b806a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"fullName\": \"{{$randomFullName}}\",\r\n    \"gender\": \"male\",\r\n    \"ageRange\": \"{{$randomInt}}-{{$randomInt}}\",\r\n    \"nationalIdNumber\": \"{{$randomInt}}{{$randomInt}}{{$randomInt}}{{$randomInt}}\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"phoneNumber\": \"+1234567890\",\r\n    \"whatsappNumber\": \"+{{$randomPhoneNumber}}\",\r\n    \"homeAddress\": \"{{$randomStreetAddress}}\",\r\n    \"countyDistrict\": \"{{$randomCountry}}\",\r\n    \"country\": \"{{$randomCountry}}\",\r\n    \"farmLocation\": \"{{$randomCity}}\",\r\n    \"farmSize\": 5.2,\r\n    \"actualFarmSize\": \"5.2 hectares\",\r\n    \"landOwnershipStatus\": \"Owned\",\r\n    \"yearsFarmingExperience\": \"10\",\r\n    \"crops\": [\r\n        {\r\n            \"cropName\": \"{{$randomProductMaterial}}\"\r\n        },\r\n        {\r\n            \"cropName\": \"{{$randomProductMaterial}}\"\r\n        }\r\n    ],\r\n    \"averageAnnualYield\": \"20 tons\",\r\n    \"farmingPractices\": \"Organic farming, Mixed cropping\",\r\n    \"annualFarmingRevenue\": \"₦3,000,000\",\r\n    \"accessToCredit\": \"Yes\",\r\n    \"previousInsurance\": \"No\",\r\n    \"produceSaleLocation\": \"Local market\",\r\n    \"financialChallenge\": \"High input cost\",\r\n    \"recentChallenges\": \"Flooding, Pest invasion\",\r\n    \"soilManagement\": \"Crop rotation, Compost use\",\r\n    \"irrigationAccess\": true,\r\n    \"climateResilientProgram\": true,\r\n    \"sustainablePractices\": \"Use of compost, minimal tillage\",\r\n    \"carbonCreditProgram\": false,\r\n    \"cropInsuranceInterest\": true,\r\n    \"paymentFrequency\": \"Quarterly\",\r\n    \"insuranceConcerns\": \"High premium cost\",\r\n    \"recommendInsurance\": \"Yes, to fellow farmers\",\r\n    \"farmPhotos\": [\r\n        {\r\n            \"photoUrl\": \"https://example.com/farm1.jpg\"\r\n        },\r\n        {\r\n            \"photoUrl\": \"https://example.com/farm2.jpg\"\r\n        }\r\n    ],\r\n    \"dataConsent\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseurl}}/farmers"
+							},
+							"response": []
+						},
+						{
+							"name": "Single Farmer Registration - Required fields only Successful",
+							"id": "1864a171-36cb-4a38-9712-470b90bff207",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"fullName\": \"{{$randomFullName}}\",\r\n    \"crops\": [\r\n        {\r\n            \"cropName\": \"{{$randomProductMaterial}}\"\r\n        },\r\n        {\r\n            \"cropName\": \"{{$randomProductMaterial}}\"\r\n        }\r\n    ],\r\n    \"farmPhotos\": [\r\n        {\r\n            \"photoUrl\": \"https://example.com/farm1.jpg\"\r\n        },\r\n        {\r\n            \"photoUrl\": \"https://example.com/farm2.jpg\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseurl}}/farmers"
+							},
+							"response": []
+						},
+						{
+							"name": "Register a single Farmer",
+							"id": "81da38c5-aa89-4f68-89a0-caab6e169c62",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseurl}}/farmers"
+							},
+							"response": []
+						},
+						{
+							"name": "Bulk register farmers",
+							"id": "ddd0adc5-adf2-4a60-a2b1-4b3cda609ee6",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"fullName\": \"{{$randomFullName}}\",\r\n        \"gender\": \"male\",\r\n        \"ageRange\": \"{{$randomInt}}-{{$randomInt}}\",\r\n        \"nationalIdNumber\": \"{{$randomInt}}{{$randomInt}}{{$randomInt}}{{$randomInt}}\",\r\n        \"email\": \"{{$randomEmail}}\",\r\n        \"phoneNumber\": \"+{{$randomPhoneNumber}}\",\r\n        \"whatsappNumber\": \"+{{$randomPhoneNumber}}\",\r\n        \"homeAddress\": \"{{$randomStreetAddress}}\",\r\n        \"countyDistrict\": \"{{$randomCountry}}\",\r\n        \"country\": \"{{$randomCountry}}\",\r\n        \"farmLocation\": \"{{$randomCity}}\",\r\n        \"farmSize\": 5.2,\r\n        \"actualFarmSize\": \"5.2 hectares\",\r\n        \"landOwnershipStatus\": \"Owned\",\r\n        \"yearsFarmingExperience\": \"10\",\r\n        \"crops\": [\r\n            {\r\n                \"cropName\": \"{{$randomProductMaterial}}\"\r\n            },\r\n            {\r\n                \"cropName\": \"{{$randomProductMaterial}}\"\r\n            }\r\n        ],\r\n        \"averageAnnualYield\": \"20 tons\",\r\n        \"farmingPractices\": \"Organic farming, Mixed cropping\",\r\n        \"annualFarmingRevenue\": \"₦3,000,000\",\r\n        \"accessToCredit\": \"Yes\",\r\n        \"previousInsurance\": \"No\",\r\n        \"produceSaleLocation\": \"Local market\",\r\n        \"financialChallenge\": \"High input cost\",\r\n        \"recentChallenges\": \"Flooding, Pest invasion\",\r\n        \"soilManagement\": \"Crop rotation, Compost use\",\r\n        \"irrigationAccess\": true,\r\n        \"climateResilientProgram\": true,\r\n        \"sustainablePractices\": \"Use of compost, minimal tillage\",\r\n        \"carbonCreditProgram\": false,\r\n        \"cropInsuranceInterest\": true,\r\n        \"paymentFrequency\": \"Quarterly\",\r\n        \"insuranceConcerns\": \"High premium cost\",\r\n        \"recommendInsurance\": \"Yes, to fellow farmers\",\r\n        \"farmPhotos\": [\r\n            {\r\n                \"photoUrl\": \"https://example.com/farm1.jpg\"\r\n            },\r\n            {\r\n                \"photoUrl\": \"https://example.com/farm2.jpg\"\r\n            }\r\n        ],\r\n        \"dataConsent\": true\r\n    },\r\n    {\r\n        \"fullName\": \"{{$randomFullName}}\",\r\n        \"gender\": \"male\",\r\n        \"ageRange\": \"{{$randomInt}}-{{$randomInt}}\",\r\n        \"nationalIdNumber\": \"{{$randomInt}}{{$randomInt}}{{$randomInt}}{{$randomInt}}\",\r\n        \"email\": \"{{$randomEmail}}\",\r\n        \"phoneNumber\": \"+{{$randomPhoneNumber}}\",\r\n        \"whatsappNumber\": \"+{{$randomPhoneNumber}}\",\r\n        \"homeAddress\": \"{{$randomStreetAddress}}\",\r\n        \"countyDistrict\": \"{{$randomCountry}}\",\r\n        \"country\": \"{{$randomCountry}}\",\r\n        \"farmLocation\": \"{{$randomCity}}\",\r\n        \"farmSize\": 5.2,\r\n        \"actualFarmSize\": \"5.2 hectares\",\r\n        \"landOwnershipStatus\": \"Owned\",\r\n        \"yearsFarmingExperience\": \"10\",\r\n        \"crops\": [\r\n            {\r\n                \"cropName\": \"{{$randomProductMaterial}}\"\r\n            },\r\n            {\r\n                \"cropName\": \"{{$randomProductMaterial}}\"\r\n            }\r\n        ],\r\n        \"averageAnnualYield\": \"20 tons\",\r\n        \"farmingPractices\": \"Organic farming, Mixed cropping\",\r\n        \"annualFarmingRevenue\": \"₦3,000,000\",\r\n        \"accessToCredit\": \"Yes\",\r\n        \"previousInsurance\": \"No\",\r\n        \"produceSaleLocation\": \"Local market\",\r\n        \"financialChallenge\": \"High input cost\",\r\n        \"recentChallenges\": \"Flooding, Pest invasion\",\r\n        \"soilManagement\": \"Crop rotation, Compost use\",\r\n        \"irrigationAccess\": true,\r\n        \"climateResilientProgram\": true,\r\n        \"sustainablePractices\": \"Use of compost, minimal tillage\",\r\n        \"carbonCreditProgram\": false,\r\n        \"cropInsuranceInterest\": true,\r\n        \"paymentFrequency\": \"Quarterly\",\r\n        \"insuranceConcerns\": \"High premium cost\",\r\n        \"recommendInsurance\": \"Yes, to fellow farmers\",\r\n        \"farmPhotos\": [\r\n            {\r\n                \"photoUrl\": \"https://example.com/farm1.jpg\"\r\n            },\r\n            {\r\n                \"photoUrl\": \"https://example.com/farm2.jpg\"\r\n            }\r\n        ],\r\n        \"dataConsent\": true\r\n    },\r\n    {\r\n        \"fullName\": \"{{$randomFullName}}\",\r\n        \"gender\": \"male\",\r\n        \"ageRange\": \"{{$randomInt}}-{{$randomInt}}\",\r\n        \"nationalIdNumber\": \"{{$randomInt}}{{$randomInt}}{{$randomInt}}{{$randomInt}}\",\r\n        \"email\": \"{{$randomEmail}}\",\r\n        \"phoneNumber\": \"+{{$randomPhoneNumber}}\",\r\n        \"whatsappNumber\": \"+{{$randomPhoneNumber}}\",\r\n        \"homeAddress\": \"{{$randomStreetAddress}}\",\r\n        \"countyDistrict\": \"{{$randomCountry}}\",\r\n        \"country\": \"{{$randomCountry}}\",\r\n        \"farmLocation\": \"{{$randomCity}}\",\r\n        \"farmSize\": 5.2,\r\n        \"actualFarmSize\": \"5.2 hectares\",\r\n        \"landOwnershipStatus\": \"Owned\",\r\n        \"yearsFarmingExperience\": \"10\",\r\n        \"crops\": [\r\n            {\r\n                \"cropName\": \"{{$randomProductMaterial}}\"\r\n            },\r\n            {\r\n                \"cropName\": \"{{$randomProductMaterial}}\"\r\n            }\r\n        ],\r\n        \"averageAnnualYield\": \"20 tons\",\r\n        \"farmingPractices\": \"Organic farming, Mixed cropping\",\r\n        \"annualFarmingRevenue\": \"₦3,000,000\",\r\n        \"accessToCredit\": \"Yes\",\r\n        \"previousInsurance\": \"No\",\r\n        \"produceSaleLocation\": \"Local market\",\r\n        \"financialChallenge\": \"High input cost\",\r\n        \"recentChallenges\": \"Flooding, Pest invasion\",\r\n        \"soilManagement\": \"Crop rotation, Compost use\",\r\n        \"irrigationAccess\": true,\r\n        \"climateResilientProgram\": true,\r\n        \"sustainablePractices\": \"Use of compost, minimal tillage\",\r\n        \"carbonCreditProgram\": false,\r\n        \"cropInsuranceInterest\": true,\r\n        \"paymentFrequency\": \"Quarterly\",\r\n        \"insuranceConcerns\": \"High premium cost\",\r\n        \"recommendInsurance\": \"Yes, to fellow farmers\",\r\n        \"farmPhotos\": [\r\n            {\r\n                \"photoUrl\": \"https://example.com/farm1.jpg\"\r\n            },\r\n            {\r\n                \"photoUrl\": \"https://example.com/farm2.jpg\"\r\n            }\r\n        ],\r\n        \"dataConsent\": true\r\n    },\r\n    {\r\n        \"fullName\": \"{{$randomFullName}}\",\r\n        \"gender\": \"male\",\r\n        \"ageRange\": \"{{$randomInt}}-{{$randomInt}}\",\r\n        \"nationalIdNumber\": \"{{$randomInt}}{{$randomInt}}{{$randomInt}}{{$randomInt}}\",\r\n        \"email\": \"{{$randomEmail}}\",\r\n        \"phoneNumber\": \"+{{$randomPhoneNumber}}\",\r\n        \"whatsappNumber\": \"+{{$randomPhoneNumber}}\",\r\n        \"homeAddress\": \"{{$randomStreetAddress}}\",\r\n        \"countyDistrict\": \"{{$randomCountry}}\",\r\n        \"country\": \"{{$randomCountry}}\",\r\n        \"farmLocation\": \"{{$randomCity}}\",\r\n        \"farmSize\": 5.2,\r\n        \"actualFarmSize\": \"5.2 hectares\",\r\n        \"landOwnershipStatus\": \"Owned\",\r\n        \"yearsFarmingExperience\": \"10\",\r\n        \"crops\": [\r\n            {\r\n                \"cropName\": \"{{$randomProductMaterial}}\"\r\n            },\r\n            {\r\n                \"cropName\": \"{{$randomProductMaterial}}\"\r\n            }\r\n        ],\r\n        \"averageAnnualYield\": \"20 tons\",\r\n        \"farmingPractices\": \"Organic farming, Mixed cropping\",\r\n        \"annualFarmingRevenue\": \"₦3,000,000\",\r\n        \"accessToCredit\": \"Yes\",\r\n        \"previousInsurance\": \"No\",\r\n        \"produceSaleLocation\": \"Local market\",\r\n        \"financialChallenge\": \"High input cost\",\r\n        \"recentChallenges\": \"Flooding, Pest invasion\",\r\n        \"soilManagement\": \"Crop rotation, Compost use\",\r\n        \"irrigationAccess\": true,\r\n        \"climateResilientProgram\": true,\r\n        \"sustainablePractices\": \"Use of compost, minimal tillage\",\r\n        \"carbonCreditProgram\": false,\r\n        \"cropInsuranceInterest\": true,\r\n        \"paymentFrequency\": \"Quarterly\",\r\n        \"insuranceConcerns\": \"High premium cost\",\r\n        \"recommendInsurance\": \"Yes, to fellow farmers\",\r\n        \"farmPhotos\": [\r\n            {\r\n                \"photoUrl\": \"https://example.com/farm1.jpg\"\r\n            },\r\n            {\r\n                \"photoUrl\": \"https://example.com/farm2.jpg\"\r\n            }\r\n        ],\r\n        \"dataConsent\": true\r\n    },\r\n    {\r\n        \"fullName\": \"{{$randomFullName}}\",\r\n        \"gender\": \"male\",\r\n        \"ageRange\": \"{{$randomInt}}-{{$randomInt}}\",\r\n        \"nationalIdNumber\": \"{{$randomInt}}{{$randomInt}}{{$randomInt}}{{$randomInt}}\",\r\n        \"email\": \"{{$randomEmail}}\",\r\n        \"phoneNumber\": \"+{{$randomPhoneNumber}}\",\r\n        \"whatsappNumber\": \"+{{$randomPhoneNumber}}\",\r\n        \"homeAddress\": \"{{$randomStreetAddress}}\",\r\n        \"countyDistrict\": \"{{$randomCountry}}\",\r\n        \"country\": \"{{$randomCountry}}\",\r\n        \"farmLocation\": \"{{$randomCity}}\",\r\n        \"farmSize\": 5.2,\r\n        \"actualFarmSize\": \"5.2 hectares\",\r\n        \"landOwnershipStatus\": \"Owned\",\r\n        \"yearsFarmingExperience\": \"10\",\r\n        \"crops\": [\r\n            {\r\n                \"cropName\": \"{{$randomProductMaterial}}\"\r\n            },\r\n            {\r\n                \"cropName\": \"{{$randomProductMaterial}}\"\r\n            }\r\n        ],\r\n        \"averageAnnualYield\": \"20 tons\",\r\n        \"farmingPractices\": \"Organic farming, Mixed cropping\",\r\n        \"annualFarmingRevenue\": \"₦3,000,000\",\r\n        \"accessToCredit\": \"Yes\",\r\n        \"previousInsurance\": \"No\",\r\n        \"produceSaleLocation\": \"Local market\",\r\n        \"financialChallenge\": \"High input cost\",\r\n        \"recentChallenges\": \"Flooding, Pest invasion\",\r\n        \"soilManagement\": \"Crop rotation, Compost use\",\r\n        \"irrigationAccess\": true,\r\n        \"climateResilientProgram\": true,\r\n        \"sustainablePractices\": \"Use of compost, minimal tillage\",\r\n        \"carbonCreditProgram\": false,\r\n        \"cropInsuranceInterest\": true,\r\n        \"paymentFrequency\": \"Quarterly\",\r\n        \"insuranceConcerns\": \"High premium cost\",\r\n        \"recommendInsurance\": \"Yes, to fellow farmers\",\r\n        \"farmPhotos\": [\r\n            {\r\n                \"photoUrl\": \"https://example.com/farm1.jpg\"\r\n            },\r\n            {\r\n                \"photoUrl\": \"https://example.com/farm2.jpg\"\r\n            }\r\n        ],\r\n        \"dataConsent\": true\r\n    }\r\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseurl}}/farmers/batch"
+							},
+							"response": []
+						}
+					],
 					"id": "bf287f25-be8a-493f-a05f-318c8b2d9966"
 				},
 				{
-					"name": "Single Farmer Registration - All Fields Passed - Successful",
-					"id": "7444cf94-1370-4e9a-98f7-aa0ebc2b806a",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"fullName\": \"{{$randomFullName}}\",\r\n    \"gender\": \"male\",\r\n    \"ageRange\": \"{{$randomInt}}-{{$randomInt}}\",\r\n    \"nationalIdNumber\": \"{{$randomInt}}{{$randomInt}}{{$randomInt}}{{$randomInt}}\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"phoneNumber\": \"+1234567890\",\r\n    \"whatsappNumber\": \"+{{$randomPhoneNumber}}\",\r\n    \"homeAddress\": \"{{$randomStreetAddress}}\",\r\n    \"countyDistrict\": \"{{$randomCountry}}\",\r\n    \"country\": \"{{$randomCountry}}\",\r\n    \"farmLocation\": \"{{$randomCity}}\",\r\n    \"farmSize\": 5.2,\r\n    \"actualFarmSize\": \"5.2 hectares\",\r\n    \"landOwnershipStatus\": \"Owned\",\r\n    \"yearsFarmingExperience\": \"10\",\r\n    \"crops\": [\r\n        {\r\n            \"cropName\": \"{{$randomProductMaterial}}\"\r\n        },\r\n        {\r\n            \"cropName\": \"{{$randomProductMaterial}}\"\r\n        }\r\n    ],\r\n    \"averageAnnualYield\": \"20 tons\",\r\n    \"farmingPractices\": \"Organic farming, Mixed cropping\",\r\n    \"annualFarmingRevenue\": \"₦3,000,000\",\r\n    \"accessToCredit\": \"Yes\",\r\n    \"previousInsurance\": \"No\",\r\n    \"produceSaleLocation\": \"Local market\",\r\n    \"financialChallenge\": \"High input cost\",\r\n    \"recentChallenges\": \"Flooding, Pest invasion\",\r\n    \"soilManagement\": \"Crop rotation, Compost use\",\r\n    \"irrigationAccess\": true,\r\n    \"climateResilientProgram\": true,\r\n    \"sustainablePractices\": \"Use of compost, minimal tillage\",\r\n    \"carbonCreditProgram\": false,\r\n    \"cropInsuranceInterest\": true,\r\n    \"paymentFrequency\": \"Quarterly\",\r\n    \"insuranceConcerns\": \"High premium cost\",\r\n    \"recommendInsurance\": \"Yes, to fellow farmers\",\r\n    \"farmPhotos\": [\r\n        {\r\n            \"photoUrl\": \"https://example.com/farm1.jpg\"\r\n        },\r\n        {\r\n            \"photoUrl\": \"https://example.com/farm2.jpg\"\r\n        }\r\n    ],\r\n    \"dataConsent\": true\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{baseurl}}/farmers"
-					},
-					"response": []
-				},
-				{
-					"name": "Single Farmer Registration - Required fields only Successful",
-					"id": "1864a171-36cb-4a38-9712-470b90bff207",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"fullName\": \"{{$randomFullName}}\",\r\n    \"crops\": [\r\n        {\r\n            \"cropName\": \"{{$randomProductMaterial}}\"\r\n        },\r\n        {\r\n            \"cropName\": \"{{$randomProductMaterial}}\"\r\n        }\r\n    ],\r\n    \"farmPhotos\": [\r\n        {\r\n            \"photoUrl\": \"https://example.com/farm1.jpg\"\r\n        },\r\n        {\r\n            \"photoUrl\": \"https://example.com/farm2.jpg\"\r\n        }\r\n    ]\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{baseurl}}/farmers"
-					},
-					"response": []
-				},
-				{
-					"name": "Register a single Farmer",
-					"id": "81da38c5-aa89-4f68-89a0-caab6e169c62",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{baseurl}}/farmers"
-					},
-					"response": []
-				},
-				{
-					"name": "Get All Farmers",
-					"event": [
+					"name": "Get Farmers",
+					"item": [
 						{
-							"listen": "test",
-							"script": {
-								"id": "b7272380-fa9c-48c1-b4a6-f5946120368e",
-								"exec": [
-									"var resp = pm.response.json();",
-									"",
-									"pm.test(\"Status code should be 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"});",
-									"",
-									"pm.test(\"Farmers details are returned\", function () {",
-									"    pm.expect(resp.data.farmers[0].id).is.not.null;",
-									"    pm.expect(resp.data.farmers[0].yemertId).is.not.null;",
-									"});",
-									"",
-									"// There is no information on how to pass the token",
-									"",
-									""
+							"name": "Get All Farmers",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b7272380-fa9c-48c1-b4a6-f5946120368e",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Farmers details are returned\", function () {",
+											"    pm.expect(resp.data.farmers[0].id).is.not.null;",
+											"    pm.expect(resp.data.farmers[0].yemertId).is.not.null;",
+											"});",
+											"",
+											"// There is no information on how to pass the token",
+											"",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "732a488b-4fd0-46c5-9928-7c8ce98d6893",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Cookie",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
 								],
-								"type": "text/javascript",
-								"packages": {}
-							}
+								"url": "{{baseurl}}/farmers"
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Farmers - With pagination",
+							"id": "e54cdc83-8c47-4232-95ce-bca47762c9d9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/farmers?page=1&limit=2",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"farmers"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Farmer by YEMERT ID",
+							"id": "78a242d9-cccc-4d61-8475-1173c3c1e825",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/farmers/:id",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"farmers",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "27623"
+										}
+									]
+								}
+							},
+							"response": []
 						}
 					],
-					"id": "732a488b-4fd0-46c5-9928-7c8ce98d6893",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Cookie",
-								"value": "",
-								"type": "text",
-								"disabled": true
-							}
-						],
-						"url": "{{baseurl}}/farmers"
-					},
-					"response": []
+					"id": "f9709e49-986d-4f15-b034-968a46bd5804"
 				},
 				{
-					"name": "Get All Farmers - With pagination",
-					"id": "e54cdc83-8c47-4232-95ce-bca47762c9d9",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{baseurl}}/farmers?page=1&limit=2",
-							"host": [
-								"{{baseurl}}"
-							],
-							"path": [
-								"farmers"
-							],
-							"query": [
-								{
-									"key": "page",
-									"value": "1"
-								},
-								{
-									"key": "limit",
-									"value": "2"
+					"name": "Delete Farmers",
+					"item": [
+						{
+							"name": "Delete farmer",
+							"id": "f3238db3-e7b8-4723-a2c5-1d80f8c8db22",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/farmers/:id",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"farmers",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "2824"
+										}
+									]
 								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get Farmer by YEMERT ID",
-					"id": "78a242d9-cccc-4d61-8475-1173c3c1e825",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{baseurl}}/farmers/:id",
-							"host": [
-								"{{baseurl}}"
-							],
-							"path": [
-								"farmers",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "27623"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Bulk register farmers",
-					"id": "ddd0adc5-adf2-4a60-a2b1-4b3cda609ee6",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "[\r\n    {\r\n        \"fullName\": \"{{$randomFullName}}\",\r\n        \"gender\": \"male\",\r\n        \"ageRange\": \"{{$randomInt}}-{{$randomInt}}\",\r\n        \"nationalIdNumber\": \"{{$randomInt}}{{$randomInt}}{{$randomInt}}{{$randomInt}}\",\r\n        \"email\": \"{{$randomEmail}}\",\r\n        \"phoneNumber\": \"+{{$randomPhoneNumber}}\",\r\n        \"whatsappNumber\": \"+{{$randomPhoneNumber}}\",\r\n        \"homeAddress\": \"{{$randomStreetAddress}}\",\r\n        \"countyDistrict\": \"{{$randomCountry}}\",\r\n        \"country\": \"{{$randomCountry}}\",\r\n        \"farmLocation\": \"{{$randomCity}}\",\r\n        \"farmSize\": 5.2,\r\n        \"actualFarmSize\": \"5.2 hectares\",\r\n        \"landOwnershipStatus\": \"Owned\",\r\n        \"yearsFarmingExperience\": \"10\",\r\n        \"crops\": [\r\n            {\r\n                \"cropName\": \"{{$randomProductMaterial}}\"\r\n            },\r\n            {\r\n                \"cropName\": \"{{$randomProductMaterial}}\"\r\n            }\r\n        ],\r\n        \"averageAnnualYield\": \"20 tons\",\r\n        \"farmingPractices\": \"Organic farming, Mixed cropping\",\r\n        \"annualFarmingRevenue\": \"₦3,000,000\",\r\n        \"accessToCredit\": \"Yes\",\r\n        \"previousInsurance\": \"No\",\r\n        \"produceSaleLocation\": \"Local market\",\r\n        \"financialChallenge\": \"High input cost\",\r\n        \"recentChallenges\": \"Flooding, Pest invasion\",\r\n        \"soilManagement\": \"Crop rotation, Compost use\",\r\n        \"irrigationAccess\": true,\r\n        \"climateResilientProgram\": true,\r\n        \"sustainablePractices\": \"Use of compost, minimal tillage\",\r\n        \"carbonCreditProgram\": false,\r\n        \"cropInsuranceInterest\": true,\r\n        \"paymentFrequency\": \"Quarterly\",\r\n        \"insuranceConcerns\": \"High premium cost\",\r\n        \"recommendInsurance\": \"Yes, to fellow farmers\",\r\n        \"farmPhotos\": [\r\n            {\r\n                \"photoUrl\": \"https://example.com/farm1.jpg\"\r\n            },\r\n            {\r\n                \"photoUrl\": \"https://example.com/farm2.jpg\"\r\n            }\r\n        ],\r\n        \"dataConsent\": true\r\n    },\r\n    {\r\n        \"fullName\": \"{{$randomFullName}}\",\r\n        \"gender\": \"male\",\r\n        \"ageRange\": \"{{$randomInt}}-{{$randomInt}}\",\r\n        \"nationalIdNumber\": \"{{$randomInt}}{{$randomInt}}{{$randomInt}}{{$randomInt}}\",\r\n        \"email\": \"{{$randomEmail}}\",\r\n        \"phoneNumber\": \"+{{$randomPhoneNumber}}\",\r\n        \"whatsappNumber\": \"+{{$randomPhoneNumber}}\",\r\n        \"homeAddress\": \"{{$randomStreetAddress}}\",\r\n        \"countyDistrict\": \"{{$randomCountry}}\",\r\n        \"country\": \"{{$randomCountry}}\",\r\n        \"farmLocation\": \"{{$randomCity}}\",\r\n        \"farmSize\": 5.2,\r\n        \"actualFarmSize\": \"5.2 hectares\",\r\n        \"landOwnershipStatus\": \"Owned\",\r\n        \"yearsFarmingExperience\": \"10\",\r\n        \"crops\": [\r\n            {\r\n                \"cropName\": \"{{$randomProductMaterial}}\"\r\n            },\r\n            {\r\n                \"cropName\": \"{{$randomProductMaterial}}\"\r\n            }\r\n        ],\r\n        \"averageAnnualYield\": \"20 tons\",\r\n        \"farmingPractices\": \"Organic farming, Mixed cropping\",\r\n        \"annualFarmingRevenue\": \"₦3,000,000\",\r\n        \"accessToCredit\": \"Yes\",\r\n        \"previousInsurance\": \"No\",\r\n        \"produceSaleLocation\": \"Local market\",\r\n        \"financialChallenge\": \"High input cost\",\r\n        \"recentChallenges\": \"Flooding, Pest invasion\",\r\n        \"soilManagement\": \"Crop rotation, Compost use\",\r\n        \"irrigationAccess\": true,\r\n        \"climateResilientProgram\": true,\r\n        \"sustainablePractices\": \"Use of compost, minimal tillage\",\r\n        \"carbonCreditProgram\": false,\r\n        \"cropInsuranceInterest\": true,\r\n        \"paymentFrequency\": \"Quarterly\",\r\n        \"insuranceConcerns\": \"High premium cost\",\r\n        \"recommendInsurance\": \"Yes, to fellow farmers\",\r\n        \"farmPhotos\": [\r\n            {\r\n                \"photoUrl\": \"https://example.com/farm1.jpg\"\r\n            },\r\n            {\r\n                \"photoUrl\": \"https://example.com/farm2.jpg\"\r\n            }\r\n        ],\r\n        \"dataConsent\": true\r\n    },\r\n    {\r\n        \"fullName\": \"{{$randomFullName}}\",\r\n        \"gender\": \"male\",\r\n        \"ageRange\": \"{{$randomInt}}-{{$randomInt}}\",\r\n        \"nationalIdNumber\": \"{{$randomInt}}{{$randomInt}}{{$randomInt}}{{$randomInt}}\",\r\n        \"email\": \"{{$randomEmail}}\",\r\n        \"phoneNumber\": \"+{{$randomPhoneNumber}}\",\r\n        \"whatsappNumber\": \"+{{$randomPhoneNumber}}\",\r\n        \"homeAddress\": \"{{$randomStreetAddress}}\",\r\n        \"countyDistrict\": \"{{$randomCountry}}\",\r\n        \"country\": \"{{$randomCountry}}\",\r\n        \"farmLocation\": \"{{$randomCity}}\",\r\n        \"farmSize\": 5.2,\r\n        \"actualFarmSize\": \"5.2 hectares\",\r\n        \"landOwnershipStatus\": \"Owned\",\r\n        \"yearsFarmingExperience\": \"10\",\r\n        \"crops\": [\r\n            {\r\n                \"cropName\": \"{{$randomProductMaterial}}\"\r\n            },\r\n            {\r\n                \"cropName\": \"{{$randomProductMaterial}}\"\r\n            }\r\n        ],\r\n        \"averageAnnualYield\": \"20 tons\",\r\n        \"farmingPractices\": \"Organic farming, Mixed cropping\",\r\n        \"annualFarmingRevenue\": \"₦3,000,000\",\r\n        \"accessToCredit\": \"Yes\",\r\n        \"previousInsurance\": \"No\",\r\n        \"produceSaleLocation\": \"Local market\",\r\n        \"financialChallenge\": \"High input cost\",\r\n        \"recentChallenges\": \"Flooding, Pest invasion\",\r\n        \"soilManagement\": \"Crop rotation, Compost use\",\r\n        \"irrigationAccess\": true,\r\n        \"climateResilientProgram\": true,\r\n        \"sustainablePractices\": \"Use of compost, minimal tillage\",\r\n        \"carbonCreditProgram\": false,\r\n        \"cropInsuranceInterest\": true,\r\n        \"paymentFrequency\": \"Quarterly\",\r\n        \"insuranceConcerns\": \"High premium cost\",\r\n        \"recommendInsurance\": \"Yes, to fellow farmers\",\r\n        \"farmPhotos\": [\r\n            {\r\n                \"photoUrl\": \"https://example.com/farm1.jpg\"\r\n            },\r\n            {\r\n                \"photoUrl\": \"https://example.com/farm2.jpg\"\r\n            }\r\n        ],\r\n        \"dataConsent\": true\r\n    },\r\n    {\r\n        \"fullName\": \"{{$randomFullName}}\",\r\n        \"gender\": \"male\",\r\n        \"ageRange\": \"{{$randomInt}}-{{$randomInt}}\",\r\n        \"nationalIdNumber\": \"{{$randomInt}}{{$randomInt}}{{$randomInt}}{{$randomInt}}\",\r\n        \"email\": \"{{$randomEmail}}\",\r\n        \"phoneNumber\": \"+{{$randomPhoneNumber}}\",\r\n        \"whatsappNumber\": \"+{{$randomPhoneNumber}}\",\r\n        \"homeAddress\": \"{{$randomStreetAddress}}\",\r\n        \"countyDistrict\": \"{{$randomCountry}}\",\r\n        \"country\": \"{{$randomCountry}}\",\r\n        \"farmLocation\": \"{{$randomCity}}\",\r\n        \"farmSize\": 5.2,\r\n        \"actualFarmSize\": \"5.2 hectares\",\r\n        \"landOwnershipStatus\": \"Owned\",\r\n        \"yearsFarmingExperience\": \"10\",\r\n        \"crops\": [\r\n            {\r\n                \"cropName\": \"{{$randomProductMaterial}}\"\r\n            },\r\n            {\r\n                \"cropName\": \"{{$randomProductMaterial}}\"\r\n            }\r\n        ],\r\n        \"averageAnnualYield\": \"20 tons\",\r\n        \"farmingPractices\": \"Organic farming, Mixed cropping\",\r\n        \"annualFarmingRevenue\": \"₦3,000,000\",\r\n        \"accessToCredit\": \"Yes\",\r\n        \"previousInsurance\": \"No\",\r\n        \"produceSaleLocation\": \"Local market\",\r\n        \"financialChallenge\": \"High input cost\",\r\n        \"recentChallenges\": \"Flooding, Pest invasion\",\r\n        \"soilManagement\": \"Crop rotation, Compost use\",\r\n        \"irrigationAccess\": true,\r\n        \"climateResilientProgram\": true,\r\n        \"sustainablePractices\": \"Use of compost, minimal tillage\",\r\n        \"carbonCreditProgram\": false,\r\n        \"cropInsuranceInterest\": true,\r\n        \"paymentFrequency\": \"Quarterly\",\r\n        \"insuranceConcerns\": \"High premium cost\",\r\n        \"recommendInsurance\": \"Yes, to fellow farmers\",\r\n        \"farmPhotos\": [\r\n            {\r\n                \"photoUrl\": \"https://example.com/farm1.jpg\"\r\n            },\r\n            {\r\n                \"photoUrl\": \"https://example.com/farm2.jpg\"\r\n            }\r\n        ],\r\n        \"dataConsent\": true\r\n    },\r\n    {\r\n        \"fullName\": \"{{$randomFullName}}\",\r\n        \"gender\": \"male\",\r\n        \"ageRange\": \"{{$randomInt}}-{{$randomInt}}\",\r\n        \"nationalIdNumber\": \"{{$randomInt}}{{$randomInt}}{{$randomInt}}{{$randomInt}}\",\r\n        \"email\": \"{{$randomEmail}}\",\r\n        \"phoneNumber\": \"+{{$randomPhoneNumber}}\",\r\n        \"whatsappNumber\": \"+{{$randomPhoneNumber}}\",\r\n        \"homeAddress\": \"{{$randomStreetAddress}}\",\r\n        \"countyDistrict\": \"{{$randomCountry}}\",\r\n        \"country\": \"{{$randomCountry}}\",\r\n        \"farmLocation\": \"{{$randomCity}}\",\r\n        \"farmSize\": 5.2,\r\n        \"actualFarmSize\": \"5.2 hectares\",\r\n        \"landOwnershipStatus\": \"Owned\",\r\n        \"yearsFarmingExperience\": \"10\",\r\n        \"crops\": [\r\n            {\r\n                \"cropName\": \"{{$randomProductMaterial}}\"\r\n            },\r\n            {\r\n                \"cropName\": \"{{$randomProductMaterial}}\"\r\n            }\r\n        ],\r\n        \"averageAnnualYield\": \"20 tons\",\r\n        \"farmingPractices\": \"Organic farming, Mixed cropping\",\r\n        \"annualFarmingRevenue\": \"₦3,000,000\",\r\n        \"accessToCredit\": \"Yes\",\r\n        \"previousInsurance\": \"No\",\r\n        \"produceSaleLocation\": \"Local market\",\r\n        \"financialChallenge\": \"High input cost\",\r\n        \"recentChallenges\": \"Flooding, Pest invasion\",\r\n        \"soilManagement\": \"Crop rotation, Compost use\",\r\n        \"irrigationAccess\": true,\r\n        \"climateResilientProgram\": true,\r\n        \"sustainablePractices\": \"Use of compost, minimal tillage\",\r\n        \"carbonCreditProgram\": false,\r\n        \"cropInsuranceInterest\": true,\r\n        \"paymentFrequency\": \"Quarterly\",\r\n        \"insuranceConcerns\": \"High premium cost\",\r\n        \"recommendInsurance\": \"Yes, to fellow farmers\",\r\n        \"farmPhotos\": [\r\n            {\r\n                \"photoUrl\": \"https://example.com/farm1.jpg\"\r\n            },\r\n            {\r\n                \"photoUrl\": \"https://example.com/farm2.jpg\"\r\n            }\r\n        ],\r\n        \"dataConsent\": true\r\n    }\r\n]",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							},
+							"response": []
 						},
-						"url": "{{baseurl}}/farmers/batch"
-					},
-					"response": []
-				},
-				{
-					"name": "Delete farmer",
-					"id": "f3238db3-e7b8-4723-a2c5-1d80f8c8db22",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "{{baseurl}}/farmers/:id",
-							"host": [
-								"{{baseurl}}"
-							],
-							"path": [
-								"farmers",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "2824"
-								}
-							]
+						{
+							"name": "Delete all farmers",
+							"id": "d06b821c-ec5b-4a72-829c-10348899ea8e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "{{baseurl}}/farmers"
+							},
+							"response": []
 						}
-					},
-					"response": []
+					],
+					"id": "54d0c74c-fef0-4d3e-b094-da9ee11dab44"
 				},
 				{
-					"name": "Delete all farmers",
-					"id": "d06b821c-ec5b-4a72-829c-10348899ea8e",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": "{{baseurl}}/farmers"
-					},
-					"response": []
+					"name": "Claims",
+					"item": [],
+					"id": "927eea1b-f48a-4e5c-a48d-3c7d7f3437b9"
 				}
 			],
 			"id": "083a3e6f-5e0d-44c8-b335-d5eb8837312c"
