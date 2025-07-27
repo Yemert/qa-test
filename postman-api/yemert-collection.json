@@ -1033,58 +1033,6 @@
 						}
 					],
 					"id": "776d0506-326c-4d8d-b695-adbc64a3c4ef"
-				},
-				{
-					"name": "Market",
-					"item": [
-						{
-							"name": "Get All Farmers Copy",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "b7272380-fa9c-48c1-b4a6-f5946120368e",
-										"exec": [
-											"var resp = pm.response.json();",
-											"",
-											"pm.test(\"Status code should be 200\", function () {",
-											"    pm.response.to.have.status(200);",
-											"});",
-											"",
-											"pm.test(\"Farmers details are returned\", function () {",
-											"    pm.expect(resp.data.farmers[0].id).is.not.null;",
-											"    pm.expect(resp.data.farmers[0].yemertId).is.not.null;",
-											"});",
-											"",
-											"// There is no information on how to pass the token",
-											"",
-											""
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								}
-							],
-							"id": "7edae2a9-a4bc-405c-a377-6be918894bf1",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Cookie",
-										"value": "",
-										"type": "text",
-										"disabled": true
-									}
-								],
-								"url": "{{baseurl}}/farmers"
-							},
-							"response": []
-						}
-					],
-					"id": "8579e4b8-cb82-4651-bae3-00fe90968267"
 				}
 			],
 			"id": "6504ec7b-f33a-4c40-8a68-a7e139163a34"
@@ -1236,7 +1184,7 @@
 							"response": []
 						},
 						{
-							"name": "Get All Farmers - With pagination",
+							"name": "Get All Farmers - With pagination - successful",
 							"id": "e54cdc83-8c47-4232-95ce-bca47762c9d9",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
