@@ -931,7 +931,7 @@
 					"response": []
 				},
 				{
-					"name": "Admin logout",
+					"name": "Admin logout - successful",
 					"event": [
 						{
 							"listen": "test",
@@ -971,7 +971,52 @@
 								}
 							}
 						},
-						"url": "{{baseurl}}/creator/admin"
+						"url": "{{baseurl}}/admin/logout"
+					},
+					"response": []
+				},
+				{
+					"name": "Admin logout - no auth",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2c033784-29bb-4c07-9527-dbf0838a35c3",
+								"exec": [
+									"var resp = pm.response.json();",
+									"",
+									"pm.test(\"Status code should be 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									"",
+									"pm.test(\"Invalid ID error message is returned\", function () {",
+									"    pm.expect(resp.message).to.eql(\"Admin with email already exists\");",
+									"    pm.expect(resp.success).to.eql(false);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "7862eed8-763a-4100-b3fa-66f7e60845fc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"admin02@yemert.co\",\n  \"role\": \"ADMIN\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/admin/logout"
 					},
 					"response": []
 				}
