@@ -1600,7 +1600,7 @@
 			"name": "USSD",
 			"item": [
 				{
-					"name": "Handle Session Requests",
+					"name": "Handle Session Requests_not tested",
 					"id": "db70ce4e-619e-487e-a5d3-678017805b33",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -1610,7 +1610,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"sessionId\": \"ATUid_12345\",\n  \"serviceCode\": \"*384*96#\",\n  \"phoneNumber\": \"+234810008999\",\n  \"text\": \"\",\n  \"networkCode\": \"63902\"\n}",
+							"raw": "{\n  \"sessionId\": \"ATUid_12345\",\n  \"serviceCode\": \"*384*96#\",\n  \"phoneNumber\": \"+234810008999\",\n  \"text\": \"stuff\",\n  \"networkCode\": \"63902\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
