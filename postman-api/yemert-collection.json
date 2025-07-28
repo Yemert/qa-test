@@ -2069,7 +2069,7 @@
 							"response": []
 						},
 						{
-							"name": "Create  Insurance - no amount",
+							"name": "Create  Insurance - no amount paid",
 							"event": [
 								{
 									"listen": "test",
@@ -2113,7 +2113,7 @@
 							"response": []
 						},
 						{
-							"name": "Create  Insurance - invalid amount",
+							"name": "Create  Insurance - invalid amount paid",
 							"event": [
 								{
 									"listen": "test",
@@ -2126,9 +2126,9 @@
 											"    pm.response.to.have.status(201);",
 											"});",
 											"",
-											"pm.test(\"The amount defaults to zero\", function () {",
+											"pm.test(\"Invalid amount error\", function () {",
 											"    pm.expect(resp.success).to.eql(true);",
-											"    pm.expect(resp.data.amountPaid).to.eql(\"0\");",
+											"    pm.expect(resp.message).to.eql(\"Amount can only be numbers\");",
 											"});"
 										],
 										"type": "text/javascript",
@@ -2145,7 +2145,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"farmerId\": 3887,\r\n    \"plan\": \"starter\",\r\n    \"costOfProduction\": \"100000\",\r\n    //   \"paid\": false,\r\n      \"amountPaid\": \"\",\r\n    //   \"mobileMoney\": false,\r\n    \"cropName\": \"maize\"\r\n}",
+									"raw": "{\r\n    \"farmerId\": 3887,\r\n    \"plan\": \"starter\",\r\n    \"costOfProduction\": \"100000\",\r\n    //   \"paid\": false,\r\n      \"amountPaid\": \"abc\",\r\n    //   \"mobileMoney\": false,\r\n    \"cropName\": \"maize\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
