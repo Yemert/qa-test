@@ -2972,7 +2972,7 @@
 							"response": []
 						},
 						{
-							"name": "Get Claim - For Single Farmer - successul",
+							"name": "Get Claim - For Single Farmer - successful",
 							"event": [
 								{
 									"listen": "test",
@@ -3621,7 +3621,7 @@
 							"response": []
 						},
 						{
-							"name": "Get Market - For Single Farmer - successful Copy 2",
+							"name": "Get Market - For Single Farmer - invalid Yemert ID",
 							"event": [
 								{
 									"listen": "test",
@@ -3673,9 +3673,8 @@
 									],
 									"variable": [
 										{
-											"id": "d3e43cf1-a1bf-476b-b7c4-71eae38ed793",
 											"key": "yemertId",
-											"value": "3641"
+											"value": "awsed"
 										}
 									]
 								}
