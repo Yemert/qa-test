@@ -3088,6 +3088,30 @@
 						},
 						{
 							"name": "Create  Claim - successful",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "1759e520-8ece-4ad5-bc42-6beeebee2eaa",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 201\", function () {",
+											"    pm.response.to.have.status(201);",
+											"});",
+											"",
+											"pm.test(\"Claim is created successfully\", function () {",
+											"    pm.expect(resp.data.type).to.eql(\"floods\");",
+											"    pm.expect(resp.data.farmer.yemertId).to.eql(3641);",
+											"    pm.expect(resp.success).to.eql(true);",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
 							"id": "55716022-e8bb-4b44-a7dc-6b79e9836e1f",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -3368,7 +3392,7 @@
 							"response": []
 						},
 						{
-							"name": "Update a specific claim for a farmer not found Copy",
+							"name": "Update a specific claim for a farmer - successful",
 							"event": [
 								{
 									"listen": "test",
