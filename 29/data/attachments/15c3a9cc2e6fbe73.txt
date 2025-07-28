@@ -1,0 +1,6 @@
+CON Welcome to Yemert!
+Choose your language:
+1. English
+2. Hausa
+3. Yoruba
+4. Igbo
