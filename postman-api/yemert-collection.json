@@ -1891,6 +1891,31 @@
 						},
 						{
 							"name": "Get Insurance - For Single Farmer",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "cb40ec74-b742-4c47-bc59-1869cbb5db08",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Farmer Insurance details are returned successfully\", function () {",
+											"    pm.expect(resp.success).to.eql(true);",
+											"    pm.expect(resp.data.farmer.id).is.not.null;",
+											"    pm.expect(resp.data.farmer.yemertId).is.not.null;",
+											"    pm.expect(resp.data.farmer.fullName).is.not.null;",
+											"    pm.expect(resp.data.farmer.phoneNumber).is.not.null;",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
 							"id": "b669c30d-9b8b-49a5-8c9d-eff65ba0833f",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -1916,7 +1941,7 @@
 									"variable": [
 										{
 											"key": "yemertID",
-											"value": "1726"
+											"value": "3887"
 										}
 									]
 								}
