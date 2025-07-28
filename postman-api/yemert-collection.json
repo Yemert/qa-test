@@ -3087,7 +3087,7 @@
 							"response": []
 						},
 						{
-							"name": "Create  Claim",
+							"name": "Create  Claim - successful",
 							"id": "55716022-e8bb-4b44-a7dc-6b79e9836e1f",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -3109,7 +3109,7 @@
 							"response": []
 						},
 						{
-							"name": "Create  Claim Copy",
+							"name": "Create Claim - no farmerId",
 							"id": "e37502b9-7a99-42c4-a571-32b30b112698",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -3131,7 +3131,7 @@
 							"response": []
 						},
 						{
-							"name": "Create  Claim Copy 2",
+							"name": "Create Claim - no Type",
 							"id": "995f48b5-3da6-4ca8-9053-5cecae30df30",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
