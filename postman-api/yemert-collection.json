@@ -624,7 +624,7 @@
 										}
 									}
 								},
-								"url": "{{baseurl}}/creator/admin"
+								"url": "{{baseurl}}/admin"
 							},
 							"response": []
 						},
@@ -669,7 +669,7 @@
 										}
 									}
 								},
-								"url": "{{baseurl}}/creator/admin"
+								"url": "{{baseurl}}/admin"
 							},
 							"response": []
 						},
@@ -3927,7 +3927,7 @@
 							"response": []
 						},
 						{
-							"name": "Create  Market - price per kg Copy",
+							"name": "Create  Market - postNow not present",
 							"event": [
 								{
 									"listen": "test",
@@ -3941,8 +3941,8 @@
 											"});",
 											"",
 											"pm.test(\"Farmer ID error is returned\", function () {",
-											"    pm.expect(resp.errors[0].field).to.eql(\"pricePerKG\");",
-											"    pm.expect(resp.errors[0].message).to.eql(\"Price per KG must be a number\");",
+											"    pm.expect(resp.errors[0].field).to.eql(\"postNow\");",
+											"    pm.expect(resp.errors[0].message).to.eql(\"Post now must be a boolean\");",
 											"    pm.expect(resp.success).to.eql(false);",
 											"});",
 											""
@@ -3961,7 +3961,53 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"farmerId\": 7213,\r\n  \"cropName\": \"peas\",\r\n  \"pricePerKG\": \"\",\r\n  \"postNow\": true\r\n}",
+									"raw": "{\r\n  \"farmerId\": 7213,\r\n  \"cropName\": \"peas\",\r\n  \"pricePerKG\": 54,\r\n  \"postNow\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseurl}}/yemert/secure/market"
+							},
+							"response": []
+						},
+						{
+							"name": "Create  Market - successful",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "73d583c4-6d1d-47e8-8bc9-e919e8e0e446",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 400\", function () {",
+											"    pm.response.to.have.status(400);",
+											"});",
+											"",
+											"pm.test(\"Farmer ID error is returned\", function () {",
+											"    pm.expect(resp.errors[0].field).to.eql(\"postNow\");",
+											"    pm.expect(resp.errors[0].message).to.eql(\"Post now must be a boolean\");",
+											"    pm.expect(resp.success).to.eql(false);",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "92a83316-0513-43e7-9441-ab556c1551dd",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"farmerId\": 7213,\r\n  \"cropName\": \"peas\",\r\n  \"pricePerKG\": 54,\r\n  \"postNow\": \"\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
