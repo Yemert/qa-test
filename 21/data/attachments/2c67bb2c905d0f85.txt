@@ -1,0 +1,51 @@
+{
+    "fullName": "Ms. Virgil Lynch",
+    "gender": "male",
+    "ageRange": "637-860",
+    "nationalIdNumber": "315199346702",
+    "email": "Mayra.Robel86@yahoo.com",
+    "phoneNumber": "+1234567890",
+    "whatsappNumber": "+542-995-5558",
+    "homeAddress": "701 Ona Route",
+    "countyDistrict": "Peru",
+    "country": "Netherlands",
+    "farmLocation": "North Tamia",
+    "farmSize": 5.2,
+    "actualFarmSize": "5.2 hectares",
+    "landOwnershipStatus": "Owned",
+    "yearsFarmingExperience": "10",
+    "crops": [
+        {
+            "cropName": "Concrete"
+        },
+        {
+            "cropName": "Metal"
+        }
+    ],
+    "averageAnnualYield": "20 tons",
+    "farmingPractices": "Organic farming, Mixed cropping",
+    "annualFarmingRevenue": "₦3,000,000",
+    "accessToCredit": "Yes",
+    "previousInsurance": "No",
+    "produceSaleLocation": "Local market",
+    "financialChallenge": "High input cost",
+    "recentChallenges": "Flooding, Pest invasion",
+    "soilManagement": "Crop rotation, Compost use",
+    "irrigationAccess": true,
+    "climateResilientProgram": true,
+    "sustainablePractices": "Use of compost, minimal tillage",
+    "carbonCreditProgram": false,
+    "cropInsuranceInterest": true,
+    "paymentFrequency": "Quarterly",
+    "insuranceConcerns": "High premium cost",
+    "recommendInsurance": "Yes, to fellow farmers",
+    "farmPhotos": [
+        {
+            "photoUrl": "https://example.com/farm1.jpg"
+        },
+        {
+            "photoUrl": "https://example.com/farm2.jpg"
+        }
+    ],
+    "dataConsent": true
+}
