@@ -3306,7 +3306,7 @@
 							"response": []
 						},
 						{
-							"name": "Update a specific claim for a farmer - successful",
+							"name": "Update a specific claim for a farmer not found",
 							"event": [
 								{
 									"listen": "test",
@@ -3360,7 +3360,70 @@
 									"variable": [
 										{
 											"key": "yemertId",
-											"value": "2585"
+											"value": "323232"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update a specific claim for a farmer not found Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "bbf6ff82-a5a0-46ca-97f6-c777b50fc6df",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 400\", function () {",
+											"    pm.response.to.have.status(400);",
+											"});",
+											"",
+											"pm.test(\"Farmer not found error is returned\", function () {",
+											"    pm.expect(resp.message).to.eql(\"Farmer not found\");",
+											"    pm.expect(resp.success).to.eql(false);",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "1084cd99-89bc-4a24-8aaa-8e3e1c4cbc67",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"claimId\": 8,\r\n  \"type\": \"pests\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/yemert/secure/claims/:yemertId",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"yemert",
+										"secure",
+										"claims",
+										":yemertId"
+									],
+									"variable": [
+										{
+											"id": "d2a5533a-2c1b-4eb7-a92d-329b360c03a4",
+											"key": "yemertId",
+											"value": "323232"
 										}
 									]
 								}
