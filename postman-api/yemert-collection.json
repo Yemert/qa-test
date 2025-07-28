@@ -3154,7 +3154,75 @@
 							"response": []
 						},
 						{
+							"name": "Create Claim - FarmerId does not exist",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "5a7b79f3-36f2-4c45-8573-72f72c24227f",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 400\", function () {",
+											"    pm.response.to.have.status(400);",
+											"});",
+											"",
+											"pm.test(\"Farmer ID error is returned\", function () {",
+											"    pm.expect(resp.message).to.eql(\"Farmer ID must be a number\");",
+											"    pm.expect(resp.success).to.eql(false);",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "893a9567-741a-4eed-802e-b4f0599ae4bb",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"farmerId\": \"\",\r\n  \"type\": \"floods\"\r\n//   \"whatsapp\": true,\r\n//   \"number\": \"08100000012\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseurl}}/yemert/secure/claims"
+							},
+							"response": []
+						},
+						{
 							"name": "Create Claim - no Type",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "6f7e39f5-0494-4902-b2b6-41f68e4fb988",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 400\", function () {",
+											"    pm.response.to.have.status(400);",
+											"});",
+											"",
+											"pm.test(\"Farmer ID error is returned\", function () {",
+											"    pm.expect(resp.message).to.eql(\"Type is required\");",
+											"    pm.expect(resp.success).to.eql(false);",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
 							"id": "995f48b5-3da6-4ca8-9053-5cecae30df30",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -3164,7 +3232,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"farmerId\": 3641,\r\n  \"type\": \"floods\"\r\n//   \"whatsapp\": true,\r\n//   \"number\": \"08100000012\"\r\n}",
+									"raw": "{\r\n  \"farmerId\": 3641,\r\n  \"type\": \"\"\r\n//   \"whatsapp\": true,\r\n//   \"number\": \"08100000012\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
