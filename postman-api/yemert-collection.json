@@ -237,7 +237,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"id\": \"\",\n  \"password\": \"AdminPass123!\"\n}",
+									"raw": "{\n  \"id\": \"\",\n  \"password\": \"Admin001\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
