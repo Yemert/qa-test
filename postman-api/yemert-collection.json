@@ -3244,7 +3244,30 @@
 							"response": []
 						},
 						{
-							"name": "Update a specific claim for a farmer - successful",
+							"name": "Update a specific claim for a farmer - no YemertID",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "ca7cc7ec-e90e-472b-a63d-feaf37cf8ae6",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 400\", function () {",
+											"    pm.response.to.have.status(400);",
+											"});",
+											"",
+											"pm.test(\"Farmer not found error is returned\", function () {",
+											"    pm.expect(resp.message).to.eql(\"Invalid Yemert ID format\");",
+											"    pm.expect(resp.success).to.eql(false);",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
 							"id": "0b1963e0-1c32-4aa4-8324-3c87bc7f40ec",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -3261,7 +3284,86 @@
 										}
 									}
 								},
-								"url": "{{baseurl}}/yemert/secure/claims/7213"
+								"url": {
+									"raw": "{{baseurl}}/yemert/secure/claims/:yemertId",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"yemert",
+										"secure",
+										"claims",
+										":yemertId"
+									],
+									"variable": [
+										{
+											"key": "yemertId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update a specific claim for a farmer - successful",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "bbf6ff82-a5a0-46ca-97f6-c777b50fc6df",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 400\", function () {",
+											"    pm.response.to.have.status(400);",
+											"});",
+											"",
+											"pm.test(\"Farmer not found error is returned\", function () {",
+											"    pm.expect(resp.message).to.eql(\"Farmer not found\");",
+											"    pm.expect(resp.success).to.eql(false);",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "39805ea4-692c-4996-867f-b5cea29d5503",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"claimId\": 8,\r\n  \"type\": \"pests\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/yemert/secure/claims/:yemertId",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"yemert",
+										"secure",
+										"claims",
+										":yemertId"
+									],
+									"variable": [
+										{
+											"key": "yemertId",
+											"value": "2585"
+										}
+									]
+								}
 							},
 							"response": []
 						}
