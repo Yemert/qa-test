@@ -2380,7 +2380,7 @@
 							"response": []
 						},
 						{
-							"name": "Update a specific Insurance for a farmer - valid YemertID",
+							"name": "Update a specific farmer Insurance - no InsuranceID",
 							"event": [
 								{
 									"listen": "test",
