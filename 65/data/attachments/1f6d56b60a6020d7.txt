@@ -1,0 +1,19 @@
+{
+    "fullName": "Ms. Dianne Frami",
+    "crops": [
+        {
+            "cropName": "Plastic"
+        },
+        {
+            "cropName": "Metal"
+        }
+    ],
+    "farmPhotos": [
+        {
+            "photoUrl": "https://example.com/farm1.jpg"
+        },
+        {
+            "photoUrl": "https://example.com/farm2.jpg"
+        }
+    ]
+}
