@@ -4022,7 +4022,30 @@
 							"response": []
 						},
 						{
-							"name": "Update a specific market for a farmer",
+							"name": "Update a specific market for a farmer - not existing",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "7a74cd37-e11f-49f9-9c33-fd713999eeed",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 400\", function () {",
+											"    pm.response.to.have.status(400);",
+											"});",
+											"",
+											"pm.test(\"Farmer error is returned\", function () {",
+											"    pm.expect(resp.message).to.eql(\"Farmer not found\");",
+											"    pm.expect(resp.success).to.eql(false);",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
 							"id": "62b4d58a-d8df-4cd2-9194-95402fbe533b",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -4039,7 +4062,87 @@
 										}
 									}
 								},
-								"url": "{{baseurl}}/yemert/secure/market/7213"
+								"url": {
+									"raw": "{{baseurl}}/yemert/secure/market/:yemertId",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"yemert",
+										"secure",
+										"market",
+										":yemertId"
+									],
+									"variable": [
+										{
+											"key": "yemertId",
+											"value": "545566"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update a specific market for a farmer - not existing Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "7a74cd37-e11f-49f9-9c33-fd713999eeed",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 400\", function () {",
+											"    pm.response.to.have.status(400);",
+											"});",
+											"",
+											"pm.test(\"Farmer error is returned\", function () {",
+											"    pm.expect(resp.message).to.eql(\"Farmer not found\");",
+											"    pm.expect(resp.success).to.eql(false);",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "bd18241b-7780-4046-90f4-9f1e2b9db6e8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"marketId\": 4,\r\n  \"cropName\": \"gold egg plants\"\r\n//   \"pricePerKG\": \"600\",\r\n//   \"postNow\": false,\r\n//   \"isActive\": false,\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/yemert/secure/market/:yemertId",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"yemert",
+										"secure",
+										"market",
+										":yemertId"
+									],
+									"variable": [
+										{
+											"id": "e31c0b34-9dd7-4be5-ab45-96a43a26d46c",
+											"key": "yemertId",
+											"value": "545566"
+										}
+									]
+								}
 							},
 							"response": []
 						}
