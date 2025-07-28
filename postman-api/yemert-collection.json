@@ -3837,6 +3837,104 @@
 							"response": []
 						},
 						{
+							"name": "Create  Market Copy 2",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "73d583c4-6d1d-47e8-8bc9-e919e8e0e446",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Market details are returned\", function () {",
+											"    pm.expect(resp.data[0].id).is.not.null;",
+											"    pm.expect(resp.data[0].cropName).is.not.null;",
+											"    pm.expect(resp.data[0].postId).is.not.null;",
+											"    pm.expect(resp.data[0].postNow).is.not.null;",
+											"    pm.expect(resp.data[0].farmer.yemertId).is.not.null;",
+											"    pm.expect(resp.data[0].farmer.fullName).is.not.null;",
+											"    pm.expect(resp.data[0].farmer.phoneNumber).is.not.null;",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "43e77a32-f4dd-4cba-9b10-18bd1c29084c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"farmerId\": 7213,\r\n  \"cropName\": \"peas\",\r\n  \"pricePerKG\": 500,\r\n  \"postNow\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseurl}}/yemert/secure/market"
+							},
+							"response": []
+						},
+						{
+							"name": "Create  Market Copy 3",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "73d583c4-6d1d-47e8-8bc9-e919e8e0e446",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Market details are returned\", function () {",
+											"    pm.expect(resp.data[0].id).is.not.null;",
+											"    pm.expect(resp.data[0].cropName).is.not.null;",
+											"    pm.expect(resp.data[0].postId).is.not.null;",
+											"    pm.expect(resp.data[0].postNow).is.not.null;",
+											"    pm.expect(resp.data[0].farmer.yemertId).is.not.null;",
+											"    pm.expect(resp.data[0].farmer.fullName).is.not.null;",
+											"    pm.expect(resp.data[0].farmer.phoneNumber).is.not.null;",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "95f6e75b-5611-432f-b529-ebd3709c7d98",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"farmerId\": 7213,\r\n  \"cropName\": \"peas\",\r\n  \"pricePerKG\": 500,\r\n  \"postNow\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseurl}}/yemert/secure/market"
+							},
+							"response": []
+						},
+						{
 							"name": "Update a specific market for a farmer Copy",
 							"id": "62b4d58a-d8df-4cd2-9194-95402fbe533b",
 							"protocolProfileBehavior": {
