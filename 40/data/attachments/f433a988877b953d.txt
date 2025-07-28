@@ -1,0 +1,9 @@
+{
+    "farmerId": 3887,
+    "plan": "",
+    "costOfProduction": "100000",
+    
+      "amountPaid": "1",
+    
+    "cropName": "maize"
+}
