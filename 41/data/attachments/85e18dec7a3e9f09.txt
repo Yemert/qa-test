@@ -1,0 +1,51 @@
+{
+    "fullName": "Earl Hartmann",
+    "gender": "male",
+    "ageRange": "895-657",
+    "nationalIdNumber": "82359059536",
+    "email": "Hattie_Wisozk85@yahoo.com",
+    "phoneNumber": "+1234567890",
+    "whatsappNumber": "+249-652-6478",
+    "homeAddress": "05459 Blanca Rest",
+    "countyDistrict": "Palau",
+    "country": "Czech Republic",
+    "farmLocation": "West Raymundo",
+    "farmSize": 5.2,
+    "actualFarmSize": "5.2 hectares",
+    "landOwnershipStatus": "Owned",
+    "yearsFarmingExperience": "10",
+    "crops": [
+        {
+            "cropName": "Soft"
+        },
+        {
+            "cropName": "Rubber"
+        }
+    ],
+    "averageAnnualYield": "20 tons",
+    "farmingPractices": "Organic farming, Mixed cropping",
+    "annualFarmingRevenue": "₦3,000,000",
+    "accessToCredit": "Yes",
+    "previousInsurance": "No",
+    "produceSaleLocation": "Local market",
+    "financialChallenge": "High input cost",
+    "recentChallenges": "Flooding, Pest invasion",
+    "soilManagement": "Crop rotation, Compost use",
+    "irrigationAccess": true,
+    "climateResilientProgram": true,
+    "sustainablePractices": "Use of compost, minimal tillage",
+    "carbonCreditProgram": false,
+    "cropInsuranceInterest": true,
+    "paymentFrequency": "Quarterly",
+    "insuranceConcerns": "High premium cost",
+    "recommendInsurance": "Yes, to fellow farmers",
+    "farmPhotos": [
+        {
+            "photoUrl": "https://example.com/farm1.jpg"
+        },
+        {
+            "photoUrl": "https://example.com/farm2.jpg"
+        }
+    ],
+    "dataConsent": true
+}
