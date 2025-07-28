@@ -2750,7 +2750,7 @@
 							"response": []
 						},
 						{
-							"name": "Update a specific farmer Insurance - successful",
+							"name": "Update a specific farmer Insurance - no plan",
 							"event": [
 								{
 									"listen": "test",
@@ -2765,7 +2765,7 @@
 											"",
 											"pm.test(\"Error related to missing farmer is returned\", function () {",
 											"    pm.expect(resp.success).to.eql(false);",
-											"    pm.expect(resp.message).to.eql(\"Insurance ID is required\");",
+											"    pm.expect(resp.message).to.eql(\"Plan is required\");",
 											"});"
 										],
 										"type": "text/javascript",
@@ -2795,7 +2795,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"insuranceId\": \"\",\r\n    \"plan\": \"starter\",\r\n    \"costOfProduction\": \"100000\",\r\n    \"amountPaid\": \"3\",\r\n    \"cropName\": \"maize\"\r\n}",
+									"raw": "{\r\n    \"insuranceId\": 9,\r\n    \"plan\": \"\",\r\n    \"costOfProduction\": \"100000\",\r\n    \"amountPaid\": \"3\",\r\n    \"cropName\": \"maize\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2815,7 +2815,155 @@
 									],
 									"variable": [
 										{
-											"id": "6783d503-2889-4163-a0e8-2cf084885461",
+											"key": "insuranceID",
+											"value": "3887"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update a specific farmer Insurance - invalid plan",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "ed6cd8b0-154e-4947-90cd-f0b1be2d7ac5",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 400\", function () {",
+											"    pm.response.to.have.status(400);",
+											"});",
+											"",
+											"pm.test(\"Error related to missing farmer is returned\", function () {",
+											"    pm.expect(resp.success).to.eql(false);",
+											"    pm.expect(resp.message).to.eql(\"Invalid plan. Must be one of: starter, standard, extended\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "08ea6f31-caba-4cee-be01-36a57aa7654e",
+										"exec": [
+											"// Set environment variables for request body",
+											"pm.environment.set(\"insuranceId\", Math.floor(Math.random() * 100) + 1); // Random insuranceId between 1 and 100",
+											"pm.environment.set(\"plan\", Math.random().toString(36).substring(2, 15)); // Random string for plan"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "272d2a7f-d3a2-41b3-a804-90d6e577f240",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"insuranceId\": 9,\r\n    \"plan\": \"hello\",\r\n    \"costOfProduction\": \"100000\",\r\n    \"amountPaid\": \"3\",\r\n    \"cropName\": \"maize\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/yemert/secure/insurance/:insuranceID",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"yemert",
+										"secure",
+										"insurance",
+										":insuranceID"
+									],
+									"variable": [
+										{
+											"key": "insuranceID",
+											"value": "3887"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update a specific farmer Insurance - invalid plan Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "ed6cd8b0-154e-4947-90cd-f0b1be2d7ac5",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 400\", function () {",
+											"    pm.response.to.have.status(400);",
+											"});",
+											"",
+											"pm.test(\"Error related to missing farmer is returned\", function () {",
+											"    pm.expect(resp.success).to.eql(false);",
+											"    pm.expect(resp.message).to.eql(\"Invalid plan. Must be one of: starter, standard, extended\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "08ea6f31-caba-4cee-be01-36a57aa7654e",
+										"exec": [
+											"// Set environment variables for request body",
+											"pm.environment.set(\"insuranceId\", Math.floor(Math.random() * 100) + 1); // Random insuranceId between 1 and 100",
+											"pm.environment.set(\"plan\", Math.random().toString(36).substring(2, 15)); // Random string for plan"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "5fec71ff-fa92-46cd-9a91-9350692cc815",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"insuranceId\": 9,\r\n    \"plan\": \"hello\",\r\n    \"costOfProduction\": \"100000\",\r\n    \"amountPaid\": \"3\",\r\n    \"cropName\": \"maize\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/yemert/secure/insurance/:insuranceID",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"yemert",
+										"secure",
+										"insurance",
+										":insuranceID"
+									],
+									"variable": [
+										{
+											"id": "b534e491-f81f-4031-875a-2666749b87a4",
 											"key": "insuranceID",
 											"value": "3887"
 										}
