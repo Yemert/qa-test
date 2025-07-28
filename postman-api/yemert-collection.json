@@ -3401,13 +3401,16 @@
 										"exec": [
 											"var resp = pm.response.json();",
 											"",
-											"pm.test(\"Status code should be 400\", function () {",
-											"    pm.response.to.have.status(400);",
+											"pm.test(\"Status code should be 200\", function () {",
+											"    pm.response.to.have.status(200);",
 											"});",
 											"",
-											"pm.test(\"Farmer not found error is returned\", function () {",
-											"    pm.expect(resp.message).to.eql(\"Farmer not found\");",
-											"    pm.expect(resp.success).to.eql(false);",
+											"pm.test(\"Claim updated successfully\", function () {",
+											"    pm.expect(resp.message).to.eql(\"Claim updated successfully\");",
+											"    pm.expect(resp.data.farmer.yemertId).to.eql(3641);",
+											"    pm.expect(resp.data.farmer.fullName).to.eql(\"Jane Adabayo\");",
+											"    pm.expect(resp.data.claim.id).to.eql(8);",
+											"    pm.expect(resp.data.claim.type).to.eql(\"pillows\");",
 											"});",
 											""
 										],
@@ -3425,7 +3428,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"claimId\": 8,\r\n  \"type\": \"pests\"\r\n}",
+									"raw": "{\r\n  \"claimId\": 8,\r\n  \"type\": \"pillows\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3445,9 +3448,8 @@
 									],
 									"variable": [
 										{
-											"id": "d2a5533a-2c1b-4eb7-a92d-329b360c03a4",
 											"key": "yemertId",
-											"value": "323232"
+											"value": "3641"
 										}
 									]
 								}
