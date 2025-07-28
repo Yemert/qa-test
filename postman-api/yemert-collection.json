@@ -2602,7 +2602,7 @@
 							"response": []
 						},
 						{
-							"name": "Update a specific Insurance for a farmer - invalid YemertID",
+							"name": "Update a specific Insurance for a farmer - non-existent YemertID",
 							"event": [
 								{
 									"listen": "test",
@@ -2676,7 +2676,81 @@
 							"response": []
 						},
 						{
-							"name": "Update a specific farmer Insurance - no InsuranceID Copy",
+							"name": "Update a specific Insurance for a farmer - invalid YemertID",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "ed6cd8b0-154e-4947-90cd-f0b1be2d7ac5",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 400\", function () {",
+											"    pm.response.to.have.status(400);",
+											"});",
+											"",
+											"pm.test(\"Error related to missing farmer is returned\", function () {",
+											"    pm.expect(resp.success).to.eql(false);",
+											"    pm.expect(resp.message).to.eql(\"Invalid Yemert ID format\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "32332b0b-5795-4c5c-896f-92afc9c3ec48",
+										"exec": [
+											"// Set environment variables for request body",
+											"pm.environment.set(\"insuranceId\", Math.floor(Math.random() * 100) + 1); // Random insuranceId between 1 and 100",
+											"pm.environment.set(\"plan\", Math.random().toString(36).substring(2, 15)); // Random string for plan"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "6f937685-63ad-4da2-8a5e-b2897bdaed44",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"insuranceId\": 230,\r\n    \"plan\": \"starter\",\r\n    \"costOfProduction\": \"100000\",\r\n    \"amountPaid\": \"3\",\r\n    \"cropName\": \"maize\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/yemert/secure/insurance/:yemertID",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"yemert",
+										"secure",
+										"insurance",
+										":yemertID"
+									],
+									"variable": [
+										{
+											"key": "yemertID",
+											"value": "avcd"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update a specific farmer Insurance - successful",
 							"event": [
 								{
 									"listen": "test",
