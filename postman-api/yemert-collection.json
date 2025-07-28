@@ -1589,174 +1589,6 @@
 								}
 							},
 							"response": []
-						},
-						{
-							"name": "Delete all claims",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "2c033784-29bb-4c07-9527-dbf0838a35c3",
-										"exec": [
-											"var resp = pm.response.json();",
-											"",
-											"pm.test(\"Status code should be 400\", function () {",
-											"    pm.response.to.have.status(400);",
-											"});",
-											"",
-											"pm.test(\"Invalid ID error message is returned\", function () {",
-											"    pm.expect(resp.message).to.eql(\"Admin with email already exists\");",
-											"    pm.expect(resp.success).to.eql(false);",
-											"});",
-											""
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								}
-							],
-							"id": "47041e9b-7507-49be-b163-94d55bb2b857",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{baseurl}}/farmers/claims/all"
-							},
-							"response": []
-						},
-						{
-							"name": "Delete all claims for a farmer",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "2c033784-29bb-4c07-9527-dbf0838a35c3",
-										"exec": [
-											"var resp = pm.response.json();",
-											"",
-											"pm.test(\"Status code should be 400\", function () {",
-											"    pm.response.to.have.status(400);",
-											"});",
-											"",
-											"pm.test(\"Invalid ID error message is returned\", function () {",
-											"    pm.expect(resp.message).to.eql(\"Admin with email already exists\");",
-											"    pm.expect(resp.success).to.eql(false);",
-											"});",
-											""
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								}
-							],
-							"id": "a8f6843c-345e-4324-a8e0-5efcf90a3f95",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{baseurl}}/farmers/claims/farmer/:yemertId",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"farmers",
-										"claims",
-										"farmer",
-										":yemertId"
-									],
-									"variable": [
-										{
-											"key": "yemertId",
-											"value": "yemertId"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Delete a single claim",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "2c033784-29bb-4c07-9527-dbf0838a35c3",
-										"exec": [
-											"var resp = pm.response.json();",
-											"",
-											"pm.test(\"Status code should be 400\", function () {",
-											"    pm.response.to.have.status(400);",
-											"});",
-											"",
-											"pm.test(\"Invalid ID error message is returned\", function () {",
-											"    pm.expect(resp.message).to.eql(\"Admin with email already exists\");",
-											"    pm.expect(resp.success).to.eql(false);",
-											"});",
-											""
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								}
-							],
-							"id": "f93444c7-294a-4e33-8ea0-67dd0da59c65",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{baseurl}}/farmers/claims/:claimID",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"farmers",
-										"claims",
-										":claimID"
-									],
-									"variable": [
-										{
-											"key": "claimID",
-											"value": "claimID"
-										}
-									]
-								}
-							},
-							"response": []
 						}
 					],
 					"id": "927eea1b-f48a-4e5c-a48d-3c7d7f3437b9"
@@ -4219,14 +4051,13 @@
 										"exec": [
 											"var resp = pm.response.json();",
 											"",
-											"pm.test(\"Status code should be 400\", function () {",
-											"    pm.response.to.have.status(400);",
+											"pm.test(\"Status code should be 200\", function () {",
+											"    pm.response.to.have.status(200);",
 											"});",
 											"",
-											"pm.test(\"Farmer ID error is returned\", function () {",
-											"    pm.expect(resp.errors[0].field).to.eql(\"marketId\");",
-											"    pm.expect(resp.errors[0].message).to.eql(\"Crop name is required\");",
-											"    pm.expect(resp.success).to.eql(false);",
+											"pm.test(\"Successful response is returned\", function () {",
+											"    pm.expect(resp.data.market.id).to.eql(4);",
+											"    pm.expect(resp.data.market.cropName).to.eql(\"Raspberries\");",
 											"});",
 											""
 										],
@@ -4244,7 +4075,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"marketId\": 4,\r\n  \"cropName\": \"\"\r\n//   \"pricePerKG\": \"600\",\r\n//   \"postNow\": false,\r\n//   \"isActive\": false,\r\n\r\n}",
+									"raw": "{\r\n  \"marketId\": 4,\r\n  \"cropName\": \"Raspberries\"\r\n//   \"pricePerKG\": \"600\",\r\n//   \"postNow\": false,\r\n//   \"isActive\": false,\r\n\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -4264,7 +4095,6 @@
 									],
 									"variable": [
 										{
-											"id": "78f2abbf-54aa-4880-add8-e5d66e486a3b",
 											"key": "yemertId",
 											"value": "3641"
 										}
