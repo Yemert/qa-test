@@ -1,0 +1,12 @@
+{
+    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjo3MjU3MzksInJvbGUiOiJBRE1JTiIsImlhdCI6MTc1Mzc0MTU2OCwiZXhwIjoxNzUzNzQ4NzY4fQ.zjZ0qe5NKQ1EvA8V4-TF1cPqFcTMRlK9H2rWcRIisIA",
+    "User-Agent": "PostmanRuntime/7.39.1",
+    "Accept": "*/*",
+    "Cache-Control": "no-cache",
+    "Postman-Token": "55a4ca3c-cf6e-45a3-93d4-895e739462e5",
+    "Host": "staging.yemert.co",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive",
+    "Cookie": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjo3MjU3MzksInJvbGUiOiJBRE1JTiIsImlhdCI6MTc1Mzc0MTU2OCwiZXhwIjoxNzUzNzQ4NzY4fQ.zjZ0qe5NKQ1EvA8V4-TF1cPqFcTMRlK9H2rWcRIisIA",
+    "Content-Length": "0"
+}
