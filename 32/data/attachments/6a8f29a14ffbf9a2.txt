@@ -1,0 +1,51 @@
+{
+    "fullName": "Mr. Brenda Morar",
+    "gender": "male",
+    "ageRange": "467-493",
+    "nationalIdNumber": "701365218652",
+    "email": "Taryn56@hotmail.com",
+    "phoneNumber": "+1234567890",
+    "whatsappNumber": "+591-532-5878",
+    "homeAddress": "807 Heathcote Plains",
+    "countyDistrict": "Falkland Islands (Malvinas)",
+    "country": "Tanzania",
+    "farmLocation": "Port Aurelia",
+    "farmSize": 5.2,
+    "actualFarmSize": "5.2 hectares",
+    "landOwnershipStatus": "Owned",
+    "yearsFarmingExperience": "10",
+    "crops": [
+        {
+            "cropName": "Granite"
+        },
+        {
+            "cropName": "Steel"
+        }
+    ],
+    "averageAnnualYield": "20 tons",
+    "farmingPractices": "Organic farming, Mixed cropping",
+    "annualFarmingRevenue": "₦3,000,000",
+    "accessToCredit": "Yes",
+    "previousInsurance": "No",
+    "produceSaleLocation": "Local market",
+    "financialChallenge": "High input cost",
+    "recentChallenges": "Flooding, Pest invasion",
+    "soilManagement": "Crop rotation, Compost use",
+    "irrigationAccess": true,
+    "climateResilientProgram": true,
+    "sustainablePractices": "Use of compost, minimal tillage",
+    "carbonCreditProgram": false,
+    "cropInsuranceInterest": true,
+    "paymentFrequency": "Quarterly",
+    "insuranceConcerns": "High premium cost",
+    "recommendInsurance": "Yes, to fellow farmers",
+    "farmPhotos": [
+        {
+            "photoUrl": "https://example.com/farm1.jpg"
+        },
+        {
+            "photoUrl": "https://example.com/farm2.jpg"
+        }
+    ],
+    "dataConsent": true
+}
