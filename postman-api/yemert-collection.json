@@ -1469,7 +1469,7 @@
 					"name": "Claims",
 					"item": [
 						{
-							"name": "Update Claims",
+							"name": "Update Claims_needs_review",
 							"event": [
 								{
 									"listen": "test",
@@ -1530,7 +1530,7 @@
 							"response": []
 						},
 						{
-							"name": "Get Claims",
+							"name": "Get Claims_needs_review",
 							"event": [
 								{
 									"listen": "test",
