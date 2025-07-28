@@ -2043,7 +2043,7 @@
 											"",
 											"pm.test(\"Error related to missing farmer is returned\", function () {",
 											"    pm.expect(resp.success).to.eql(false);",
-											"    pm.expect(resp.message).to.eql(\"Farmer details is required\");",
+											"    pm.expect(resp.message).to.eql(\"Farmer ID is required\");",
 											"});"
 										],
 										"type": "text/javascript",
@@ -2061,6 +2061,50 @@
 								"body": {
 									"mode": "raw",
 									"raw": "{\r\n    \"farmerId\": \"\",\r\n    \"plan\": \"starter\",\r\n    \"costOfProduction\": \"100000\",\r\n    //   \"paid\": false,\r\n      \"amountPaid\": \"1\",\r\n    //   \"mobileMoney\": false,\r\n    \"cropName\": \"maize\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseurl}}/yemert/secure/insurance"
+							},
+							"response": []
+						},
+						{
+							"name": "Create  Insurance - invalid farmerId",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "d746bd42-1004-4316-9c93-6b6f4441e6d2",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 400\", function () {",
+											"    pm.response.to.have.status(400);",
+											"});",
+											"",
+											"pm.test(\"Error related to missing farmer is returned\", function () {",
+											"    pm.expect(resp.success).to.eql(false);",
+											"    pm.expect(resp.message).to.eql(\"Farmer ID can only be numeric\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "8c9a00cb-c693-4d74-855e-cafad53ca28e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"farmerId\": \"abcd\",\r\n    \"plan\": \"starter\",\r\n    \"costOfProduction\": \"100000\",\r\n    //   \"paid\": false,\r\n      \"amountPaid\": \"1\",\r\n    //   \"mobileMoney\": false,\r\n    \"cropName\": \"maize\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
