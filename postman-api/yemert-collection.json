@@ -4147,7 +4147,7 @@
 							"response": []
 						},
 						{
-							"name": "Update a specific market for a farmer - no Market ID Copy",
+							"name": "Update a specific market for a farmer - no crop name",
 							"event": [
 								{
 									"listen": "test",
@@ -4162,7 +4162,7 @@
 											"",
 											"pm.test(\"Farmer ID error is returned\", function () {",
 											"    pm.expect(resp.errors[0].field).to.eql(\"marketId\");",
-											"    pm.expect(resp.errors[0].message).to.eql(\"Market ID must be a number\");",
+											"    pm.expect(resp.errors[0].message).to.eql(\"Crop name is required\");",
 											"    pm.expect(resp.success).to.eql(false);",
 											"});",
 											""
@@ -4181,7 +4181,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"marketId\": \"\",\r\n  \"cropName\": \"gold egg plants\"\r\n//   \"pricePerKG\": \"600\",\r\n//   \"postNow\": false,\r\n//   \"isActive\": false,\r\n\r\n}",
+									"raw": "{\r\n  \"marketId\": 4,\r\n  \"cropName\": \"\"\r\n//   \"pricePerKG\": \"600\",\r\n//   \"postNow\": false,\r\n//   \"isActive\": false,\r\n\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -4201,7 +4201,70 @@
 									],
 									"variable": [
 										{
-											"id": "276449dc-d814-4bdf-bbda-df138d05de5f",
+											"key": "yemertId",
+											"value": "3641"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update a specific market for a farmer - successful",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "7a74cd37-e11f-49f9-9c33-fd713999eeed",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 400\", function () {",
+											"    pm.response.to.have.status(400);",
+											"});",
+											"",
+											"pm.test(\"Farmer ID error is returned\", function () {",
+											"    pm.expect(resp.errors[0].field).to.eql(\"marketId\");",
+											"    pm.expect(resp.errors[0].message).to.eql(\"Crop name is required\");",
+											"    pm.expect(resp.success).to.eql(false);",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "c6a4e090-1a2d-426f-ab92-22082af3ef38",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"marketId\": 4,\r\n  \"cropName\": \"\"\r\n//   \"pricePerKG\": \"600\",\r\n//   \"postNow\": false,\r\n//   \"isActive\": false,\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/yemert/secure/market/:yemertId",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"yemert",
+										"secure",
+										"market",
+										":yemertId"
+									],
+									"variable": [
+										{
+											"id": "78f2abbf-54aa-4880-add8-e5d66e486a3b",
 											"key": "yemertId",
 											"value": "3641"
 										}
