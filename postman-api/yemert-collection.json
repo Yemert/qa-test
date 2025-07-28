@@ -2380,7 +2380,22 @@
 							"response": []
 						},
 						{
-							"name": "Update a specific Insurance for a farmer",
+							"name": "Update a specific Insurance for a farmer - valid YemertID",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "ed6cd8b0-154e-4947-90cd-f0b1be2d7ac5",
+										"exec": [
+											"// Set environment variables for request body",
+											"pm.environment.set(\"insuranceId\", Math.floor(Math.random() * 100) + 1); // Random insuranceId between 1 and 100",
+											"pm.environment.set(\"plan\", Math.random().toString(36).substring(2, 15)); // Random string for plan"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
 							"id": "3b01eede-3f00-4bc1-b117-76a6badf38c5",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -2390,14 +2405,85 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"insuranceId\": 23,\r\n    \"plan\": \"starter\",\r\n    \"costOfProduction\": \"100000\",\r\n    \"amountPaid\": \"3\",\r\n    \"cropName\": \"maize\"\r\n}",
+									"raw": "{\r\n    \"plan\": \"starter\",\r\n    \"costOfProduction\": \"100000\",\r\n    \"amountPaid\": \"3\",\r\n    \"cropName\": \"maize\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
 										}
 									}
 								},
-								"url": "{{baseurl}}/yemert/secure/insurance/7213"
+								"url": {
+									"raw": "{{baseurl}}/yemert/secure/insurance/:insuranceID",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"yemert",
+										"secure",
+										"insurance",
+										":insuranceID"
+									],
+									"variable": [
+										{
+											"key": "insuranceID",
+											"value": "9"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update a specific Insurance for a farmer - invalid YemertID",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "ed6cd8b0-154e-4947-90cd-f0b1be2d7ac5",
+										"exec": [
+											"// Set environment variables for request body",
+											"pm.environment.set(\"insuranceId\", Math.floor(Math.random() * 100) + 1); // Random insuranceId between 1 and 100",
+											"pm.environment.set(\"plan\", Math.random().toString(36).substring(2, 15)); // Random string for plan"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "497c8d75-6d7f-4a88-afc1-231f83f92cf7",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"plan\": \"starter\",\r\n    \"costOfProduction\": \"100000\",\r\n    \"amountPaid\": \"3\",\r\n    \"cropName\": \"maize\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/yemert/secure/insurance/:yemertID",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"yemert",
+										"secure",
+										"insurance",
+										":yemertID"
+									],
+									"variable": [
+										{
+											"key": "yemertID",
+											"value": ""
+										}
+									]
+								}
 							},
 							"response": []
 						},
