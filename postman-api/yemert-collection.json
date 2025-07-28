@@ -2113,6 +2113,50 @@
 							"response": []
 						},
 						{
+							"name": "Create  Insurance - invalid amount",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "67485185-0d48-418e-90f2-62e27caeca6b",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 201\", function () {",
+											"    pm.response.to.have.status(201);",
+											"});",
+											"",
+											"pm.test(\"The amount defaults to zero\", function () {",
+											"    pm.expect(resp.success).to.eql(true);",
+											"    pm.expect(resp.data.amountPaid).to.eql(\"0\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "5011806d-d7d3-4fba-a9c5-f3f6c44aac6d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"farmerId\": 3887,\r\n    \"plan\": \"starter\",\r\n    \"costOfProduction\": \"100000\",\r\n    //   \"paid\": false,\r\n      \"amountPaid\": \"\",\r\n    //   \"mobileMoney\": false,\r\n    \"cropName\": \"maize\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseurl}}/yemert/secure/insurance"
+							},
+							"response": []
+						},
+						{
 							"name": "Create  Insurance - no crop name",
 							"event": [
 								{
