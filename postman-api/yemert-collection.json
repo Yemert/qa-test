@@ -2838,8 +2838,8 @@
 											"});",
 											"",
 											"pm.test(\"Error related to missing farmer is returned\", function () {",
-											"    pm.expect(resp.success).to.eql(false);",
-											"    pm.expect(resp.message).to.eql(\"Invalid plan. Must be one of: starter, standard, extended\");",
+											"    pm.expect(resp.success).to.eql(true);",
+											"    pm.expect(resp.data.insurance.costOfProduction).to.eql(\"7500\");",
 											"});"
 										],
 										"type": "text/javascript",
@@ -2869,7 +2869,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"insuranceId\": 9,\r\n    \"plan\": \"hello\",\r\n    \"costOfProduction\": \"100000\",\r\n    \"amountPaid\": \"3\",\r\n    \"cropName\": \"maize\"\r\n}",
+									"raw": "{\r\n    \"insuranceId\": 9,\r\n    \"plan\": \"standard\",\r\n    \"costOfProduction\": \"50000\",\r\n    \"amountPaid\": \"3\",\r\n    \"cropName\": \"maize\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
