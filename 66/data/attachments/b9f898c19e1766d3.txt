@@ -1,0 +1,19 @@
+{
+    "fullName": "Lynn Lueilwitz",
+    "crops": [
+        {
+            "cropName": "Metal"
+        },
+        {
+            "cropName": "Metal"
+        }
+    ],
+    "farmPhotos": [
+        {
+            "photoUrl": "https://example.com/farm1.jpg"
+        },
+        {
+            "photoUrl": "https://example.com/farm2.jpg"
+        }
+    ]
+}
