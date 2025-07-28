@@ -1466,53 +1466,6 @@
 					"id": "f9709e49-986d-4f15-b034-968a46bd5804"
 				},
 				{
-					"name": "Delete Farmers",
-					"item": [
-						{
-							"name": "Delete farmer",
-							"id": "f3238db3-e7b8-4723-a2c5-1d80f8c8db22",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"url": {
-									"raw": "{{baseurl}}/farmers/:id",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"farmers",
-										":id"
-									],
-									"variable": [
-										{
-											"key": "id",
-											"value": "2824"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Delete all farmers",
-							"id": "d06b821c-ec5b-4a72-829c-10348899ea8e",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"url": "{{baseurl}}/farmers"
-							},
-							"response": []
-						}
-					],
-					"id": "54d0c74c-fef0-4d3e-b094-da9ee11dab44"
-				},
-				{
 					"name": "Claims",
 					"item": [
 						{
@@ -1859,7 +1812,7 @@
 											"    pm.response.to.have.status(200);",
 											"});",
 											"",
-											"pm.test(\"Admin details are returned\", function () {",
+											"pm.test(\"Insurance details are returned\", function () {",
 											"    pm.expect(resp.data[0].id).is.not.null;",
 											"    pm.expect(resp.data[0].farmerId).is.not.null;",
 											"    pm.expect(resp.data[0].cropName).is.not.null;",
@@ -2971,72 +2924,6 @@
 								}
 							},
 							"response": []
-						},
-						{
-							"name": "Delete insurance records for a specific farmer Copy",
-							"id": "27e8e4a9-2c15-41b8-b594-181fa2307852",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{baseurl}}/yemert/secure/insurance/farmer/7213"
-							},
-							"response": []
-						},
-						{
-							"name": "Delete a specific insurance record Copy",
-							"id": "34bb017d-03a2-4ec6-a147-1f0b9aa71c8f",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{baseurl}}/yemert/secure/insurance/7213"
-							},
-							"response": []
-						},
-						{
-							"name": "Delete all insurance records Copy",
-							"id": "d0b6e314-2365-4b18-b673-b76bb54eb29b",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{baseurl}}/yemert/secure/insurance/all"
-							},
-							"response": []
 						}
 					],
 					"id": "5b8aff45-306f-4f4b-8601-d9bd93bff7ec"
@@ -3117,72 +3004,6 @@
 								"url": "{{baseurl}}/yemert/secure/claims/7213"
 							},
 							"response": []
-						},
-						{
-							"name": "Delete claim records for a specific farmer",
-							"id": "5926398b-bdfb-4889-8c7c-ba5db48a8dac",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{baseurl}}/yemert/secure/claims/farmer/7213"
-							},
-							"response": []
-						},
-						{
-							"name": "Delete a specific claim record",
-							"id": "4252a93f-3a8f-49b3-9eb6-417cd065f538",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{baseurl}}/yemert/secure/claims/10"
-							},
-							"response": []
-						},
-						{
-							"name": "Delete all claim records",
-							"id": "bc01c1ed-bcdd-4e99-a321-d3d886f44db8",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{baseurl}}/yemert/secure/claims/all"
-							},
-							"response": []
 						}
 					],
 					"id": "9ab218e6-073d-4f23-b607-5a28b6bd463c"
@@ -3261,72 +3082,6 @@
 									}
 								},
 								"url": "{{baseurl}}/yemert/secure/market/7213"
-							},
-							"response": []
-						},
-						{
-							"name": "Delete market records for a specific farmer",
-							"id": "eafc7e04-bf5e-4cb8-82ef-29776e87b867",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{baseurl}}/yemert/secure/market/farmer/7213"
-							},
-							"response": []
-						},
-						{
-							"name": "Delete a specific market record",
-							"id": "b4a06423-1ffc-4390-97b1-e7de99ee42bb",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"cropName\": \"beans\",\r\n  \"acresPlots\": \"2.4\",\r\n  \"plan\": \"biannual\",\r\n  \"insuranceId\": 1,\r\n  \"isActive\": false\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{baseurl}}/yemert/secure/market/3690"
-							},
-							"response": []
-						},
-						{
-							"name": "Delete all market records",
-							"id": "74f1d51f-2631-479e-97ff-c8b43f0b49aa",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{baseurl}}/yemert/secure/market/all"
 							},
 							"response": []
 						}
