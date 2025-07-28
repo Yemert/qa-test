@@ -1,9 +1,0 @@
-{
-    "farmerId": 3887,
-    "plan": "starter",
-    "costOfProduction": "100000",
-    
-      "amountPaid": "1",
-    
-    "cropName": "maize"
-}
