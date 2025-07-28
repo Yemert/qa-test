@@ -2070,6 +2070,28 @@
 						},
 						{
 							"name": "Create  Insurance - no amount",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "67485185-0d48-418e-90f2-62e27caeca6b",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 201\", function () {",
+											"    pm.response.to.have.status(201);",
+											"});",
+											"",
+											"pm.test(\"The amount defaults to zero\", function () {",
+											"    pm.expect(resp.success).to.eql(true);",
+											"    pm.expect(resp.data.amountPaid).to.eql(\"0\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
 							"id": "3a96e912-3cb6-40ee-a009-c97ae90a247c",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -2079,7 +2101,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"farmerId\": 3887,\r\n    \"plan\": \"starter\",\r\n    \"costOfProduction\": \"100000\",\r\n    //   \"paid\": false,\r\n      \"amountPaid\": \"1\",\r\n    //   \"mobileMoney\": false,\r\n    \"cropName\": \"maize\"\r\n}",
+									"raw": "{\r\n    \"farmerId\": 3887,\r\n    \"plan\": \"starter\",\r\n    \"costOfProduction\": \"100000\",\r\n    //   \"paid\": false,\r\n      \"amountPaid\": \"\",\r\n    //   \"mobileMoney\": false,\r\n    \"cropName\": \"maize\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2092,6 +2114,28 @@
 						},
 						{
 							"name": "Create  Insurance - no crop name",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "d698ada6-b906-4013-b99f-d7e96d8f8a5a",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 201\", function () {",
+											"    pm.response.to.have.status(201);",
+											"});",
+											"",
+											"pm.test(\"The amount defaults to zero\", function () {",
+											"    pm.expect(resp.success).to.eql(true);",
+											"    pm.expect(resp.message).to.eql(\"Crop name is required\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
 							"id": "de82d174-5f12-4743-b914-e428f2f8616d",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -2101,7 +2145,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"farmerId\": 3887,\r\n    \"plan\": \"starter\",\r\n    \"costOfProduction\": \"100000\",\r\n    //   \"paid\": false,\r\n      \"amountPaid\": \"1\",\r\n    //   \"mobileMoney\": false,\r\n    \"cropName\": \"maize\"\r\n}",
+									"raw": "{\r\n    \"farmerId\": 3887,\r\n    \"plan\": \"starter\",\r\n    \"costOfProduction\": \"100000\",\r\n    //   \"paid\": false,\r\n      \"amountPaid\": \"\",\r\n    //   \"mobileMoney\": false,\r\n    \"cropName\": \"maize\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
