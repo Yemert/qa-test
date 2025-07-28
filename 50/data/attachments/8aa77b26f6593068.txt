@@ -1,4 +1,0 @@
-{
-  "claimId": 8,
-  "type": "pests"
-}

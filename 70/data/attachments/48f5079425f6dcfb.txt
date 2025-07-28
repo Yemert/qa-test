@@ -1,0 +1,51 @@
+{
+    "fullName": "Angel Spencer I",
+    "gender": "male",
+    "ageRange": "274-318",
+    "nationalIdNumber": "37169178950",
+    "email": "Carol_Kuhlman@yahoo.com",
+    "phoneNumber": "+1234567890",
+    "whatsappNumber": "+574-618-4190",
+    "homeAddress": "7056 Lora Greens",
+    "countyDistrict": "Ethiopia",
+    "country": "Jordan",
+    "farmLocation": "Auburn",
+    "farmSize": 5.2,
+    "actualFarmSize": "5.2 hectares",
+    "landOwnershipStatus": "Owned",
+    "yearsFarmingExperience": "10",
+    "crops": [
+        {
+            "cropName": "Steel"
+        },
+        {
+            "cropName": "Steel"
+        }
+    ],
+    "averageAnnualYield": "20 tons",
+    "farmingPractices": "Organic farming, Mixed cropping",
+    "annualFarmingRevenue": "₦3,000,000",
+    "accessToCredit": "Yes",
+    "previousInsurance": "No",
+    "produceSaleLocation": "Local market",
+    "financialChallenge": "High input cost",
+    "recentChallenges": "Flooding, Pest invasion",
+    "soilManagement": "Crop rotation, Compost use",
+    "irrigationAccess": true,
+    "climateResilientProgram": true,
+    "sustainablePractices": "Use of compost, minimal tillage",
+    "carbonCreditProgram": false,
+    "cropInsuranceInterest": true,
+    "paymentFrequency": "Quarterly",
+    "insuranceConcerns": "High premium cost",
+    "recommendInsurance": "Yes, to fellow farmers",
+    "farmPhotos": [
+        {
+            "photoUrl": "https://example.com/farm1.jpg"
+        },
+        {
+            "photoUrl": "https://example.com/farm2.jpg"
+        }
+    ],
+    "dataConsent": true
+}
