@@ -2395,7 +2395,7 @@
 											"",
 											"pm.test(\"Error related to missing farmer is returned\", function () {",
 											"    pm.expect(resp.success).to.eql(false);",
-											"    pm.expect(resp.message).to.eql(\"Insurance ID must be a positive integer if provided\");",
+											"    pm.expect(resp.message).to.eql(\"Insurance ID is required\");",
 											"});"
 										],
 										"type": "text/javascript",
@@ -2425,7 +2425,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"insuranceId\": \"\",\r\n    \"plan\": \"starter\",\r\n    \"costOfProduction\": \"100000\",\r\n    \"amountPaid\": \"3\",\r\n    \"cropName\": \"maize\"\r\n}",
+									"raw": "{\r\n    \"plan\": \"starter\",\r\n    \"costOfProduction\": \"100000\",\r\n    \"amountPaid\": \"3\",\r\n    \"cropName\": \"maize\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
