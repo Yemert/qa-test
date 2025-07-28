@@ -1981,8 +1981,118 @@
 							"response": []
 						},
 						{
-							"name": "Create  Insurance",
+							"name": "Create  Insurance - successful",
 							"id": "852239dd-928f-4ee0-89bc-ec8f281dd843",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"farmerId\": 3887,\r\n    \"plan\": \"starter\",\r\n    \"costOfProduction\": \"100000\",\r\n    //   \"paid\": false,\r\n      \"amountPaid\": \"1\",\r\n    //   \"mobileMoney\": false,\r\n    \"cropName\": \"maize\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseurl}}/yemert/secure/insurance"
+							},
+							"response": []
+						},
+						{
+							"name": "Create  Insurance - no farmerId",
+							"id": "375ef53f-1bb2-4b19-a51b-d6c14fa22fc1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"farmerId\": 3887,\r\n    \"plan\": \"starter\",\r\n    \"costOfProduction\": \"100000\",\r\n    //   \"paid\": false,\r\n      \"amountPaid\": \"1\",\r\n    //   \"mobileMoney\": false,\r\n    \"cropName\": \"maize\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseurl}}/yemert/secure/insurance"
+							},
+							"response": []
+						},
+						{
+							"name": "Create  Insurance - no Insurance plan",
+							"id": "fbf721b4-cd54-49bf-a076-5304d0fa9d36",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"farmerId\": 3887,\r\n    \"plan\": \"starter\",\r\n    \"costOfProduction\": \"100000\",\r\n    //   \"paid\": false,\r\n      \"amountPaid\": \"1\",\r\n    //   \"mobileMoney\": false,\r\n    \"cropName\": \"maize\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseurl}}/yemert/secure/insurance"
+							},
+							"response": []
+						},
+						{
+							"name": "Create  Insurance - no cost of production",
+							"id": "b4714803-68dd-4773-b373-d702d6c04675",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"farmerId\": 3887,\r\n    \"plan\": \"starter\",\r\n    \"costOfProduction\": \"100000\",\r\n    //   \"paid\": false,\r\n      \"amountPaid\": \"1\",\r\n    //   \"mobileMoney\": false,\r\n    \"cropName\": \"maize\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseurl}}/yemert/secure/insurance"
+							},
+							"response": []
+						},
+						{
+							"name": "Create  Insurance - successful Copy",
+							"id": "3a96e912-3cb6-40ee-a009-c97ae90a247c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"farmerId\": 3887,\r\n    \"plan\": \"starter\",\r\n    \"costOfProduction\": \"100000\",\r\n    //   \"paid\": false,\r\n      \"amountPaid\": \"1\",\r\n    //   \"mobileMoney\": false,\r\n    \"cropName\": \"maize\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseurl}}/yemert/secure/insurance"
+							},
+							"response": []
+						},
+						{
+							"name": "Create  Insurance - successful Copy",
+							"id": "de82d174-5f12-4743-b914-e428f2f8616d",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
