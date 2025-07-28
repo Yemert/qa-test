@@ -3464,6 +3464,33 @@
 					"item": [
 						{
 							"name": "Get Market - All",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "0f4f5a31-9c5f-42e7-b66f-f97b8f5c46fc",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Market details are returned\", function () {",
+											"    pm.expect(resp.data[0].id).is.not.null;",
+											"    pm.expect(resp.data[0].cropName).is.not.null;",
+											"    pm.expect(resp.data[0].postId).is.not.null;",
+											"    pm.expect(resp.data[0].postNow).is.not.null;",
+											"    pm.expect(resp.data[0].farmer.yemertId).is.not.null;",
+											"    pm.expect(resp.data[0].farmer.fullName).is.not.null;",
+											"    pm.expect(resp.data[0].farmer.phoneNumber).is.not.null;",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
 							"id": "781b654b-19b8-4a86-ab1d-6ffb3ee7b44d",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -3476,7 +3503,34 @@
 							"response": []
 						},
 						{
-							"name": "Get Market - For Single Farmer",
+							"name": "Get Market - For Single Farmer - successful",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "6665fe5b-7261-4146-b5a7-53e39b5294af",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Market details are returned\", function () {",
+											"    pm.expect(resp.data[0].id).is.not.null;",
+											"    pm.expect(resp.data[0].cropName).is.not.null;",
+											"    pm.expect(resp.data[0].postId).is.not.null;",
+											"    pm.expect(resp.data[0].postNow).is.not.null;",
+											"    pm.expect(resp.data[0].farmer.yemertId).is.not.null;",
+											"    pm.expect(resp.data[0].farmer.fullName).is.not.null;",
+											"    pm.expect(resp.data[0].farmer.phoneNumber).is.not.null;",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
 							"id": "5b2027fe-b8eb-4815-b4c6-1cc0d5dd692b",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -3488,7 +3542,205 @@
 									"mode": "raw",
 									"raw": ""
 								},
-								"url": "{{baseurl}}/yemert/secure/market/YM-7213"
+								"url": {
+									"raw": "{{baseurl}}/yemert/secure/market/:yemertId",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"yemert",
+										"secure",
+										"market",
+										":yemertId"
+									],
+									"variable": [
+										{
+											"key": "yemertId",
+											"value": "3641"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Market - For Single Farmer does not exist",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "6665fe5b-7261-4146-b5a7-53e39b5294af",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 400\", function () {",
+											"    pm.response.to.have.status(400);",
+											"});",
+											"",
+											"pm.test(\"Farmer not found error is returned\", function () {",
+											"    pm.expect(resp.message).to.eql(\"Farmer not found\");",
+											"    pm.expect(resp.success).to.eql(false);",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "84e36c6d-0438-45fd-8714-53ea250db762",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{baseurl}}/yemert/secure/market/:yemertId",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"yemert",
+										"secure",
+										"market",
+										":yemertId"
+									],
+									"variable": [
+										{
+											"key": "yemertId",
+											"value": "10101"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Market - For Single Farmer - successful Copy 2",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "6665fe5b-7261-4146-b5a7-53e39b5294af",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Market details are returned\", function () {",
+											"    pm.expect(resp.data[0].id).is.not.null;",
+											"    pm.expect(resp.data[0].cropName).is.not.null;",
+											"    pm.expect(resp.data[0].postId).is.not.null;",
+											"    pm.expect(resp.data[0].postNow).is.not.null;",
+											"    pm.expect(resp.data[0].farmer.yemertId).is.not.null;",
+											"    pm.expect(resp.data[0].farmer.fullName).is.not.null;",
+											"    pm.expect(resp.data[0].farmer.phoneNumber).is.not.null;",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "52ae0d9e-4143-4c2a-84a3-0bedaa749ba1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{baseurl}}/yemert/secure/market/:yemertId",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"yemert",
+										"secure",
+										"market",
+										":yemertId"
+									],
+									"variable": [
+										{
+											"id": "d3e43cf1-a1bf-476b-b7c4-71eae38ed793",
+											"key": "yemertId",
+											"value": "3641"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Market - For Single Farmer - successful Copy 3",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "6665fe5b-7261-4146-b5a7-53e39b5294af",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Market details are returned\", function () {",
+											"    pm.expect(resp.data[0].id).is.not.null;",
+											"    pm.expect(resp.data[0].cropName).is.not.null;",
+											"    pm.expect(resp.data[0].postId).is.not.null;",
+											"    pm.expect(resp.data[0].postNow).is.not.null;",
+											"    pm.expect(resp.data[0].farmer.yemertId).is.not.null;",
+											"    pm.expect(resp.data[0].farmer.fullName).is.not.null;",
+											"    pm.expect(resp.data[0].farmer.phoneNumber).is.not.null;",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "fa897510-8e5a-4b99-89b5-c1894a7cded1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{baseurl}}/yemert/secure/market/:yemertId",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"yemert",
+										"secure",
+										"market",
+										":yemertId"
+									],
+									"variable": [
+										{
+											"id": "d3e43cf1-a1bf-476b-b7c4-71eae38ed793",
+											"key": "yemertId",
+											"value": "3641"
+										}
+									]
+								}
 							},
 							"response": []
 						},
