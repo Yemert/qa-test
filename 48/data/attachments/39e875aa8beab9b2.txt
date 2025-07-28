@@ -1,0 +1,19 @@
+{
+    "fullName": "Johanna Beahan",
+    "crops": [
+        {
+            "cropName": "Plastic"
+        },
+        {
+            "cropName": "Wooden"
+        }
+    ],
+    "farmPhotos": [
+        {
+            "photoUrl": "https://example.com/farm1.jpg"
+        },
+        {
+            "photoUrl": "https://example.com/farm2.jpg"
+        }
+    ]
+}
