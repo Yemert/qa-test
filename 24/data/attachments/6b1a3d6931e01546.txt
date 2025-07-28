@@ -1,0 +1,7 @@
+{
+  "cropName": "beans",
+  "acresPlots": "2.4",
+  "plan": "biannual",
+  "insuranceId": 1,
+  "isActive": false
+}
