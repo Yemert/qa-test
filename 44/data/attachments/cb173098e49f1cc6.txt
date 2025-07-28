@@ -1,0 +1,7 @@
+{
+    "insuranceId": 9,
+    "plan": "",
+    "costOfProduction": "100000",
+    "amountPaid": "3",
+    "cropName": "maize"
+}
