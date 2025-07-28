@@ -3168,7 +3168,7 @@
 											"});",
 											"",
 											"pm.test(\"Farmer ID error is returned\", function () {",
-											"    pm.expect(resp.message).to.eql(\"Farmer ID must be a number\");",
+											"    pm.expect(resp.message).to.eql(\"Farmer not found\");",
 											"    pm.expect(resp.success).to.eql(false);",
 											"});",
 											""
@@ -3187,7 +3187,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"farmerId\": \"\",\r\n  \"type\": \"floods\"\r\n//   \"whatsapp\": true,\r\n//   \"number\": \"08100000012\"\r\n}",
+									"raw": "{\r\n  \"farmerId\": \"2234433\",\r\n  \"type\": \"floods\"\r\n//   \"whatsapp\": true,\r\n//   \"number\": \"08100000012\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3244,7 +3244,7 @@
 							"response": []
 						},
 						{
-							"name": "Update a specific claim for a farmer Copy",
+							"name": "Update a specific claim for a farmer - successful",
 							"id": "0b1963e0-1c32-4aa4-8324-3c87bc7f40ec",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
