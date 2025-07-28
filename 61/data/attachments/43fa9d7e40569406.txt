@@ -1,0 +1,19 @@
+{
+    "fullName": "Devin Robel",
+    "crops": [
+        {
+            "cropName": "Concrete"
+        },
+        {
+            "cropName": "Frozen"
+        }
+    ],
+    "farmPhotos": [
+        {
+            "photoUrl": "https://example.com/farm1.jpg"
+        },
+        {
+            "photoUrl": "https://example.com/farm2.jpg"
+        }
+    ]
+}

@@ -1,0 +1,51 @@
+{
+    "fullName": "Colleen Hintz",
+    "gender": "male",
+    "ageRange": "397-500",
+    "nationalIdNumber": "377631915725",
+    "email": "Liana_Jacobson@yahoo.com",
+    "phoneNumber": "+1234567890",
+    "whatsappNumber": "+678-526-7324",
+    "homeAddress": "487 Malvina Highway",
+    "countyDistrict": "Indonesia",
+    "country": "Serbia",
+    "farmLocation": "East Rasheed",
+    "farmSize": 5.2,
+    "actualFarmSize": "5.2 hectares",
+    "landOwnershipStatus": "Owned",
+    "yearsFarmingExperience": "10",
+    "crops": [
+        {
+            "cropName": "Metal"
+        },
+        {
+            "cropName": "Cotton"
+        }
+    ],
+    "averageAnnualYield": "20 tons",
+    "farmingPractices": "Organic farming, Mixed cropping",
+    "annualFarmingRevenue": "₦3,000,000",
+    "accessToCredit": "Yes",
+    "previousInsurance": "No",
+    "produceSaleLocation": "Local market",
+    "financialChallenge": "High input cost",
+    "recentChallenges": "Flooding, Pest invasion",
+    "soilManagement": "Crop rotation, Compost use",
+    "irrigationAccess": true,
+    "climateResilientProgram": true,
+    "sustainablePractices": "Use of compost, minimal tillage",
+    "carbonCreditProgram": false,
+    "cropInsuranceInterest": true,
+    "paymentFrequency": "Quarterly",
+    "insuranceConcerns": "High premium cost",
+    "recommendInsurance": "Yes, to fellow farmers",
+    "farmPhotos": [
+        {
+            "photoUrl": "https://example.com/farm1.jpg"
+        },
+        {
+            "photoUrl": "https://example.com/farm2.jpg"
+        }
+    ],
+    "dataConsent": true
+}
