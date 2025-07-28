@@ -2069,7 +2069,7 @@
 							"response": []
 						},
 						{
-							"name": "Create  Insurance - successful Copy",
+							"name": "Create  Insurance - no amount",
 							"id": "3a96e912-3cb6-40ee-a009-c97ae90a247c",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -2091,7 +2091,7 @@
 							"response": []
 						},
 						{
-							"name": "Create  Insurance - successful Copy",
+							"name": "Create  Insurance - no crop name",
 							"id": "de82d174-5f12-4743-b914-e428f2f8616d",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
