@@ -1,0 +1,51 @@
+{
+    "fullName": "Darnell Grady",
+    "gender": "male",
+    "ageRange": "694-870",
+    "nationalIdNumber": "49226113960",
+    "email": "Lucie88@yahoo.com",
+    "phoneNumber": "+1234567890",
+    "whatsappNumber": "+555-656-3787",
+    "homeAddress": "852 Nader Court",
+    "countyDistrict": "El Salvador",
+    "country": "Puerto Rico",
+    "farmLocation": "Urielshire",
+    "farmSize": 5.2,
+    "actualFarmSize": "5.2 hectares",
+    "landOwnershipStatus": "Owned",
+    "yearsFarmingExperience": "10",
+    "crops": [
+        {
+            "cropName": "Rubber"
+        },
+        {
+            "cropName": "Steel"
+        }
+    ],
+    "averageAnnualYield": "20 tons",
+    "farmingPractices": "Organic farming, Mixed cropping",
+    "annualFarmingRevenue": "₦3,000,000",
+    "accessToCredit": "Yes",
+    "previousInsurance": "No",
+    "produceSaleLocation": "Local market",
+    "financialChallenge": "High input cost",
+    "recentChallenges": "Flooding, Pest invasion",
+    "soilManagement": "Crop rotation, Compost use",
+    "irrigationAccess": true,
+    "climateResilientProgram": true,
+    "sustainablePractices": "Use of compost, minimal tillage",
+    "carbonCreditProgram": false,
+    "cropInsuranceInterest": true,
+    "paymentFrequency": "Quarterly",
+    "insuranceConcerns": "High premium cost",
+    "recommendInsurance": "Yes, to fellow farmers",
+    "farmPhotos": [
+        {
+            "photoUrl": "https://example.com/farm1.jpg"
+        },
+        {
+            "photoUrl": "https://example.com/farm2.jpg"
+        }
+    ],
+    "dataConsent": true
+}
