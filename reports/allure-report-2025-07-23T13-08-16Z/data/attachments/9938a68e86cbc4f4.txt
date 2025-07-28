@@ -1,6 +1,0 @@
-{
-  "farmerId": 3641,
-  "type": "floods"
-
-
-}

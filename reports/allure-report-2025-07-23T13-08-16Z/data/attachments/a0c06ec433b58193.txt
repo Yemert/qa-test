@@ -1,8 +1,0 @@
-{
-  "marketId": 4,
-  "cropName": "gold egg plants"
-
-
-
-
-}
