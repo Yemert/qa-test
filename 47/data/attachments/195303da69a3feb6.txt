@@ -1,0 +1,6 @@
+{
+  "farmerId": "",
+  "type": "floods"
+
+
+}
