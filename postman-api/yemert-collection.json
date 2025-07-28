@@ -2824,7 +2824,7 @@
 							"response": []
 						},
 						{
-							"name": "Update a specific farmer Insurance - invalid plan",
+							"name": "Update a specific farmer Insurance - successful standard update",
 							"event": [
 								{
 									"listen": "test",
@@ -2898,7 +2898,7 @@
 							"response": []
 						},
 						{
-							"name": "Update a specific farmer Insurance - invalid plan Copy",
+							"name": "Update a specific farmer Insurance - invalid plan",
 							"event": [
 								{
 									"listen": "test",
