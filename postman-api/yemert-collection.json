@@ -2933,6 +2933,31 @@
 					"item": [
 						{
 							"name": "Get Claims - All",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "33751c2f-838d-4a83-b6bc-881e7d7b99a4",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Claims details are returned\", function () {",
+											"    pm.expect(resp.data[0].id).is.not.null;",
+											"    pm.expect(resp.data[0].type).is.not.null;",
+											"    pm.expect(resp.data[0].whatsapp).is.not.null;",
+											"    pm.expect(resp.data[0].isActive).is.not.null;",
+											"    pm.expect(resp.data[0].farmer.yemertId).is.not.null;",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
 							"id": "07e5d0b1-c8c9-4b51-a5ec-22c9bec58ef2",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -2945,7 +2970,7 @@
 							"response": []
 						},
 						{
-							"name": "Get Claim - For Single Farmer",
+							"name": "Get Claim - For Single Farmer - successul",
 							"id": "4dd0fb2d-c480-46fa-9df2-7473d82ad0ab",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
