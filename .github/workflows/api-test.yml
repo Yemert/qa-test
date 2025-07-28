@@ -5,8 +5,8 @@ name: Staging API Tests
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
+#  pull_request:
+#    branches: [ main ]
   workflow_dispatch:  # Manual trigger support
 
 jobs:
@@ -52,9 +52,9 @@ jobs:
           allure_history: allure-history
           allure_results: ./allure-results
 
-      - name: Get timestamp
-        id: vars
-        run: echo "timestamp=$(date -u +'%Y-%m-%dT%H-%M-%SZ')" >> $GITHUB_OUTPUT
+#      - name: Get timestamp
+#        id: vars
+#        run: echo "timestamp=$(date -u +'%Y-%m-%dT%H-%M-%SZ')" >> $GITHUB_OUTPUT
 
 
       - name: Publish test report
@@ -79,8 +79,8 @@ jobs:
 #          publish_branch: gh-pages
 #          keep_files: true
 
-      - name: Output GitHub Pages URL
-        run: |
-          echo "Allure Report URL:"
-          echo "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/reports/allure-report-${{ steps.vars.outputs.timestamp }}"
+#      - name: Output GitHub Pages URL
+#        run: |
+#          echo "Allure Report URL:"
+#          echo "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/reports/allure-report-${{ steps.vars.outputs.timestamp }}"
 
