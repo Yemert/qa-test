@@ -3110,6 +3110,29 @@
 						},
 						{
 							"name": "Create Claim - no farmerId",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "5a7b79f3-36f2-4c45-8573-72f72c24227f",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 400\", function () {",
+											"    pm.response.to.have.status(400);",
+											"});",
+											"",
+											"pm.test(\"Farmer ID error is returned\", function () {",
+											"    pm.expect(resp.message).to.eql(\"Farmer ID must be a number\");",
+											"    pm.expect(resp.success).to.eql(false);",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
 							"id": "e37502b9-7a99-42c4-a571-32b30b112698",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -3119,7 +3142,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"farmerId\": 3641,\r\n  \"type\": \"floods\"\r\n//   \"whatsapp\": true,\r\n//   \"number\": \"08100000012\"\r\n}",
+									"raw": "{\r\n  \"farmerId\": \"\",\r\n  \"type\": \"floods\"\r\n//   \"whatsapp\": true,\r\n//   \"number\": \"08100000012\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
