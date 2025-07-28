@@ -1,0 +1,251 @@
+[
+    {
+        "fullName": "Abel Jones",
+        "gender": "male",
+        "ageRange": "950-151",
+        "nationalIdNumber": "117528814386",
+        "email": "Marcelle57@yahoo.com",
+        "phoneNumber": "+669-386-7545",
+        "whatsappNumber": "+829-944-5335",
+        "homeAddress": "39429 Murphy Ville",
+        "countyDistrict": "Bangladesh",
+        "country": "Turkmenistan",
+        "farmLocation": "Tremblayburgh",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Steel"
+            },
+            {
+                "cropName": "Metal"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": [
+            {
+                "photoUrl": "https://example.com/farm1.jpg"
+            },
+            {
+                "photoUrl": "https://example.com/farm2.jpg"
+            }
+        ],
+        "dataConsent": true
+    },
+    {
+        "fullName": "David Corkery",
+        "gender": "male",
+        "ageRange": "916-296",
+        "nationalIdNumber": "649631555",
+        "email": "",
+        "phoneNumber": "",
+        "whatsappNumber": "+795-908-5858",
+        "homeAddress": "5659 Carter Lake",
+        "countyDistrict": "Antarctica (the territory South of 60 deg S)",
+        "country": "Gibraltar",
+        "farmLocation": "Lewishaven",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": [
+            {
+                "photoUrl": "https://example.com/farm1.jpg"
+            },
+            {
+                "photoUrl": "https://example.com/farm2.jpg"
+            }
+        ],
+        "dataConsent": true
+    },
+    {
+        "fullName": "Timothy Sipes",
+        "gender": "male",
+        "ageRange": "255-721",
+        "nationalIdNumber": "619711966732",
+        "email": "Malika_Bernier@yahoo.com",
+        "phoneNumber": "+990-454-7278",
+        "whatsappNumber": "+366-346-8059",
+        "homeAddress": "4782 Reynolds View",
+        "countyDistrict": "Costa Rica",
+        "country": "Cape Verde",
+        "farmLocation": "Port Elzashire",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Rubber"
+            },
+            {
+                "cropName": "Soft"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": [
+            {
+                "photoUrl": "https://example.com/farm1.jpg"
+            },
+            {
+                "photoUrl": "https://example.com/farm2.jpg"
+            }
+        ],
+        "dataConsent": true
+    },
+    {
+        "fullName": "Shawn Monahan",
+        "gender": "male",
+        "ageRange": "818-321",
+        "nationalIdNumber": "998112187948",
+        "email": "Lulu_Leuschke@hotmail.com",
+        "phoneNumber": "+389-656-8605",
+        "whatsappNumber": "+755-580-2328",
+        "homeAddress": "5226 Wunsch Mall",
+        "countyDistrict": "Kyrgyz Republic",
+        "country": "Mozambique",
+        "farmLocation": "Gracieland",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Plastic"
+            },
+            {
+                "cropName": "Fresh"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": [
+            {
+                "photoUrl": "https://example.com/farm1.jpg"
+            },
+            {
+                "photoUrl": "https://example.com/farm2.jpg"
+            }
+        ],
+        "dataConsent": true
+    },
+    {
+        "fullName": "Sabrina Cummerata",
+        "gender": "male",
+        "ageRange": "941-389",
+        "nationalIdNumber": "204230519824",
+        "email": "Joseph_Hauck@hotmail.com",
+        "phoneNumber": "+716-851-4930",
+        "whatsappNumber": "+362-717-7249",
+        "homeAddress": "2101 Larson Mount",
+        "countyDistrict": "Greenland",
+        "country": "Grenada",
+        "farmLocation": "West Glennie",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Wooden"
+            },
+            {
+                "cropName": "Plastic"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": [
+            {
+                "photoUrl": "https://example.com/farm1.jpg"
+            },
+            {
+                "photoUrl": "https://example.com/farm2.jpg"
+            }
+        ],
+        "dataConsent": true
+    }
+]

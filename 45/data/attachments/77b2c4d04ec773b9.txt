@@ -1,0 +1,51 @@
+{
+    "fullName": "Roberto Johnson",
+    "gender": "male",
+    "ageRange": "642-235",
+    "nationalIdNumber": "135526242967",
+    "email": "Vicenta_Greenholt45@gmail.com",
+    "phoneNumber": "+1234567890",
+    "whatsappNumber": "+407-242-4039",
+    "homeAddress": "9335 Moses Valley",
+    "countyDistrict": "Afghanistan",
+    "country": "Mexico",
+    "farmLocation": "South Kaneburgh",
+    "farmSize": 5.2,
+    "actualFarmSize": "5.2 hectares",
+    "landOwnershipStatus": "Owned",
+    "yearsFarmingExperience": "10",
+    "crops": [
+        {
+            "cropName": "Plastic"
+        },
+        {
+            "cropName": "Frozen"
+        }
+    ],
+    "averageAnnualYield": "20 tons",
+    "farmingPractices": "Organic farming, Mixed cropping",
+    "annualFarmingRevenue": "₦3,000,000",
+    "accessToCredit": "Yes",
+    "previousInsurance": "No",
+    "produceSaleLocation": "Local market",
+    "financialChallenge": "High input cost",
+    "recentChallenges": "Flooding, Pest invasion",
+    "soilManagement": "Crop rotation, Compost use",
+    "irrigationAccess": true,
+    "climateResilientProgram": true,
+    "sustainablePractices": "Use of compost, minimal tillage",
+    "carbonCreditProgram": false,
+    "cropInsuranceInterest": true,
+    "paymentFrequency": "Quarterly",
+    "insuranceConcerns": "High premium cost",
+    "recommendInsurance": "Yes, to fellow farmers",
+    "farmPhotos": [
+        {
+            "photoUrl": "https://example.com/farm1.jpg"
+        },
+        {
+            "photoUrl": "https://example.com/farm2.jpg"
+        }
+    ],
+    "dataConsent": true
+}

@@ -1,0 +1,257 @@
+[
+    {
+        "fullName": "Terri Pfeffer",
+        "gender": "male",
+        "ageRange": "5-62",
+        "nationalIdNumber": "778819484132",
+        "email": "Bryce41@gmail.com",
+        "phoneNumber": "+965-559-6658",
+        "whatsappNumber": "+556-394-6175",
+        "homeAddress": "85881 Schimmel Path",
+        "countyDistrict": "South Africa",
+        "country": "Macedonia",
+        "farmLocation": "Lake Judeshire",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Granite"
+            },
+            {
+                "cropName": "Plastic"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": [
+            {
+                "photoUrl": "https://example.com/farm1.jpg"
+            },
+            {
+                "photoUrl": "https://example.com/farm2.jpg"
+            }
+        ],
+        "dataConsent": true
+    },
+    {
+        "fullName": "Eric Monahan",
+        "gender": "male",
+        "ageRange": "814-316",
+        "nationalIdNumber": "7441585796",
+        "email": "Antonina81@gmail.com",
+        "phoneNumber": "+232-577-8170",
+        "whatsappNumber": "+652-915-1396",
+        "homeAddress": "32707 O'Connell Avenue",
+        "countyDistrict": "Isle of Man",
+        "country": "Somalia",
+        "farmLocation": "McClureburgh",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Steel"
+            },
+            {
+                "cropName": "Plastic"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": [
+            {
+                "photoUrl": "https://example.com/farm1.jpg"
+            },
+            {
+                "photoUrl": "https://example.com/farm2.jpg"
+            }
+        ],
+        "dataConsent": true
+    },
+    {
+        "fullName": "Alex Feeney PhD",
+        "gender": "male",
+        "ageRange": "84-608",
+        "nationalIdNumber": "78989201577",
+        "email": "Zander.Volkman@hotmail.com",
+        "phoneNumber": "+867-705-9227",
+        "whatsappNumber": "+274-551-2934",
+        "homeAddress": "87725 Dandre Islands",
+        "countyDistrict": "Switzerland",
+        "country": "United States of America",
+        "farmLocation": "Thielport",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Frozen"
+            },
+            {
+                "cropName": "Frozen"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": [
+            {
+                "photoUrl": "https://example.com/farm1.jpg"
+            },
+            {
+                "photoUrl": "https://example.com/farm2.jpg"
+            }
+        ],
+        "dataConsent": true
+    },
+    {
+        "fullName": "Samuel Dickens",
+        "gender": "male",
+        "ageRange": "903-773",
+        "nationalIdNumber": "913267912446",
+        "email": "Margarette_Veum@yahoo.com",
+        "phoneNumber": "+785-565-8808",
+        "whatsappNumber": "+907-891-5997",
+        "homeAddress": "84416 Mitchel Bridge",
+        "countyDistrict": "United States of America",
+        "country": "Gambia",
+        "farmLocation": "Port Agustinaborough",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Soft"
+            },
+            {
+                "cropName": "Frozen"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": [
+            {
+                "photoUrl": "https://example.com/farm1.jpg"
+            },
+            {
+                "photoUrl": "https://example.com/farm2.jpg"
+            }
+        ],
+        "dataConsent": true
+    },
+    {
+        "fullName": "Natalie Keebler",
+        "gender": "male",
+        "ageRange": "126-73",
+        "nationalIdNumber": "99679724414",
+        "email": "Marty_Kuhic39@hotmail.com",
+        "phoneNumber": "+639-445-9120",
+        "whatsappNumber": "+627-698-4922",
+        "homeAddress": "343 Sylvan Parkway",
+        "countyDistrict": "United States of America",
+        "country": "Guyana",
+        "farmLocation": "Parisianfort",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Rubber"
+            },
+            {
+                "cropName": "Frozen"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": [
+            {
+                "photoUrl": "https://example.com/farm1.jpg"
+            },
+            {
+                "photoUrl": "https://example.com/farm2.jpg"
+            }
+        ],
+        "dataConsent": true
+    }
+]
