@@ -1,0 +1,51 @@
+{
+    "fullName": "Lydia Orn",
+    "gender": "male",
+    "ageRange": "650-489",
+    "nationalIdNumber": "8956129516",
+    "email": "Vena52@hotmail.com",
+    "phoneNumber": "+1234567890",
+    "whatsappNumber": "+438-477-5804",
+    "homeAddress": "378 Jones Plain",
+    "countyDistrict": "Indonesia",
+    "country": "Cocos (Keeling) Islands",
+    "farmLocation": "Carmichael",
+    "farmSize": 5.2,
+    "actualFarmSize": "5.2 hectares",
+    "landOwnershipStatus": "Owned",
+    "yearsFarmingExperience": "10",
+    "crops": [
+        {
+            "cropName": "Concrete"
+        },
+        {
+            "cropName": "Fresh"
+        }
+    ],
+    "averageAnnualYield": "20 tons",
+    "farmingPractices": "Organic farming, Mixed cropping",
+    "annualFarmingRevenue": "₦3,000,000",
+    "accessToCredit": "Yes",
+    "previousInsurance": "No",
+    "produceSaleLocation": "Local market",
+    "financialChallenge": "High input cost",
+    "recentChallenges": "Flooding, Pest invasion",
+    "soilManagement": "Crop rotation, Compost use",
+    "irrigationAccess": true,
+    "climateResilientProgram": true,
+    "sustainablePractices": "Use of compost, minimal tillage",
+    "carbonCreditProgram": false,
+    "cropInsuranceInterest": true,
+    "paymentFrequency": "Quarterly",
+    "insuranceConcerns": "High premium cost",
+    "recommendInsurance": "Yes, to fellow farmers",
+    "farmPhotos": [
+        {
+            "photoUrl": "https://example.com/farm1.jpg"
+        },
+        {
+            "photoUrl": "https://example.com/farm2.jpg"
+        }
+    ],
+    "dataConsent": true
+}
