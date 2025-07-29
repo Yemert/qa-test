@@ -1,0 +1,19 @@
+{
+    "fullName": "Mr. Jamie Schumm",
+    "crops": [
+        {
+            "cropName": "Granite"
+        },
+        {
+            "cropName": "Steel"
+        }
+    ],
+    "farmPhotos": [
+        {
+            "photoUrl": "https://example.com/farm1.jpg"
+        },
+        {
+            "photoUrl": "https://example.com/farm2.jpg"
+        }
+    ]
+}
