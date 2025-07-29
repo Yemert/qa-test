@@ -1,7 +1,0 @@
-{
-  "sessionId": "ATUid_12345",
-  "serviceCode": "*384*96#",
-  "phoneNumber": "+234810008999",
-  "text": "",
-  "networkCode": "63902"
-}

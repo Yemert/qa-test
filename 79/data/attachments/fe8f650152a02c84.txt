@@ -1,0 +1,51 @@
+{
+    "fullName": "Willis Kreiger",
+    "gender": "male",
+    "ageRange": "465-451",
+    "nationalIdNumber": "74189243883",
+    "email": "Jamel_Homenick43@hotmail.com",
+    "phoneNumber": "+1234567890",
+    "whatsappNumber": "+388-734-0712",
+    "homeAddress": "760 Donny Fall",
+    "countyDistrict": "Turkey",
+    "country": "Comoros",
+    "farmLocation": "Moreno Valley",
+    "farmSize": 5.2,
+    "actualFarmSize": "5.2 hectares",
+    "landOwnershipStatus": "Owned",
+    "yearsFarmingExperience": "10",
+    "crops": [
+        {
+            "cropName": "Metal"
+        },
+        {
+            "cropName": "Wooden"
+        }
+    ],
+    "averageAnnualYield": "20 tons",
+    "farmingPractices": "Organic farming, Mixed cropping",
+    "annualFarmingRevenue": "₦3,000,000",
+    "accessToCredit": "Yes",
+    "previousInsurance": "No",
+    "produceSaleLocation": "Local market",
+    "financialChallenge": "High input cost",
+    "recentChallenges": "Flooding, Pest invasion",
+    "soilManagement": "Crop rotation, Compost use",
+    "irrigationAccess": true,
+    "climateResilientProgram": true,
+    "sustainablePractices": "Use of compost, minimal tillage",
+    "carbonCreditProgram": false,
+    "cropInsuranceInterest": true,
+    "paymentFrequency": "Quarterly",
+    "insuranceConcerns": "High premium cost",
+    "recommendInsurance": "Yes, to fellow farmers",
+    "farmPhotos": [
+        {
+            "photoUrl": "https://example.com/farm1.jpg"
+        },
+        {
+            "photoUrl": "https://example.com/farm2.jpg"
+        }
+    ],
+    "dataConsent": true
+}
