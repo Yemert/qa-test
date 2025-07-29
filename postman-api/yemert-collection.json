@@ -1458,7 +1458,7 @@
 								"header": [
 									{
 										"key": "Cookie",
-										"value": "",
+										"value": "token=",
 										"type": "text",
 										"disabled": true
 									}
