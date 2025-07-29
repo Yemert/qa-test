@@ -1,0 +1,19 @@
+{
+    "fullName": "Alicia Kerluke",
+    "crops": [
+        {
+            "cropName": "Metal"
+        },
+        {
+            "cropName": "Soft"
+        }
+    ],
+    "farmPhotos": [
+        {
+            "photoUrl": "https://example.com/farm1.jpg"
+        },
+        {
+            "photoUrl": "https://example.com/farm2.jpg"
+        }
+    ]
+}

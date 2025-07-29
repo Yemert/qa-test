@@ -1,0 +1,1 @@
+{"success":true,"message":"Insurance created successfully","data":{"id":76,"cropName":"maize","plan":"starter","costOfProduction":"","mobileMoney":false,"txId":"8021","startDate":"29th Jul, 2025","endDate":"29th Oct, 2025","paid":true,"amountToPay":"0","amountPaid":"1","isActive":true,"farmer":{"yemertId":3887}}}

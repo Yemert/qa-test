@@ -1,0 +1,1 @@
+{"success":true,"message":"Admin created successfully. Please securely share the initial password with the new admin.","data":{"id":17,"adminId":511910,"role":"ADMIN","access":true,"email":"Maggie_Zulauf@yahoo.com","createdAt":"2025-07-29T23:24:55.287Z","updatedAt":"2025-07-29T23:24:55.287Z","initialPassword":"8zkny5dnOF0E!"}}

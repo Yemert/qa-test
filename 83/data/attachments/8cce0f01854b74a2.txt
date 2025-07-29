@@ -1,0 +1,1 @@
+{"success":true,"message":"Farmer claims fetched successfully","data":{"farmer":{"yemertId":2585,"fullName":"Boot Loot","phoneNumber":"2348031111112"},"claims":[{"id":4,"type":"Theft/Violence","whatsapp":false,"number":null,"isActive":true,"farmer":{"yemertId":2585,"fullName":"Boot Loot","phoneNumber":"2348031111112"}}]}}
