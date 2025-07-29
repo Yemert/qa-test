@@ -779,13 +779,15 @@
 										"exec": [
 											"var resp = pm.response.json();",
 											"",
-											"pm.test(\"Status code should be 400\", function () {",
-											"    pm.response.to.have.status(400);",
+											"pm.test(\"Status code should be 201\", function () {",
+											"    pm.response.to.have.status(201);",
 											"});",
 											"",
-											"pm.test(\"Invalid ID error message is returned\", function () {",
-											"    pm.expect(resp.message).to.eql(\"Admin with email already exists\");",
-											"    pm.expect(resp.success).to.eql(false);",
+											"pm.test(\"Admin is created successfully\", function () {",
+											"    pm.expect(resp.message).to.eql(\"Admin created successfully. Please securely share the initial password with the new admin.\");",
+											"    pm.expect(resp.success).to.eql(true);",
+											"    pm.expect(resp.data.role).to.eql(\"ADMIN\");",
+											"    pm.expect(resp.data.initialPassword).is.not.null;",
 											"});",
 											""
 										],
@@ -803,7 +805,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"email\": \"admin02@yemert.co\",\n  \"role\": \"ADMIN\"\n}",
+									"raw": "{\n  \"email\": \"{{$randomEmail}}\",\n  \"role\": \"ADMIN\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
