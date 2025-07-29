@@ -1074,7 +1074,22 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": "{{baseurl}}/admin"
+								"url": {
+									"raw": "{{baseurl}}/admin/:identifier",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"admin",
+										":identifier"
+									],
+									"variable": [
+										{
+											"key": "identifier",
+											"value": ""
+										}
+									]
+								}
 							},
 							"response": []
 						},
