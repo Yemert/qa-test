@@ -902,6 +902,45 @@
 							"response": []
 						},
 						{
+							"name": "Get Logged in Admin details - Successful",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "2a779a39-4925-471e-866f-f64d7eb4ef98",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Admin details are returned\", function () {",
+											"    pm.expect(resp.data.id).to.eql(\"725739\");",
+											"    pm.expect(resp.success).to.eql(\"true\");",
+											"});",
+											"",
+											"// There is no information on how to pass the token",
+											"",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "7b23c3c2-e2ad-4f88-9b1b-79f23019aae8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{baseurl}}/admin"
+							},
+							"response": []
+						},
+						{
 							"name": "Get Admin details - no authentication",
 							"event": [
 								{
@@ -972,45 +1011,6 @@
 								}
 							],
 							"id": "7db53596-2915-4c01-b7a2-6cffeb115dc3",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": "{{baseurl}}/admin"
-							},
-							"response": []
-						},
-						{
-							"name": "Get Admin details - successful Copy",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "2a779a39-4925-471e-866f-f64d7eb4ef98",
-										"exec": [
-											"var resp = pm.response.json();",
-											"",
-											"pm.test(\"Status code should be 200\", function () {",
-											"    pm.response.to.have.status(200);",
-											"});",
-											"",
-											"pm.test(\"Admin details are returned\", function () {",
-											"    pm.expect(resp.data.id).to.eql(\"725739\");",
-											"    pm.expect(resp.success).to.eql(\"true\");",
-											"});",
-											"",
-											"// There is no information on how to pass the token",
-											"",
-											""
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								}
-							],
-							"id": "7b23c3c2-e2ad-4f88-9b1b-79f23019aae8",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
