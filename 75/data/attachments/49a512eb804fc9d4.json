@@ -1,0 +1,12 @@
+{
+    "Content-Type": "application/json",
+    "Authorization": "Bearer 86bcc48e-9801-4d2c-83ad-0b3cf7883412",
+    "User-Agent": "PostmanRuntime/7.39.1",
+    "Accept": "*/*",
+    "Cache-Control": "no-cache",
+    "Postman-Token": "770626d0-4c0f-4fff-b141-a0861a76a1c6",
+    "Host": "staging.yemert.co",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive",
+    "Content-Length": "87"
+}

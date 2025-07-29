@@ -1,0 +1,10 @@
+{
+    "Authorization": "Bearer 86bcc48e-9801-4d2c-83ad-0b3cf7883412",
+    "User-Agent": "PostmanRuntime/7.39.1",
+    "Accept": "*/*",
+    "Cache-Control": "no-cache",
+    "Postman-Token": "1378aad8-8eb9-4ad7-a4b3-74843d2203b7",
+    "Host": "staging.yemert.co",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive"
+}

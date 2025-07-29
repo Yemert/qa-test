@@ -1,0 +1,51 @@
+{
+    "fullName": "Robyn West",
+    "gender": "male",
+    "ageRange": "78-295",
+    "nationalIdNumber": "78269241919",
+    "email": "Marquis60@gmail.com",
+    "phoneNumber": "+1234567890",
+    "whatsappNumber": "+471-479-9356",
+    "homeAddress": "7617 Lynn Vista",
+    "countyDistrict": "United States of America",
+    "country": "Qatar",
+    "farmLocation": "Port Greg",
+    "farmSize": 5.2,
+    "actualFarmSize": "5.2 hectares",
+    "landOwnershipStatus": "Owned",
+    "yearsFarmingExperience": "10",
+    "crops": [
+        {
+            "cropName": "Steel"
+        },
+        {
+            "cropName": "Plastic"
+        }
+    ],
+    "averageAnnualYield": "20 tons",
+    "farmingPractices": "Organic farming, Mixed cropping",
+    "annualFarmingRevenue": "₦3,000,000",
+    "accessToCredit": "Yes",
+    "previousInsurance": "No",
+    "produceSaleLocation": "Local market",
+    "financialChallenge": "High input cost",
+    "recentChallenges": "Flooding, Pest invasion",
+    "soilManagement": "Crop rotation, Compost use",
+    "irrigationAccess": true,
+    "climateResilientProgram": true,
+    "sustainablePractices": "Use of compost, minimal tillage",
+    "carbonCreditProgram": false,
+    "cropInsuranceInterest": true,
+    "paymentFrequency": "Quarterly",
+    "insuranceConcerns": "High premium cost",
+    "recommendInsurance": "Yes, to fellow farmers",
+    "farmPhotos": [
+        {
+            "photoUrl": "https://example.com/farm1.jpg"
+        },
+        {
+            "photoUrl": "https://example.com/farm2.jpg"
+        }
+    ],
+    "dataConsent": true
+}

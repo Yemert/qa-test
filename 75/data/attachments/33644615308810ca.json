@@ -1,0 +1,13 @@
+{
+    "Content-Type": "application/json",
+    "Authorization": "Bearer 86bcc48e-9801-4d2c-83ad-0b3cf7883412",
+    "User-Agent": "PostmanRuntime/7.39.1",
+    "Accept": "*/*",
+    "Cache-Control": "no-cache",
+    "Postman-Token": "dfe50614-a53b-43af-b786-153034048730",
+    "Host": "staging.yemert.co",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive",
+    "Content-Length": "47",
+    "Cookie": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjo3MjU3MzkwLCJyb2xlIjoiU1VQRVJfQURNSU4iLCJpYXQiOjE3NTM4MTQzNTIsImV4cCI6MTc1NDQxOTE1Mn0.IdPYjZb4Sk6t6Vfp8xqYBpG0hzgtEpQXd7KJ12n6uaI"
+}

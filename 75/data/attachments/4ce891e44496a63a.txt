@@ -1,0 +1,251 @@
+[
+    {
+        "fullName": "Cesar Balistreri",
+        "gender": "male",
+        "ageRange": "725-736",
+        "nationalIdNumber": "950140731807",
+        "email": "Shayna_Raynor@gmail.com",
+        "phoneNumber": "+328-695-3557",
+        "whatsappNumber": "+428-375-8418",
+        "homeAddress": "054 Homenick Mountain",
+        "countyDistrict": "Greece",
+        "country": "Dominica",
+        "farmLocation": "Meriden",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Soft"
+            },
+            {
+                "cropName": "Rubber"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": [
+            {
+                "photoUrl": "https://example.com/farm1.jpg"
+            },
+            {
+                "photoUrl": "https://example.com/farm2.jpg"
+            }
+        ],
+        "dataConsent": true
+    },
+    {
+        "fullName": "Josh Stracke",
+        "gender": "male",
+        "ageRange": "320-511",
+        "nationalIdNumber": "25882562873",
+        "email": "",
+        "phoneNumber": "",
+        "whatsappNumber": "+817-407-9631",
+        "homeAddress": "70554 Myriam Trail",
+        "countyDistrict": "Lebanon",
+        "country": "Equatorial Guinea",
+        "farmLocation": "Yeseniaville",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": [
+            {
+                "photoUrl": "https://example.com/farm1.jpg"
+            },
+            {
+                "photoUrl": "https://example.com/farm2.jpg"
+            }
+        ],
+        "dataConsent": true
+    },
+    {
+        "fullName": "Don King",
+        "gender": "male",
+        "ageRange": "197-24",
+        "nationalIdNumber": "944724240137",
+        "email": "Nova32@yahoo.com",
+        "phoneNumber": "+804-390-0382",
+        "whatsappNumber": "+420-259-4545",
+        "homeAddress": "186 Hilpert Bypass",
+        "countyDistrict": "Macedonia",
+        "country": "Congo",
+        "farmLocation": "Jerdemouth",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Frozen"
+            },
+            {
+                "cropName": "Metal"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": [
+            {
+                "photoUrl": "https://example.com/farm1.jpg"
+            },
+            {
+                "photoUrl": "https://example.com/farm2.jpg"
+            }
+        ],
+        "dataConsent": true
+    },
+    {
+        "fullName": "Angel Abernathy",
+        "gender": "male",
+        "ageRange": "178-192",
+        "nationalIdNumber": "1046791539",
+        "email": "Turner61@gmail.com",
+        "phoneNumber": "+880-868-1651",
+        "whatsappNumber": "+745-809-2485",
+        "homeAddress": "31011 Newton Fords",
+        "countyDistrict": "Armenia",
+        "country": "Vietnam",
+        "farmLocation": "Lake Yasmeenborough",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Concrete"
+            },
+            {
+                "cropName": "Concrete"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": [
+            {
+                "photoUrl": "https://example.com/farm1.jpg"
+            },
+            {
+                "photoUrl": "https://example.com/farm2.jpg"
+            }
+        ],
+        "dataConsent": true
+    },
+    {
+        "fullName": "Ellen Herman",
+        "gender": "male",
+        "ageRange": "616-171",
+        "nationalIdNumber": "70125263545",
+        "email": "Kasey.Pacocha@hotmail.com",
+        "phoneNumber": "+603-228-3373",
+        "whatsappNumber": "+824-380-8998",
+        "homeAddress": "34429 Huel Loaf",
+        "countyDistrict": "Bolivia",
+        "country": "Benin",
+        "farmLocation": "Erie",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Metal"
+            },
+            {
+                "cropName": "Cotton"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": [
+            {
+                "photoUrl": "https://example.com/farm1.jpg"
+            },
+            {
+                "photoUrl": "https://example.com/farm2.jpg"
+            }
+        ],
+        "dataConsent": true
+    }
+]

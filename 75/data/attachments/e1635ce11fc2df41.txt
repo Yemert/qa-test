@@ -1,0 +1,19 @@
+{
+    "fullName": "Jane Toy",
+    "crops": [
+        {
+            "cropName": "Soft"
+        },
+        {
+            "cropName": "Metal"
+        }
+    ],
+    "farmPhotos": [
+        {
+            "photoUrl": "https://example.com/farm1.jpg"
+        },
+        {
+            "photoUrl": "https://example.com/farm2.jpg"
+        }
+    ]
+}
