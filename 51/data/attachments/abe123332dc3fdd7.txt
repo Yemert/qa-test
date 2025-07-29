@@ -1,1 +1,0 @@
-{"success":false,"message":"Your Password should be more than 6 characters"}
