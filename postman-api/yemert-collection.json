@@ -1666,7 +1666,38 @@
 							"response": []
 						}
 					],
-					"id": "f9709e49-986d-4f15-b034-968a46bd5804"
+					"id": "f9709e49-986d-4f15-b034-968a46bd5804",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "356a1a90-d8f6-41d5-8f34-15b54bd325ae",
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									"const cookie = pm.environment.get(\"cookieToken\");\r",
+									"\r",
+									"if(cookie) {\r",
+									"    pm.request.headers.upsert({\r",
+									"        key: \"Cookie\",\r",
+									"        value: `token=${cookie}`\r",
+									"    });\r",
+									"}"
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "be505b9e-61d3-4513-affb-be53f1aefe2a",
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						}
+					]
 				},
 				{
 					"name": "Claims",
@@ -4285,7 +4316,38 @@
 					"id": "8cc2f8c9-1428-427e-b080-0a648f12043a"
 				}
 			],
-			"id": "2c75f443-2949-4183-95df-48e8ff1b2a8b"
+			"id": "2c75f443-2949-4183-95df-48e8ff1b2a8b",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "1f4a93d3-773a-41f7-a5a0-de9cf3bb8c65",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "6c279e3a-6324-433b-8ec7-10634c066e08",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							"const cookie = pm.environment.get(\"cookieToken\");\r",
+							"\r",
+							"if(cookie) {\r",
+							"    pm.request.headers.upsert({\r",
+							"        key: \"Cookie\",\r",
+							"        value: `token=${cookie}`\r",
+							"    });\r",
+							"}"
+						]
+					}
+				}
+			]
 		}
 	],
 	"auth": {
