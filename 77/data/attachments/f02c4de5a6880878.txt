@@ -1,0 +1,251 @@
+[
+    {
+        "fullName": "Adrienne Terry",
+        "gender": "male",
+        "ageRange": "337-132",
+        "nationalIdNumber": "945701418943",
+        "email": "Jaquan_Oberbrunner@hotmail.com",
+        "phoneNumber": "+660-422-2390",
+        "whatsappNumber": "+849-251-8871",
+        "homeAddress": "03072 Botsford Inlet",
+        "countyDistrict": "Anguilla",
+        "country": "Senegal",
+        "farmLocation": "East Jamil",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Rubber"
+            },
+            {
+                "cropName": "Cotton"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": [
+            {
+                "photoUrl": "https://example.com/farm1.jpg"
+            },
+            {
+                "photoUrl": "https://example.com/farm2.jpg"
+            }
+        ],
+        "dataConsent": true
+    },
+    {
+        "fullName": "Maureen McLaughlin",
+        "gender": "male",
+        "ageRange": "411-724",
+        "nationalIdNumber": "469271337251",
+        "email": "",
+        "phoneNumber": "",
+        "whatsappNumber": "+507-474-5560",
+        "homeAddress": "3057 Ellsworth Squares",
+        "countyDistrict": "Saint Barthelemy",
+        "country": "Guinea-Bissau",
+        "farmLocation": "West Adolphtown",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": [
+            {
+                "photoUrl": "https://example.com/farm1.jpg"
+            },
+            {
+                "photoUrl": "https://example.com/farm2.jpg"
+            }
+        ],
+        "dataConsent": true
+    },
+    {
+        "fullName": "Ms. Miranda Bayer",
+        "gender": "male",
+        "ageRange": "537-528",
+        "nationalIdNumber": "577508585574",
+        "email": "Abraham99@gmail.com",
+        "phoneNumber": "+929-413-1237",
+        "whatsappNumber": "+457-504-8387",
+        "homeAddress": "6319 Jerel Path",
+        "countyDistrict": "Pakistan",
+        "country": "China",
+        "farmLocation": "Ratkeborough",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Soft"
+            },
+            {
+                "cropName": "Soft"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": [
+            {
+                "photoUrl": "https://example.com/farm1.jpg"
+            },
+            {
+                "photoUrl": "https://example.com/farm2.jpg"
+            }
+        ],
+        "dataConsent": true
+    },
+    {
+        "fullName": "Keith Kshlerin",
+        "gender": "male",
+        "ageRange": "139-712",
+        "nationalIdNumber": "185719719842",
+        "email": "Elijah3@hotmail.com",
+        "phoneNumber": "+984-696-1892",
+        "whatsappNumber": "+582-863-4685",
+        "homeAddress": "5553 Liana Cape",
+        "countyDistrict": "Oman",
+        "country": "French Southern Territories",
+        "farmLocation": "Wymanfurt",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Rubber"
+            },
+            {
+                "cropName": "Cotton"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": [
+            {
+                "photoUrl": "https://example.com/farm1.jpg"
+            },
+            {
+                "photoUrl": "https://example.com/farm2.jpg"
+            }
+        ],
+        "dataConsent": true
+    },
+    {
+        "fullName": "Bryan Brown",
+        "gender": "male",
+        "ageRange": "43-6",
+        "nationalIdNumber": "99141756394",
+        "email": "Karlie.Barton@hotmail.com",
+        "phoneNumber": "+334-793-7863",
+        "whatsappNumber": "+758-967-4203",
+        "homeAddress": "48027 Rodrick Mews",
+        "countyDistrict": "Greece",
+        "country": "Denmark",
+        "farmLocation": "Waltonberg",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Metal"
+            },
+            {
+                "cropName": "Soft"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": [
+            {
+                "photoUrl": "https://example.com/farm1.jpg"
+            },
+            {
+                "photoUrl": "https://example.com/farm2.jpg"
+            }
+        ],
+        "dataConsent": true
+    }
+]

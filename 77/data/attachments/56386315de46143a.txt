@@ -1,0 +1,257 @@
+[
+    {
+        "fullName": "Ms. Rosemary Leffler",
+        "gender": "male",
+        "ageRange": "948-426",
+        "nationalIdNumber": "752423881942",
+        "email": "Eunice95@yahoo.com",
+        "phoneNumber": "+349-560-0792",
+        "whatsappNumber": "+939-441-2075",
+        "homeAddress": "763 Dolly Station",
+        "countyDistrict": "Montenegro",
+        "country": "Mongolia",
+        "farmLocation": "Lizethton",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Concrete"
+            },
+            {
+                "cropName": "Concrete"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": [
+            {
+                "photoUrl": "https://example.com/farm1.jpg"
+            },
+            {
+                "photoUrl": "https://example.com/farm2.jpg"
+            }
+        ],
+        "dataConsent": true
+    },
+    {
+        "fullName": "Jimmie Stanton",
+        "gender": "male",
+        "ageRange": "822-705",
+        "nationalIdNumber": "10790024260",
+        "email": "Tyrell.Barrows@hotmail.com",
+        "phoneNumber": "+259-659-6966",
+        "whatsappNumber": "+916-785-5301",
+        "homeAddress": "573 Karine Ville",
+        "countyDistrict": "India",
+        "country": "Cote d'Ivoire",
+        "farmLocation": "Concord",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Cotton"
+            },
+            {
+                "cropName": "Metal"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": [
+            {
+                "photoUrl": "https://example.com/farm1.jpg"
+            },
+            {
+                "photoUrl": "https://example.com/farm2.jpg"
+            }
+        ],
+        "dataConsent": true
+    },
+    {
+        "fullName": "Gretchen Jerde",
+        "gender": "male",
+        "ageRange": "955-416",
+        "nationalIdNumber": "98276233798",
+        "email": "Wyatt24@hotmail.com",
+        "phoneNumber": "+658-722-4191",
+        "whatsappNumber": "+646-461-6365",
+        "homeAddress": "927 Eloy Square",
+        "countyDistrict": "Martinique",
+        "country": "Afghanistan",
+        "farmLocation": "Lake Urban",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Rubber"
+            },
+            {
+                "cropName": "Soft"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": [
+            {
+                "photoUrl": "https://example.com/farm1.jpg"
+            },
+            {
+                "photoUrl": "https://example.com/farm2.jpg"
+            }
+        ],
+        "dataConsent": true
+    },
+    {
+        "fullName": "Tricia Steuber",
+        "gender": "male",
+        "ageRange": "109-768",
+        "nationalIdNumber": "581776404765",
+        "email": "Kevon_Ortiz74@hotmail.com",
+        "phoneNumber": "+338-601-1821",
+        "whatsappNumber": "+939-675-7656",
+        "homeAddress": "699 Paul Spur",
+        "countyDistrict": "Puerto Rico",
+        "country": "Brunei Darussalam",
+        "farmLocation": "South Dawson",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Soft"
+            },
+            {
+                "cropName": "Steel"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": [
+            {
+                "photoUrl": "https://example.com/farm1.jpg"
+            },
+            {
+                "photoUrl": "https://example.com/farm2.jpg"
+            }
+        ],
+        "dataConsent": true
+    },
+    {
+        "fullName": "Bobbie Lubowitz",
+        "gender": "male",
+        "ageRange": "592-744",
+        "nationalIdNumber": "410848735248",
+        "email": "Dustin_Jast1@gmail.com",
+        "phoneNumber": "+511-654-6423",
+        "whatsappNumber": "+239-576-0671",
+        "homeAddress": "028 Keegan Walks",
+        "countyDistrict": "Cocos (Keeling) Islands",
+        "country": "Puerto Rico",
+        "farmLocation": "Aliso Viejo",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Plastic"
+            },
+            {
+                "cropName": "Fresh"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": [
+            {
+                "photoUrl": "https://example.com/farm1.jpg"
+            },
+            {
+                "photoUrl": "https://example.com/farm2.jpg"
+            }
+        ],
+        "dataConsent": true
+    }
+]

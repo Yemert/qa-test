@@ -1,0 +1,4 @@
+{
+  "claimId": 123454,
+  "role": "ADMIN"
+}
