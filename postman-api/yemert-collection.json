@@ -854,7 +854,38 @@
 							"response": []
 						}
 					],
-					"id": "2344e141-8315-4658-9d78-62d282f3a005"
+					"id": "2344e141-8315-4658-9d78-62d282f3a005",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "1e2ecbe8-74ac-4e59-85b4-f8e10f7cf37f",
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									"const cookie = pm.environment.get(\"cookieToken\");\r",
+									"\r",
+									"if(cookie) {\r",
+									"    pm.request.headers.upsert({\r",
+									"        key: \"Cookie\",\r",
+									"        value: `token=${cokkie}`\r",
+									"    });\r",
+									"}"
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "0bf5d44b-947c-4230-989a-13a1d1cf54b1",
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						}
+					]
 				},
 				{
 					"name": "Get Admins",
