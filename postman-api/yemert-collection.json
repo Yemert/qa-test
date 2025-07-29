@@ -1013,13 +1013,13 @@
 										"exec": [
 											"var resp = pm.response.json();",
 											"",
-											"pm.test(\"Status code should be 401\", function () {",
-											"    pm.response.to.have.status(401);",
+											"pm.test(\"Status code should be 400\", function () {",
+											"    pm.response.to.have.status(400);",
 											"});",
 											"",
-											"pm.test(\"An authentication error is returned\", function () {",
+											"pm.test(\"A user required error is returned\", function () {",
 											"    pm.expect(resp.message).to.eql(\"Please provide either a valid email or admin ID\");",
-											"    pm.expect(resp.success).to.eql(\"false\");",
+											"    pm.expect(resp.success).to.eql(false);",
 											"});",
 											""
 										],
