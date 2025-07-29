@@ -1217,7 +1217,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "8eb47dfc-8175-44c4-a270-846275248117",
+								"id": "216a9bc9-047e-44b7-9747-0adc2bde08df",
 								"type": "text/javascript",
 								"packages": {},
 								"exec": [
@@ -1226,7 +1226,7 @@
 									"if(cookie) {\r",
 									"    pm.request.headers.upsert({\r",
 									"        key: \"Cookie\",\r",
-									"        value: \"token=${cookie}\"\r",
+									"        value: `token=${cookie}`\r",
 									"    });\r",
 									"}"
 								]
@@ -1235,7 +1235,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "66792d77-1bbd-4951-bb6e-76257857830f",
+								"id": "659ead8c-8255-4fb0-a915-fc061996b151",
 								"type": "text/javascript",
 								"packages": {},
 								"exec": [
@@ -1460,7 +1460,38 @@
 							"response": []
 						}
 					],
-					"id": "bf287f25-be8a-493f-a05f-318c8b2d9966"
+					"id": "bf287f25-be8a-493f-a05f-318c8b2d9966",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "b65327ac-2f05-419d-a87c-01bda07aa26c",
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									"const cookie = pm.environment.get(\"admin_token\");",
+									"",
+									"if(cookie) {",
+									"    pm.request.headers.upsert({",
+									"        key: \"Cookie\",",
+									"        value: `token=${cookie}`",
+									"    });",
+									"}"
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "ff51b671-3cdd-4c94-9b9e-d5284a5f9003",
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						}
+					]
 				},
 				{
 					"name": "Get Farmers",
@@ -1685,11 +1716,11 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "356a1a90-d8f6-41d5-8f34-15b54bd325ae",
+								"id": "4b42fc54-59ad-466d-8560-a3298374043b",
 								"type": "text/javascript",
 								"packages": {},
 								"exec": [
-									"const cookie = pm.environment.get(\"cookieToken\");\r",
+									"const cookie = pm.environment.get(\"admin_token\");\r",
 									"\r",
 									"if(cookie) {\r",
 									"    pm.request.headers.upsert({\r",
@@ -1703,7 +1734,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "be505b9e-61d3-4513-affb-be53f1aefe2a",
+								"id": "f97492cb-3528-4e87-9179-3e692fad75f8",
 								"type": "text/javascript",
 								"packages": {},
 								"exec": [
