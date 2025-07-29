@@ -1103,6 +1103,56 @@
 							"response": []
 						},
 						{
+							"name": "Get list of admins - no auth",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "2a779a39-4925-471e-866f-f64d7eb4ef98",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 401\", function () {",
+											"    pm.response.to.have.status(401);",
+											"});",
+											"",
+											"pm.test(\"Authentication error message is returned\", function () {",
+											"    pm.expect(resp.success).to.eql(false);",
+											"    pm.expect(resp.message).to.eql(\"No authorization provided\");",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "5ba48d05-33cc-4261-9c6b-6513f5f64933",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}",
+										"type": "text"
+									},
+									{
+										"key": "Cookie",
+										"value": "token=",
+										"type": "text"
+									}
+								],
+								"url": "{{baseurl}}/admins"
+							},
+							"response": []
+						},
+						{
 							"name": "Get list of admins - successful",
 							"event": [
 								{
@@ -1145,52 +1195,6 @@
 										"key": "Authorization",
 										"value": "Bearer {{bearerToken}}",
 										"type": "text"
-									}
-								],
-								"url": "{{baseurl}}/admins"
-							},
-							"response": []
-						},
-						{
-							"name": "Get list of admins - no auth",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "2a779a39-4925-471e-866f-f64d7eb4ef98",
-										"exec": [
-											"var resp = pm.response.json();",
-											"",
-											"pm.test(\"Status code should be 401\", function () {",
-											"    pm.response.to.have.status(401);",
-											"});",
-											"",
-											"pm.test(\"Authentication error message is returned\", function () {",
-											"    pm.expect(resp.success).to.eql(false);",
-											"    pm.expect(resp.message).to.eql(\"No authorization provided\");",
-											"});",
-											""
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								}
-							],
-							"id": "5ba48d05-33cc-4261-9c6b-6513f5f64933",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "noauth"
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{bearerToken}}",
-										"type": "text",
-										"disabled": true
 									}
 								],
 								"url": "{{baseurl}}/admins"
