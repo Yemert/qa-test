@@ -9,7 +9,7 @@
 			"name": "Admin",
 			"item": [
 				{
-					"name": "Login User Types",
+					"name": "A_Login User Types",
 					"item": [
 						{
 							"name": "SUPER_ADMIN - Admin Login",
@@ -531,51 +531,6 @@
 								"url": "{{baseurl}}/admin/logout"
 							},
 							"response": []
-						},
-						{
-							"name": "Admin logout - no auth",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "2c033784-29bb-4c07-9527-dbf0838a35c3",
-										"exec": [
-											"var resp = pm.response.json();",
-											"",
-											"pm.test(\"Status code should be 400\", function () {",
-											"    pm.response.to.have.status(400);",
-											"});",
-											"",
-											"pm.test(\"Invalid ID error message is returned\", function () {",
-											"    pm.expect(resp.message).to.eql(\"Admin with email already exists\");",
-											"    pm.expect(resp.success).to.eql(false);",
-											"});",
-											""
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								}
-							],
-							"id": "7862eed8-763a-4100-b3fa-66f7e60845fc",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"email\": \"admin02@yemert.co\",\n  \"role\": \"ADMIN\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{baseurl}}/admin/logout"
-							},
-							"response": []
 						}
 					],
 					"id": "49ab835d-0339-4300-b054-20bb59265361"
@@ -614,7 +569,13 @@
 							},
 							"request": {
 								"method": "POST",
-								"header": [],
+								"header": [
+									{
+										"key": "Cookie",
+										"value": "token={{cookieToken}}",
+										"type": "text"
+									}
+								],
 								"body": {
 									"mode": "raw",
 									"raw": "{\n    \"email\": \"gdtD@hshs.hhs\",\n    \"role\": \"ADMIN\"\n}",
@@ -854,11 +815,129 @@
 							"response": []
 						}
 					],
-					"id": "2344e141-8315-4658-9d78-62d282f3a005"
+					"id": "2344e141-8315-4658-9d78-62d282f3a005",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "5706ce6d-5eb6-4a5d-b121-0b2c98f49188",
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									"const cookie = pm.environment.get(\"cookieToken\");\r",
+									"\r",
+									"if(cookie) {\r",
+									"    pm.request.headers.upsert({\r",
+									"        key: \"Cookie\",\r",
+									"        value: `token=${cookie}`\r",
+									"    });\r",
+									"}"
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "5fdc685a-07d3-462e-ac13-b23f4865f72a",
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						}
+					]
 				},
 				{
 					"name": "Get Admins",
 					"item": [
+						{
+							"name": "Get Logged in Admin details - no authentication",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "3f0e4a32-ab7c-4401-8ded-64120d491741",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 401\", function () {",
+											"    pm.response.to.have.status(401);",
+											"});",
+											"",
+											"pm.test(\"An authentication error is returned\", function () {",
+											"    pm.expect(resp.message).to.eql(\"User must be logged in\");",
+											"    pm.expect(resp.success).to.eql(\"false\");",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "c95b31e6-4ae1-48bd-a561-e7cb8f4ae9e4",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Cookie",
+										"value": "token=",
+										"type": "text"
+									}
+								],
+								"url": "{{baseurl}}/admin/profile"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Logged in Admin details - Successful",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "2a779a39-4925-471e-866f-f64d7eb4ef98",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Admin details are returned\", function () {",
+											"    pm.expect(resp.data.id).to.eql(\"725739\");",
+											"    pm.expect(resp.success).to.eql(\"true\");",
+											"});",
+											"",
+											"// There is no information on how to pass the token",
+											"",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "7b23c3c2-e2ad-4f88-9b1b-79f23019aae8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Cookie",
+										"value": "{{cookieToken}}",
+										"type": "text"
+									}
+								],
+								"url": "{{baseurl}}/admin/profile"
+							},
+							"response": []
+						},
 						{
 							"name": "Get Admin details - no authentication",
 							"event": [
@@ -897,7 +976,73 @@
 										"type": "text"
 									}
 								],
-								"url": "{{baseurl}}/admin"
+								"url": {
+									"raw": "{{baseurl}}/admin/:identifier",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"admin",
+										":identifier"
+									],
+									"variable": [
+										{
+											"key": "identifier",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Admin details - no email or Admin ID",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "3f0e4a32-ab7c-4401-8ded-64120d491741",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 401\", function () {",
+											"    pm.response.to.have.status(401);",
+											"});",
+											"",
+											"pm.test(\"An authentication error is returned\", function () {",
+											"    pm.expect(resp.message).to.eql(\"User must be logged in\");",
+											"    pm.expect(resp.success).to.eql(\"false\");",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "0dfc6c14-15a6-4579-8cfd-f0faa235b4b2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/admin/:identifier",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"admin",
+										":identifier"
+									],
+									"variable": [
+										{
+											"key": "identifier",
+											"value": ""
+										}
+									]
+								}
 							},
 							"response": []
 						},
@@ -936,7 +1081,72 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": "{{baseurl}}/admin"
+								"url": {
+									"raw": "{{baseurl}}/admin/:identifier",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"admin",
+										":identifier"
+									],
+									"variable": [
+										{
+											"key": "identifier",
+											"value": "961701"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of admins - no auth",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "2a779a39-4925-471e-866f-f64d7eb4ef98",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 401\", function () {",
+											"    pm.response.to.have.status(401);",
+											"});",
+											"",
+											"pm.test(\"Authentication error message is returned\", function () {",
+											"    pm.expect(resp.success).to.eql(false);",
+											"    pm.expect(resp.message).to.eql(\"No authorization provided\");",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "5ba48d05-33cc-4261-9c6b-6513f5f64933",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{bearerToken}}",
+										"type": "text"
+									},
+									{
+										"key": "Cookie",
+										"value": "token=",
+										"type": "text"
+									}
+								],
+								"url": "{{baseurl}}/admins"
 							},
 							"response": []
 						},
@@ -988,55 +1198,40 @@
 								"url": "{{baseurl}}/admins"
 							},
 							"response": []
-						},
-						{
-							"name": "Get list of admins - no auth",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "2a779a39-4925-471e-866f-f64d7eb4ef98",
-										"exec": [
-											"var resp = pm.response.json();",
-											"",
-											"pm.test(\"Status code should be 401\", function () {",
-											"    pm.response.to.have.status(401);",
-											"});",
-											"",
-											"pm.test(\"Authentication error message is returned\", function () {",
-											"    pm.expect(resp.success).to.eql(false);",
-											"    pm.expect(resp.message).to.eql(\"No authorization provided\");",
-											"});",
-											""
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								}
-							],
-							"id": "5ba48d05-33cc-4261-9c6b-6513f5f64933",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "noauth"
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{bearerToken}}",
-										"type": "text",
-										"disabled": true
-									}
-								],
-								"url": "{{baseurl}}/admins"
-							},
-							"response": []
 						}
 					],
-					"id": "776d0506-326c-4d8d-b695-adbc64a3c4ef"
+					"id": "776d0506-326c-4d8d-b695-adbc64a3c4ef",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "90127185-8115-4bd5-8dc2-67617032f887",
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									"const cookie = pm.environment.get(\"cookieToken\");\r",
+									"\r",
+									"if(cookie) {\r",
+									"    pm.request.headers.upsert({\r",
+									"        key: \"Cookie\",\r",
+									"        value: `token=${cookie}`\r",
+									"    });\r",
+									"}"
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "4a1589b1-0ad8-4041-b1fa-39e96ade03ec",
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						}
+					]
 				}
 			],
 			"id": "6504ec7b-f33a-4c40-8a68-a7e139163a34"
@@ -1292,7 +1487,7 @@
 								"header": [
 									{
 										"key": "Cookie",
-										"value": "",
+										"value": "token=",
 										"type": "text",
 										"disabled": true
 									}
@@ -1455,7 +1650,7 @@
 									"variable": [
 										{
 											"key": "id",
-											"value": "2180"
+											"value": "7213"
 										}
 									]
 								}
@@ -1463,7 +1658,38 @@
 							"response": []
 						}
 					],
-					"id": "f9709e49-986d-4f15-b034-968a46bd5804"
+					"id": "f9709e49-986d-4f15-b034-968a46bd5804",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "356a1a90-d8f6-41d5-8f34-15b54bd325ae",
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									"const cookie = pm.environment.get(\"cookieToken\");\r",
+									"\r",
+									"if(cookie) {\r",
+									"    pm.request.headers.upsert({\r",
+									"        key: \"Cookie\",\r",
+									"        value: `token=${cookie}`\r",
+									"    });\r",
+									"}"
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "be505b9e-61d3-4513-affb-be53f1aefe2a",
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						}
+					]
 				},
 				{
 					"name": "Claims",
@@ -1502,30 +1728,14 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"email\": \"admin02@yemert.co\",\n  \"role\": \"ADMIN\"\n}",
+									"raw": "{\n  \"claimId\": 123454,\n  \"role\": \"ADMIN\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
 										}
 									}
 								},
-								"url": {
-									"raw": "{{baseurl}}/farmers/claims/:yemertId",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"farmers",
-										"claims",
-										":yemertId"
-									],
-									"variable": [
-										{
-											"key": "yemertId",
-											"value": "yemertId"
-										}
-									]
-								}
+								"url": "{{baseurl}}/yemert/secure/claims/123"
 							},
 							"response": []
 						},
@@ -1561,15 +1771,6 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"email\": \"admin02@yemert.co\",\n  \"role\": \"ADMIN\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
 								"url": {
 									"raw": "{{baseurl}}/farmers/claims/:yemertId",
 									"host": [
@@ -1594,7 +1795,38 @@
 					"id": "927eea1b-f48a-4e5c-a48d-3c7d7f3437b9"
 				}
 			],
-			"id": "083a3e6f-5e0d-44c8-b335-d5eb8837312c"
+			"id": "083a3e6f-5e0d-44c8-b335-d5eb8837312c",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "bfa63822-83b3-4f46-a227-e12ec7dff0f3",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							"const cookie = pm.environment.get(\"cookieToken\");\r",
+							"\r",
+							"if(cookie) {\r",
+							"    pm.request.headers.upsert({\r",
+							"        key: \"Cookie\",\r",
+							"        value: `token=${cookie}`\r",
+							"    });\r",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "6efe7669-931d-4744-870c-13a1c0f4f8a0",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
 		},
 		{
 			"name": "USSD",
@@ -2798,7 +3030,14 @@
 							},
 							"request": {
 								"method": "GET",
-								"header": [],
+								"header": [
+									{
+										"key": "Cookie",
+										"value": "token=",
+										"type": "text",
+										"disabled": true
+									}
+								],
 								"url": "{{baseurl}}/yemert/secure/claims"
 							},
 							"response": []
@@ -4107,7 +4346,38 @@
 					"id": "8cc2f8c9-1428-427e-b080-0a648f12043a"
 				}
 			],
-			"id": "2c75f443-2949-4183-95df-48e8ff1b2a8b"
+			"id": "2c75f443-2949-4183-95df-48e8ff1b2a8b",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "987d488d-1e24-4e45-8ae8-d1e29f7e3be3",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							"const cookie = pm.environment.get(\"cookieToken\");\r",
+							"\r",
+							"if(cookie) {\r",
+							"    pm.request.headers.upsert({\r",
+							"        key: \"Cookie\",\r",
+							"        value: `token=${cookie}`\r",
+							"    });\r",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "fe445d95-e1a4-4507-9817-a71d184544df",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
 		}
 	],
 	"auth": {
