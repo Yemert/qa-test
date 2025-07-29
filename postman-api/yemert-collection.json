@@ -897,7 +897,7 @@
 										"type": "text"
 									}
 								],
-								"url": "{{baseurl}}/admin"
+								"url": "{{baseurl}}/admin/profile"
 							},
 							"response": []
 						},
