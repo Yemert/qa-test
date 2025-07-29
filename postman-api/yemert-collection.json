@@ -859,7 +859,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "1e2ecbe8-74ac-4e59-85b4-f8e10f7cf37f",
+								"id": "5706ce6d-5eb6-4a5d-b121-0b2c98f49188",
 								"type": "text/javascript",
 								"packages": {},
 								"exec": [
@@ -868,7 +868,7 @@
 									"if(cookie) {\r",
 									"    pm.request.headers.upsert({\r",
 									"        key: \"Cookie\",\r",
-									"        value: `token=${cokkie}`\r",
+									"        value: `token=${cookie}`\r",
 									"    });\r",
 									"}"
 								]
@@ -877,7 +877,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "0bf5d44b-947c-4230-989a-13a1d1cf54b1",
+								"id": "5fdc685a-07d3-462e-ac13-b23f4865f72a",
 								"type": "text/javascript",
 								"packages": {},
 								"exec": [
