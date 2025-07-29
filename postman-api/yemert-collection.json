@@ -218,7 +218,7 @@
 											"});",
 											"",
 											"pm.test(\"An empty ID error is returned\", function () {",
-											"    pm.expect(resp.message).to.eql(\"ID is required\");",
+											"    pm.expect(resp.message).to.eql(\"ID is required to login\");",
 											"    pm.expect(resp.success).to.eql(false);",
 											"});",
 											""
@@ -309,7 +309,7 @@
 											"});",
 											"",
 											"pm.test(\"Invalid ID error message is returned\", function () {",
-											"    pm.expect(resp.message).to.eql(\"Your Admin ID must be a number\");",
+											"    pm.expect(resp.message).to.eql(\"ID must be a number\");",
 											"    pm.expect(resp.success).to.eql(false);",
 											"});",
 											""
@@ -445,7 +445,7 @@
 											"",
 											"pm.test(\"Successful login information is returned\", function () {",
 											"    pm.environment.set(\"admin_token\", resp.data.token);",
-											"    pm.expect(resp.message).to.eql(\"Credentials valid\");",
+											"    pm.expect(resp.message).to.eql(\"Login successful\");",
 											"    pm.expect(resp.success).to.eql(true);",
 											"    pm.expect(resp.data.token).is.not.null;",
 											"    pm.expect(resp.success).to.eql(true);",
@@ -497,7 +497,7 @@
 											"pm.test(\"Logout successful\", function () {",
 											"    pm.expect(resp.message).to.eql(\"Logged out successfully\");",
 											"    pm.expect(resp.success).to.eql(true);",
-											"    pm.expect(resp.success).is.null;",
+											"    pm.expect(resp.data).is.null;",
 											"});",
 											""
 										],
