@@ -1668,14 +1668,14 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"email\": \"admin02@yemert.co\",\n  \"role\": \"ADMIN\"\n}",
+									"raw": "{\n  \"claimId\": 123454,\n  \"role\": \"ADMIN\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
 										}
 									}
 								},
-								"url": "{{baseurl}}/yemert/secure/claims/12345"
+								"url": "{{baseurl}}/yemert/secure/claims/123"
 							},
 							"response": []
 						},
