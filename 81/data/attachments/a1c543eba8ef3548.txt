@@ -1,0 +1,1 @@
+{"success":true,"message":"Admin created successfully. Please securely share the initial password with the new admin.","data":{"id":15,"adminId":531046,"role":"ADMIN","access":true,"email":"Brooklyn.DAmore4@hotmail.com","createdAt":"2025-07-29T22:50:52.076Z","updatedAt":"2025-07-29T22:50:52.076Z","initialPassword":"9osepay6HGMR!"}}
