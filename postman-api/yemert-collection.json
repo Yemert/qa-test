@@ -481,7 +481,7 @@
 							"response": []
 						},
 						{
-							"name": "Admin logout - successful",
+							"name": "Admin Login- Logout",
 							"event": [
 								{
 									"listen": "test",
