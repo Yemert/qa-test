@@ -1215,11 +1215,11 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "90127185-8115-4bd5-8dc2-67617032f887",
+								"id": "d161afe6-5b75-43e5-b15c-6b1485bde887",
 								"type": "text/javascript",
 								"packages": {},
 								"exec": [
-									"const cookie = pm.environment.get(\"cookieToken\");\r",
+									"const cookie = pm.environment.get(\"admin_token\");\r",
 									"\r",
 									"if(cookie) {\r",
 									"    pm.request.headers.upsert({\r",
@@ -1233,7 +1233,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "4a1589b1-0ad8-4041-b1fa-39e96ade03ec",
+								"id": "396e3f59-5d3e-45a5-a0dc-dc3442dac82a",
 								"type": "text/javascript",
 								"packages": {},
 								"exec": [
