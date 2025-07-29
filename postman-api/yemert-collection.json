@@ -1013,13 +1013,13 @@
 										"exec": [
 											"var resp = pm.response.json();",
 											"",
-											"pm.test(\"Status code should be 401\", function () {",
-											"    pm.response.to.have.status(401);",
+											"pm.test(\"Status code should be 400\", function () {",
+											"    pm.response.to.have.status(400);",
 											"});",
 											"",
-											"pm.test(\"An authentication error is returned\", function () {",
+											"pm.test(\"A user required error is returned\", function () {",
 											"    pm.expect(resp.message).to.eql(\"Please provide either a valid email or admin ID\");",
-											"    pm.expect(resp.success).to.eql(\"false\");",
+											"    pm.expect(resp.success).to.eql(false);",
 											"});",
 											""
 										],
@@ -1217,7 +1217,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "d161afe6-5b75-43e5-b15c-6b1485bde887",
+								"id": "216a9bc9-047e-44b7-9747-0adc2bde08df",
 								"type": "text/javascript",
 								"packages": {},
 								"exec": [
@@ -1235,7 +1235,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "396e3f59-5d3e-45a5-a0dc-dc3442dac82a",
+								"id": "659ead8c-8255-4fb0-a915-fc061996b151",
 								"type": "text/javascript",
 								"packages": {},
 								"exec": [
@@ -1460,7 +1460,38 @@
 							"response": []
 						}
 					],
-					"id": "bf287f25-be8a-493f-a05f-318c8b2d9966"
+					"id": "bf287f25-be8a-493f-a05f-318c8b2d9966",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "b65327ac-2f05-419d-a87c-01bda07aa26c",
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									"const cookie = pm.environment.get(\"admin_token\");",
+									"",
+									"if(cookie) {",
+									"    pm.request.headers.upsert({",
+									"        key: \"Cookie\",",
+									"        value: `token=${cookie}`",
+									"    });",
+									"}"
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "ff51b671-3cdd-4c94-9b9e-d5284a5f9003",
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						}
+					]
 				},
 				{
 					"name": "Get Farmers",
@@ -1685,11 +1716,11 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "356a1a90-d8f6-41d5-8f34-15b54bd325ae",
+								"id": "4b42fc54-59ad-466d-8560-a3298374043b",
 								"type": "text/javascript",
 								"packages": {},
 								"exec": [
-									"const cookie = pm.environment.get(\"cookieToken\");\r",
+									"const cookie = pm.environment.get(\"admin_token\");\r",
 									"\r",
 									"if(cookie) {\r",
 									"    pm.request.headers.upsert({\r",
@@ -1703,7 +1734,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "be505b9e-61d3-4513-affb-be53f1aefe2a",
+								"id": "f97492cb-3528-4e87-9179-3e692fad75f8",
 								"type": "text/javascript",
 								"packages": {},
 								"exec": [
@@ -1717,7 +1748,7 @@
 					"name": "Claims",
 					"item": [
 						{
-							"name": "Update Claims_needs_review",
+							"name": "Update Claims_blocked",
 							"event": [
 								{
 									"listen": "test",
@@ -1806,7 +1837,7 @@
 									"variable": [
 										{
 											"key": "yemertId",
-											"value": "yemertId"
+											"value": "5470"
 										}
 									]
 								}
@@ -2407,7 +2438,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"farmerId\": 3887,\r\n    \"plan\": \"starter\",\r\n    \"costOfProduction\": \"100000\",\r\n    //   \"paid\": false,\r\n      \"amountPaid\": \"\",\r\n    //   \"mobileMoney\": false,\r\n    \"cropName\": \"maize\"\r\n}",
+									"raw": "{\r\n    \"farmerId\": 3887,\r\n    \"plan\": \"starter\",\r\n    \"costOfProduction\": \"100000\",\r\n    //   \"paid\": false,\r\n      \"amountPaid\": \"\",\r\n    //   \"mobileMoney\": false,\r\n    \"cropName\": \"\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
