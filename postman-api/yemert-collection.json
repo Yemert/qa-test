@@ -1717,7 +1717,7 @@
 					"name": "Claims",
 					"item": [
 						{
-							"name": "Update Claims_needs_review",
+							"name": "Update Claims_blocked",
 							"event": [
 								{
 									"listen": "test",
@@ -1806,7 +1806,7 @@
 									"variable": [
 										{
 											"key": "yemertId",
-											"value": "yemertId"
+											"value": "5470"
 										}
 									]
 								}
