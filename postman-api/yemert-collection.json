@@ -998,7 +998,7 @@
 							"response": []
 						},
 						{
-							"name": "Get Admin details - no authentication Copy",
+							"name": "Get Admin details - no email or Admin ID",
 							"event": [
 								{
 									"listen": "test",
@@ -1035,7 +1035,22 @@
 										"type": "text"
 									}
 								],
-								"url": "{{baseurl}}/admin"
+								"url": {
+									"raw": "{{baseurl}}/admin/:identifier",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"admin",
+										":identifier"
+									],
+									"variable": [
+										{
+											"key": "identifier",
+											"value": ""
+										}
+									]
+								}
 							},
 							"response": []
 						},
@@ -1086,7 +1101,7 @@
 									"variable": [
 										{
 											"key": "identifier",
-											"value": ""
+											"value": "961701"
 										}
 									]
 								}
