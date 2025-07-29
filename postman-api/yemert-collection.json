@@ -1490,8 +1490,12 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"packages": {},
-										"type": "text/javascript"
+										"id": "5da5509c-9b8e-494b-b5a4-3438bcdf4af0",
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
@@ -1504,9 +1508,8 @@
 								"header": [
 									{
 										"key": "Cookie",
-										"value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjo3MjU3MzksInJvbGUiOiJBRE1JTiIsImlhdCI6MTc1MzgyNDg4NSwiZXhwIjoxNzU0NDI5Njg1fQ.TVgBokAGe1xNt6aqIqgz9lYk6Sbh-3wW05YtIzUe4tU",
-										"type": "text",
-										"disabled": true
+										"value": "token={{admin_token}}",
+										"type": "text"
 									}
 								],
 								"url": "{{baseurl}}/farmers"
@@ -1533,8 +1536,8 @@
 											"});",
 											"",
 											"pm.test(\"Correct pagination details are returned\", function () {",
-											"    pm.expect(resp.data.pagination.page).to.eql(\"2\");",
-											"    pm.expect(resp.data.pagination.limit).to.eql(\"15\");",
+											"    pm.expect(resp.data.pagination.page).to.eql(2);",
+											"    pm.expect(resp.data.pagination.limit).to.eql(15);",
 											"});",
 											""
 										],
@@ -1582,8 +1585,8 @@
 										"exec": [
 											"var resp = pm.response.json();",
 											"",
-											"pm.test(\"Status code should be 400\", function () {",
-											"    pm.response.to.have.status(400);",
+											"pm.test(\"Status code should be 404\", function () {",
+											"    pm.response.to.have.status(404);",
 											"});",
 											"",
 											"pm.test(\"Farmer not found error is returned\", function () {",
@@ -1667,7 +1670,7 @@
 									"variable": [
 										{
 											"key": "id",
-											"value": "7213"
+											"value": "2180"
 										}
 									]
 								}
