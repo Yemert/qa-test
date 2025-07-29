@@ -1239,7 +1239,38 @@
 							"response": []
 						}
 					],
-					"id": "776d0506-326c-4d8d-b695-adbc64a3c4ef"
+					"id": "776d0506-326c-4d8d-b695-adbc64a3c4ef",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "90127185-8115-4bd5-8dc2-67617032f887",
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									"const cookie = pm.environment.get(\"cookieToken\");\r",
+									"\r",
+									"if(cookie) {\r",
+									"    pm.request.headers.upsert({\r",
+									"        key: \"Cookie\",\r",
+									"        value: `token=${cookie}`\r",
+									"    });\r",
+									"}"
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "4a1589b1-0ad8-4041-b1fa-39e96ade03ec",
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						}
+					]
 				}
 			],
 			"id": "6504ec7b-f33a-4c40-8a68-a7e139163a34"
@@ -1803,7 +1834,38 @@
 					"id": "927eea1b-f48a-4e5c-a48d-3c7d7f3437b9"
 				}
 			],
-			"id": "083a3e6f-5e0d-44c8-b335-d5eb8837312c"
+			"id": "083a3e6f-5e0d-44c8-b335-d5eb8837312c",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "bfa63822-83b3-4f46-a227-e12ec7dff0f3",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							"const cookie = pm.environment.get(\"cookieToken\");\r",
+							"\r",
+							"if(cookie) {\r",
+							"    pm.request.headers.upsert({\r",
+							"        key: \"Cookie\",\r",
+							"        value: `token=${cookie}`\r",
+							"    });\r",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "6efe7669-931d-4744-870c-13a1c0f4f8a0",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
 		},
 		{
 			"name": "USSD",
@@ -4321,18 +4383,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "1f4a93d3-773a-41f7-a5a0-de9cf3bb8c65",
-						"type": "text/javascript",
-						"packages": {},
-						"exec": [
-							""
-						]
-					}
-				},
-				{
-					"listen": "test",
-					"script": {
-						"id": "6c279e3a-6324-433b-8ec7-10634c066e08",
+						"id": "987d488d-1e24-4e45-8ae8-d1e29f7e3be3",
 						"type": "text/javascript",
 						"packages": {},
 						"exec": [
@@ -4344,6 +4395,17 @@
 							"        value: `token=${cookie}`\r",
 							"    });\r",
 							"}"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "fe445d95-e1a4-4507-9817-a71d184544df",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
 						]
 					}
 				}
