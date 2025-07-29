@@ -1476,6 +1476,13 @@
 										"type": "text/javascript",
 										"packages": {}
 									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"packages": {},
+										"type": "text/javascript"
+									}
 								}
 							],
 							"id": "732a488b-4fd0-46c5-9928-7c8ce98d6893",
@@ -1487,7 +1494,7 @@
 								"header": [
 									{
 										"key": "Cookie",
-										"value": "token=",
+										"value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjo3MjU3MzksInJvbGUiOiJBRE1JTiIsImlhdCI6MTc1MzgyNDg4NSwiZXhwIjoxNzU0NDI5Njg1fQ.TVgBokAGe1xNt6aqIqgz9lYk6Sbh-3wW05YtIzUe4tU",
 										"type": "text",
 										"disabled": true
 									}
