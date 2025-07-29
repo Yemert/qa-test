@@ -958,8 +958,8 @@
 											"});",
 											"",
 											"pm.test(\"An authentication error is returned\", function () {",
-											"    pm.expect(resp.message).to.eql(\"User must be logged in\");",
-											"    pm.expect(resp.success).to.eql(\"false\");",
+											"    pm.expect(resp.message).to.eql(\"No authorization header provided\");",
+											"    pm.expect(resp.success).to.eql(false);",
 											"});",
 											""
 										],
@@ -973,6 +973,9 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "noauth"
+								},
 								"method": "GET",
 								"header": [
 									{
@@ -993,7 +996,7 @@
 									"variable": [
 										{
 											"key": "identifier",
-											"value": ""
+											"value": "Daisy.Swift33@yahoo.com"
 										}
 									]
 								}
@@ -1066,8 +1069,10 @@
 											"});",
 											"",
 											"pm.test(\"Admin details are returned\", function () {",
-											"    pm.expect(resp.data.id).to.eql(\"725739\");",
-											"    pm.expect(resp.success).to.eql(\"true\");",
+											"    pm.expect(resp.data.adminId).to.eql(725739);",
+											"    pm.expect(resp.success).to.eql(true);",
+											"    pm.expect(resp.data.email).to.eql(\"test@email.com\");",
+											"    pm.expect(resp.data.role).to.eql(\"ADMIN\");",
 											"});",
 											"",
 											"// There is no information on how to pass the token",
@@ -1098,7 +1103,7 @@
 									"variable": [
 										{
 											"key": "identifier",
-											"value": "961701"
+											"value": "725739"
 										}
 									]
 								}
