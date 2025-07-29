@@ -3163,8 +3163,8 @@
 										"exec": [
 											"var resp = pm.response.json();",
 											"",
-											"pm.test(\"Status code should be 400\", function () {",
-											"    pm.response.to.have.status(400);",
+											"pm.test(\"Status code should be 404\", function () {",
+											"    pm.response.to.have.status(404);",
 											"});",
 											"",
 											"pm.test(\"Farmer not found error is returned\", function () {",
@@ -3362,7 +3362,7 @@
 											"});",
 											"",
 											"pm.test(\"Farmer ID error is returned\", function () {",
-											"    pm.expect(resp.message).to.eql(\"Type is required\");",
+											"    pm.expect(resp.errors[0].message).to.eql(\"Type is required\");",
 											"    pm.expect(resp.success).to.eql(false);",
 											"});",
 											""
@@ -3582,7 +3582,38 @@
 							"response": []
 						}
 					],
-					"id": "9ab218e6-073d-4f23-b607-5a28b6bd463c"
+					"id": "9ab218e6-073d-4f23-b607-5a28b6bd463c",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "62550f0b-3d44-4866-88da-34192c773e0c",
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									"const cookie = pm.environment.get(\"admin_token\");",
+									"",
+									"if(cookie) {",
+									"    pm.request.headers.upsert({",
+									"        key: \"Cookie\",",
+									"        value: `token=${cookie}`",
+									"    });",
+									"}"
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "910355c8-ca07-438d-8ea0-653e2d06e6a8",
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						}
+					]
 				},
 				{
 					"name": "Market",
