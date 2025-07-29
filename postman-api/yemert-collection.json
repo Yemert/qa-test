@@ -218,7 +218,7 @@
 											"});",
 											"",
 											"pm.test(\"An empty ID error is returned\", function () {",
-											"    pm.expect(resp.message).to.eql(\"ID is required\");",
+											"    pm.expect(resp.message).to.eql(\"ID is required to login\");",
 											"    pm.expect(resp.success).to.eql(false);",
 											"});",
 											""
@@ -309,7 +309,7 @@
 											"});",
 											"",
 											"pm.test(\"Invalid ID error message is returned\", function () {",
-											"    pm.expect(resp.message).to.eql(\"Your Admin ID must be a number\");",
+											"    pm.expect(resp.message).to.eql(\"ID must be a number\");",
 											"    pm.expect(resp.success).to.eql(false);",
 											"});",
 											""
@@ -445,7 +445,7 @@
 											"",
 											"pm.test(\"Successful login information is returned\", function () {",
 											"    pm.environment.set(\"admin_token\", resp.data.token);",
-											"    pm.expect(resp.message).to.eql(\"Credentials valid\");",
+											"    pm.expect(resp.message).to.eql(\"Login successful\");",
 											"    pm.expect(resp.success).to.eql(true);",
 											"    pm.expect(resp.data.token).is.not.null;",
 											"    pm.expect(resp.success).to.eql(true);",
@@ -497,7 +497,7 @@
 											"pm.test(\"Logout successful\", function () {",
 											"    pm.expect(resp.message).to.eql(\"Logged out successfully\");",
 											"    pm.expect(resp.success).to.eql(true);",
-											"    pm.expect(resp.success).is.null;",
+											"    pm.expect(resp.data).is.null;",
 											"});",
 											""
 										],
@@ -779,13 +779,15 @@
 										"exec": [
 											"var resp = pm.response.json();",
 											"",
-											"pm.test(\"Status code should be 400\", function () {",
-											"    pm.response.to.have.status(400);",
+											"pm.test(\"Status code should be 201\", function () {",
+											"    pm.response.to.have.status(201);",
 											"});",
 											"",
-											"pm.test(\"Invalid ID error message is returned\", function () {",
-											"    pm.expect(resp.message).to.eql(\"Admin with email already exists\");",
-											"    pm.expect(resp.success).to.eql(false);",
+											"pm.test(\"Admin is created successfully\", function () {",
+											"    pm.expect(resp.message).to.eql(\"Admin created successfully. Please securely share the initial password with the new admin.\");",
+											"    pm.expect(resp.success).to.eql(true);",
+											"    pm.expect(resp.data.role).to.eql(\"ADMIN\");",
+											"    pm.expect(resp.data.initialPassword).is.not.null;",
 											"});",
 											""
 										],
@@ -803,7 +805,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"email\": \"admin02@yemert.co\",\n  \"role\": \"ADMIN\"\n}",
+									"raw": "{\n  \"email\": \"{{$randomEmail}}\",\n  \"role\": \"ADMIN\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -866,8 +868,8 @@
 											"});",
 											"",
 											"pm.test(\"An authentication error is returned\", function () {",
-											"    pm.expect(resp.message).to.eql(\"User must be logged in\");",
-											"    pm.expect(resp.success).to.eql(\"false\");",
+											"    pm.expect(resp.message).to.eql(\"No authorization header provided\");",
+											"    pm.expect(resp.success).to.eql(false);",
 											"});",
 											""
 										],
@@ -881,6 +883,9 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "noauth"
+								},
 								"method": "GET",
 								"header": [
 									{
@@ -953,8 +958,8 @@
 											"});",
 											"",
 											"pm.test(\"An authentication error is returned\", function () {",
-											"    pm.expect(resp.message).to.eql(\"User must be logged in\");",
-											"    pm.expect(resp.success).to.eql(\"false\");",
+											"    pm.expect(resp.message).to.eql(\"No authorization header provided\");",
+											"    pm.expect(resp.success).to.eql(false);",
 											"});",
 											""
 										],
@@ -968,6 +973,9 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "noauth"
+								},
 								"method": "GET",
 								"header": [
 									{
@@ -988,7 +996,7 @@
 									"variable": [
 										{
 											"key": "identifier",
-											"value": ""
+											"value": "Daisy.Swift33@yahoo.com"
 										}
 									]
 								}
@@ -1061,8 +1069,10 @@
 											"});",
 											"",
 											"pm.test(\"Admin details are returned\", function () {",
-											"    pm.expect(resp.data.id).to.eql(\"725739\");",
-											"    pm.expect(resp.success).to.eql(\"true\");",
+											"    pm.expect(resp.data.adminId).to.eql(725739);",
+											"    pm.expect(resp.success).to.eql(true);",
+											"    pm.expect(resp.data.email).to.eql(\"test@email.com\");",
+											"    pm.expect(resp.data.role).to.eql(\"ADMIN\");",
 											"});",
 											"",
 											"// There is no information on how to pass the token",
@@ -1093,7 +1103,7 @@
 									"variable": [
 										{
 											"key": "identifier",
-											"value": "961701"
+											"value": "725739"
 										}
 									]
 								}
@@ -1205,11 +1215,11 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "90127185-8115-4bd5-8dc2-67617032f887",
+								"id": "d161afe6-5b75-43e5-b15c-6b1485bde887",
 								"type": "text/javascript",
 								"packages": {},
 								"exec": [
-									"const cookie = pm.environment.get(\"cookieToken\");\r",
+									"const cookie = pm.environment.get(\"admin_token\");\r",
 									"\r",
 									"if(cookie) {\r",
 									"    pm.request.headers.upsert({\r",
@@ -1223,7 +1233,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "4a1589b1-0ad8-4041-b1fa-39e96ade03ec",
+								"id": "396e3f59-5d3e-45a5-a0dc-dc3442dac82a",
 								"type": "text/javascript",
 								"packages": {},
 								"exec": [
@@ -1476,6 +1486,17 @@
 										"type": "text/javascript",
 										"packages": {}
 									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "5da5509c-9b8e-494b-b5a4-3438bcdf4af0",
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
 								}
 							],
 							"id": "732a488b-4fd0-46c5-9928-7c8ce98d6893",
@@ -1487,9 +1508,8 @@
 								"header": [
 									{
 										"key": "Cookie",
-										"value": "token=",
-										"type": "text",
-										"disabled": true
+										"value": "token={{admin_token}}",
+										"type": "text"
 									}
 								],
 								"url": "{{baseurl}}/farmers"
@@ -1516,8 +1536,8 @@
 											"});",
 											"",
 											"pm.test(\"Correct pagination details are returned\", function () {",
-											"    pm.expect(resp.data.pagination.page).to.eql(\"2\");",
-											"    pm.expect(resp.data.pagination.limit).to.eql(\"15\");",
+											"    pm.expect(resp.data.pagination.page).to.eql(2);",
+											"    pm.expect(resp.data.pagination.limit).to.eql(15);",
 											"});",
 											""
 										],
@@ -1565,8 +1585,8 @@
 										"exec": [
 											"var resp = pm.response.json();",
 											"",
-											"pm.test(\"Status code should be 400\", function () {",
-											"    pm.response.to.have.status(400);",
+											"pm.test(\"Status code should be 404\", function () {",
+											"    pm.response.to.have.status(404);",
 											"});",
 											"",
 											"pm.test(\"Farmer not found error is returned\", function () {",
@@ -1650,7 +1670,7 @@
 									"variable": [
 										{
 											"key": "id",
-											"value": "7213"
+											"value": "2180"
 										}
 									]
 								}
