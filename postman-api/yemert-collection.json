@@ -936,7 +936,7 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": "{{baseurl}}/admin"
+								"url": "{{baseurl}}/admin/profile"
 							},
 							"response": []
 						},
@@ -966,6 +966,63 @@
 								}
 							],
 							"id": "6a933955-ca4f-4abe-9d48-553855ce1662",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Cookie",
+										"value": "token=",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseurl}}/admin/:identifier",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"admin",
+										":identifier"
+									],
+									"variable": [
+										{
+											"key": "identifier",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Admin details - no authentication Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "3f0e4a32-ab7c-4401-8ded-64120d491741",
+										"exec": [
+											"var resp = pm.response.json();",
+											"",
+											"pm.test(\"Status code should be 401\", function () {",
+											"    pm.response.to.have.status(401);",
+											"});",
+											"",
+											"pm.test(\"An authentication error is returned\", function () {",
+											"    pm.expect(resp.message).to.eql(\"User must be logged in\");",
+											"    pm.expect(resp.success).to.eql(\"false\");",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "0dfc6c14-15a6-4579-8cfd-f0faa235b4b2",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
