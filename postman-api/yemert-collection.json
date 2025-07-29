@@ -1675,23 +1675,7 @@
 										}
 									}
 								},
-								"url": {
-									"raw": "{{baseurl}}/farmers/claims/:yemertId",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"farmers",
-										"claims",
-										":yemertId"
-									],
-									"variable": [
-										{
-											"key": "yemertId",
-											"value": "yemertId"
-										}
-									]
-								}
+								"url": "{{baseurl}}/yemert/secure/claims/12345"
 							},
 							"response": []
 						},
