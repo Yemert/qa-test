@@ -604,7 +604,7 @@
 											"});",
 											"",
 											"pm.test(\"Empty email error message is returned\", function () {",
-											"    pm.expect(resp.message).to.eql(\"Provide a valid email\");",
+											"    pm.expect(resp.message).to.eql(\"Admin email is required\");",
 											"    pm.expect(resp.success).to.eql(false);",
 											"});",
 											""
