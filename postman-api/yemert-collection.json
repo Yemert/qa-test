@@ -1018,7 +1018,7 @@
 											"});",
 											"",
 											"pm.test(\"An authentication error is returned\", function () {",
-											"    pm.expect(resp.message).to.eql(\"User must be logged in\");",
+											"    pm.expect(resp.message).to.eql(\"Please provide either a valid email or admin ID\");",
 											"    pm.expect(resp.success).to.eql(\"false\");",
 											"});",
 											""
@@ -1126,7 +1126,7 @@
 											"",
 											"pm.test(\"Authentication error message is returned\", function () {",
 											"    pm.expect(resp.success).to.eql(false);",
-											"    pm.expect(resp.message).to.eql(\"No authorization provided\");",
+											"    pm.expect(resp.message).to.eql(\"No authorization header provided\");",
 											"});",
 											""
 										],
@@ -1148,12 +1148,14 @@
 									{
 										"key": "Authorization",
 										"value": "Bearer {{bearerToken}}",
-										"type": "text"
+										"type": "text",
+										"disabled": true
 									},
 									{
 										"key": "Cookie",
 										"value": "token=",
-										"type": "text"
+										"type": "text",
+										"disabled": true
 									}
 								],
 								"url": "{{baseurl}}/admins"
