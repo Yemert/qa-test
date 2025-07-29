@@ -1,6 +1,0 @@
-{
-  "farmerId": 7213,
-  "cropName": "peas",
-  "pricePerKG": "",
-  "postNow": true
-}

@@ -1,0 +1,1 @@
+{"success":true,"message":"Admin created successfully. Please securely share the initial password with the new admin.","data":{"id":14,"adminId":908092,"role":"ADMIN","access":true,"email":"Rahsaan72@hotmail.com","createdAt":"2025-07-29T22:41:46.250Z","updatedAt":"2025-07-29T22:41:46.250Z","initialPassword":"2kbzljurOTYT!"}}

@@ -1,0 +1,4 @@
+{
+  "email": "Rahsaan72@hotmail.com",
+  "role": "ADMIN"
+}

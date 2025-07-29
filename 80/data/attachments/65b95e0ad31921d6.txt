@@ -1,0 +1,1 @@
+{"success":true,"message":"Admin details retrieved successfully","data":{"id":3,"adminId":725739,"email":"test@email.com","role":"ADMIN","dateJoined":"2025-06-19T07:15:53.713Z"}}
