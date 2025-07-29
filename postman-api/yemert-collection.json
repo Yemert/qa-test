@@ -614,7 +614,13 @@
 							},
 							"request": {
 								"method": "POST",
-								"header": [],
+								"header": [
+									{
+										"key": "Cookie",
+										"value": "token={{cookieToken}}",
+										"type": "text"
+									}
+								],
 								"body": {
 									"mode": "raw",
 									"raw": "{\n    \"email\": \"gdtD@hshs.hhs\",\n    \"role\": \"ADMIN\"\n}",
