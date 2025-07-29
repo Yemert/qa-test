@@ -3069,7 +3069,14 @@
 							},
 							"request": {
 								"method": "GET",
-								"header": [],
+								"header": [
+									{
+										"key": "Cookie",
+										"value": "token=",
+										"type": "text",
+										"disabled": true
+									}
+								],
 								"url": "{{baseurl}}/yemert/secure/claims"
 							},
 							"response": []
