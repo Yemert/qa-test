@@ -1,0 +1,51 @@
+{
+    "fullName": "Lela Schmitt",
+    "gender": "male",
+    "ageRange": "45-986",
+    "nationalIdNumber": "923721180513",
+    "email": "Eveline50@yahoo.com",
+    "phoneNumber": "+1234567890",
+    "whatsappNumber": "+735-507-3599",
+    "homeAddress": "364 Pouros Cape",
+    "countyDistrict": "Dominican Republic",
+    "country": "Monaco",
+    "farmLocation": "South Ernest",
+    "farmSize": 5.2,
+    "actualFarmSize": "5.2 hectares",
+    "landOwnershipStatus": "Owned",
+    "yearsFarmingExperience": "10",
+    "crops": [
+        {
+            "cropName": "Wooden"
+        },
+        {
+            "cropName": "Steel"
+        }
+    ],
+    "averageAnnualYield": "20 tons",
+    "farmingPractices": "Organic farming, Mixed cropping",
+    "annualFarmingRevenue": "₦3,000,000",
+    "accessToCredit": "Yes",
+    "previousInsurance": "No",
+    "produceSaleLocation": "Local market",
+    "financialChallenge": "High input cost",
+    "recentChallenges": "Flooding, Pest invasion",
+    "soilManagement": "Crop rotation, Compost use",
+    "irrigationAccess": true,
+    "climateResilientProgram": true,
+    "sustainablePractices": "Use of compost, minimal tillage",
+    "carbonCreditProgram": false,
+    "cropInsuranceInterest": true,
+    "paymentFrequency": "Quarterly",
+    "insuranceConcerns": "High premium cost",
+    "recommendInsurance": "Yes, to fellow farmers",
+    "farmPhotos": [
+        {
+            "photoUrl": "https://example.com/farm1.jpg"
+        },
+        {
+            "photoUrl": "https://example.com/farm2.jpg"
+        }
+    ],
+    "dataConsent": true
+}

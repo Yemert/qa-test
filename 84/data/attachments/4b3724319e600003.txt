@@ -1,0 +1,1 @@
+{"success":true,"message":"Market post created successfully","data":{"market":{"id":14,"postId":"2220","cropName":"peas","pricePerKG":"54","postNow":false,"isActive":false,"farmer":{"yemertId":3641,"fullName":"Jane Adabayo","phoneNumber":"23409160563943"}}}}
