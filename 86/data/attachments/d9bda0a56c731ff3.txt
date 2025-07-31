@@ -1,0 +1,44 @@
+{
+    "fullName": "Lynn Herzog",
+    "gender": "male",
+    "ageRange": "522-634",
+    "nationalIdNumber": "439167552638",
+    "email": "Gia24@hotmail.com",
+    "phoneNumber": "+1234567890",
+    "whatsappNumber": "+782-714-5999",
+    "homeAddress": "2154 Korey Shoal",
+    "countyDistrict": "Faroe Islands",
+    "country": "Indonesia",
+    "farmLocation": "Shawnee",
+    "farmSize": 5.2,
+    "actualFarmSize": "5.2 hectares",
+    "landOwnershipStatus": "Owned",
+    "yearsFarmingExperience": "10",
+    "crops": [
+        {
+            "cropName": "Metal"
+        },
+        {
+            "cropName": "Rubber"
+        }
+    ],
+    "averageAnnualYield": "20 tons",
+    "farmingPractices": "Organic farming, Mixed cropping",
+    "annualFarmingRevenue": "₦3,000,000",
+    "accessToCredit": "Yes",
+    "previousInsurance": "No",
+    "produceSaleLocation": "Local market",
+    "financialChallenge": "High input cost",
+    "recentChallenges": "Flooding, Pest invasion",
+    "soilManagement": "Crop rotation, Compost use",
+    "irrigationAccess": true,
+    "climateResilientProgram": true,
+    "sustainablePractices": "Use of compost, minimal tillage",
+    "carbonCreditProgram": false,
+    "cropInsuranceInterest": true,
+    "paymentFrequency": "Quarterly",
+    "insuranceConcerns": "High premium cost",
+    "recommendInsurance": "Yes, to fellow farmers",
+    "farmPhotos": ["https://example.com/farm1.jpg", "https://example.com/farm2.jpg"],
+    "dataConsent": true
+}

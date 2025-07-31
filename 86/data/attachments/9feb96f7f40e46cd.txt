@@ -1,0 +1,1 @@
+{"success":true,"message":"Admin created successfully. Please securely share the initial password with the new admin.","data":{"id":20,"adminId":442386,"role":"ADMIN","access":true,"email":"Sibyl_Hoppe@gmail.com","createdAt":"2025-07-31T23:48:57.472Z","updatedAt":"2025-07-31T23:48:57.472Z","initialPassword":"nwafi0uhRKOB!"}}

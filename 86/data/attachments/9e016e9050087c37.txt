@@ -1,0 +1,44 @@
+{
+    "fullName": "Herman Dibbert",
+    "gender": "male",
+    "ageRange": "892-92",
+    "nationalIdNumber": "713564400682",
+    "email": "Roman96@hotmail.com",
+    "phoneNumber": "+1234567890",
+    "whatsappNumber": "+537-492-3742",
+    "homeAddress": "47118 Upton Ford",
+    "countyDistrict": "Madagascar",
+    "country": "Tokelau",
+    "farmLocation": "Lake Sofia",
+    "farmSize": 5.2,
+    "actualFarmSize": "5.2 hectares",
+    "landOwnershipStatus": "Owned",
+    "yearsFarmingExperience": "10",
+    "crops": [
+        {
+            "cropName": "Frozen"
+        },
+        {
+            "cropName": "Granite"
+        }
+    ],
+    "averageAnnualYield": "20 tons",
+    "farmingPractices": "Organic farming, Mixed cropping",
+    "annualFarmingRevenue": "₦3,000,000",
+    "accessToCredit": "Yes",
+    "previousInsurance": "No",
+    "produceSaleLocation": "Local market",
+    "financialChallenge": "High input cost",
+    "recentChallenges": "Flooding, Pest invasion",
+    "soilManagement": "Crop rotation, Compost use",
+    "irrigationAccess": true,
+    "climateResilientProgram": true,
+    "sustainablePractices": "Use of compost, minimal tillage",
+    "carbonCreditProgram": false,
+    "cropInsuranceInterest": true,
+    "paymentFrequency": "Quarterly",
+    "insuranceConcerns": "High premium cost",
+    "recommendInsurance": "Yes, to fellow farmers",
+    "farmPhotos": ["https://example.com/farm1.jpg", "https://example.com/farm2.jpg"],
+    "dataConsent": true
+}
