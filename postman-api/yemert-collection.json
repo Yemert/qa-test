@@ -830,13 +830,7 @@
 							},
 							"request": {
 								"method": "GET",
-								"header": [
-									{
-										"key": "Cookie",
-										"value": "{{cookieToken}}",
-										"type": "text"
-									}
-								],
+								"header": [],
 								"url": "{{baseurl}}/admin/profile"
 							},
 							"response": []
