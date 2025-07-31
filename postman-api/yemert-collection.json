@@ -1252,7 +1252,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"fullName\": \"{{$randomFullName}}\",\r\n    \"crops\": [\r\n        {\r\n            \"cropName\": \"{{$randomProductMaterial}}\"\r\n        },\r\n        {\r\n            \"cropName\": \"{{$randomProductMaterial}}\"\r\n        }\r\n    ],\r\n    \"farmPhotos\": [\r\n        {\r\n            \"photoUrl\": \"https://example.com/farm1.jpg\"\r\n        },\r\n        {\r\n            \"photoUrl\": \"https://example.com/farm2.jpg\"\r\n        }\r\n    ]\r\n}",
+									"raw": "{\r\n    \"fullName\": \"{{$randomFullName}}\",\r\n    \"crops\": [\r\n        {\r\n            \"cropName\": \"{{$randomProductMaterial}}\"\r\n        },\r\n        {\r\n            \"cropName\": \"{{$randomProductMaterial}}\"\r\n        }\r\n    ],\r\n    \"farmPhotos\": [\"https://example.com/farm1.jpg\", \"https://example.com/farm2.jpg\"]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
