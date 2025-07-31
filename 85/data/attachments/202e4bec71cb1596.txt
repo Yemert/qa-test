@@ -1,0 +1,1 @@
+{"success":true,"message":"Admin created successfully. Please securely share the initial password with the new admin.","data":{"id":19,"adminId":246938,"role":"ADMIN","access":true,"email":"Rickie.Hartmann@yahoo.com","createdAt":"2025-07-31T22:34:37.020Z","updatedAt":"2025-07-31T22:34:37.020Z","initialPassword":"qpgbvl68WER7!"}}

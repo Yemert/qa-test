@@ -1,0 +1,222 @@
+[
+    {
+        "fullName": "Norman Gutmann",
+        "gender": "male",
+        "ageRange": "507-953",
+        "nationalIdNumber": "140433270704",
+        "email": "Addie_Smitham@hotmail.com",
+        "phoneNumber": "+927-574-2758",
+        "whatsappNumber": "+305-796-2217",
+        "homeAddress": "13604 Christa Knolls",
+        "countyDistrict": "Burundi",
+        "country": "Namibia",
+        "farmLocation": "West Camylleberg",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Steel"
+            },
+            {
+                "cropName": "Frozen"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": ["https://example.com/farm1.jpg", "https://example.com/farm2.jpg"],
+        "dataConsent": true
+    },
+    {
+        "fullName": "Lindsey Kulas",
+        "gender": "male",
+        "ageRange": "867-821",
+        "nationalIdNumber": "28426855605",
+        "email": "Russ.Kertzmann@hotmail.com",
+        "phoneNumber": "+610-771-9300",
+        "whatsappNumber": "+331-833-0704",
+        "homeAddress": "8300 Mitchell Fort",
+        "countyDistrict": "Pakistan",
+        "country": "Guinea-Bissau",
+        "farmLocation": "West Ivory",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Steel"
+            },
+            {
+                "cropName": "Granite"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": ["https://example.com/farm1.jpg", "https://example.com/farm2.jpg"],
+        "dataConsent": true
+    },
+    {
+        "fullName": "Carolyn Cartwright",
+        "gender": "male",
+        "ageRange": "373-664",
+        "nationalIdNumber": "229975979538",
+        "email": "Justus_Turner58@yahoo.com",
+        "phoneNumber": "+331-834-5698",
+        "whatsappNumber": "+677-394-6872",
+        "homeAddress": "04243 Hilll Corner",
+        "countyDistrict": "Bolivia",
+        "country": "Italy",
+        "farmLocation": "Wendychester",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Rubber"
+            },
+            {
+                "cropName": "Concrete"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": ["https://example.com/farm1.jpg", "https://example.com/farm2.jpg"],
+        "dataConsent": true
+    },
+    {
+        "fullName": "Lena Dietrich Jr.",
+        "gender": "male",
+        "ageRange": "681-360",
+        "nationalIdNumber": "912767952497",
+        "email": "Ezekiel_Nicolas16@yahoo.com",
+        "phoneNumber": "+373-502-7201",
+        "whatsappNumber": "+537-489-9270",
+        "homeAddress": "885 Towne Prairie",
+        "countyDistrict": "Tajikistan",
+        "country": "Sao Tome and Principe",
+        "farmLocation": "The Hammocks",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Metal"
+            },
+            {
+                "cropName": "Steel"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": ["https://example.com/farm1.jpg", "https://example.com/farm2.jpg"],
+        "dataConsent": true
+    },
+    {
+        "fullName": "Danny Homenick",
+        "gender": "male",
+        "ageRange": "164-969",
+        "nationalIdNumber": "991761281819",
+        "email": "Florence66@gmail.com",
+        "phoneNumber": "+838-416-5179",
+        "whatsappNumber": "+482-752-7955",
+        "homeAddress": "19585 Jarred Park",
+        "countyDistrict": "Palestinian Territory",
+        "country": "Venezuela",
+        "farmLocation": "North Maximus",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Rubber"
+            },
+            {
+                "cropName": "Granite"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": ["https://example.com/farm1.jpg", "https://example.com/farm2.jpg"],
+        "dataConsent": true
+    }
+]

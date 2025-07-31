@@ -1,0 +1,12 @@
+{
+    "fullName": "Mr. Ernesto Schmidt",
+    "crops": [
+        {
+            "cropName": "Granite"
+        },
+        {
+            "cropName": "Cotton"
+        }
+    ],
+    "farmPhotos": ["https://example.com/farm1.jpg", "https://example.com/farm2.jpg"]
+}
