@@ -1168,7 +1168,7 @@
 											"});",
 											"",
 											"pm.test(\"Farm photos are returned\", function () {",
-											"    pm.expect(resp.data.farmPhotos).is.not.empty;",
+											"    pm.expect(resp.data.farmPhotos[0]).is.not.empty;",
 											"});"
 										],
 										"type": "text/javascript",
