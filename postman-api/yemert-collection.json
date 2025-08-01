@@ -1510,8 +1510,8 @@
 										"exec": [
 											"var resp = pm.response.json();",
 											"",
-											"pm.test(\"Status code should be 404\", function () {",
-											"    pm.response.to.have.status(404);",
+											"pm.test(\"Status code should be 400\", function () {",
+											"    pm.response.to.have.status(400);",
 											"});",
 											"",
 											"pm.test(\"Farmer not found error is returned\", function () {",
