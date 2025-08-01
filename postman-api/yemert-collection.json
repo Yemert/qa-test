@@ -1357,11 +1357,11 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "b65327ac-2f05-419d-a87c-01bda07aa26c",
+								"id": "57381a11-725b-4a9b-9b9a-216d9a36d368",
 								"type": "text/javascript",
 								"packages": {},
 								"exec": [
-									"const cookie = pm.environment.get(\"admin_token\");",
+									"const cookie = pm.environment.get(\"super_admin_token\");",
 									"",
 									"if(cookie) {",
 									"    pm.request.headers.upsert({",
@@ -1375,7 +1375,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "ff51b671-3cdd-4c94-9b9e-d5284a5f9003",
+								"id": "4485dbdd-c325-4f53-877a-d0bf68bf28e6",
 								"type": "text/javascript",
 								"packages": {},
 								"exec": [
@@ -1681,58 +1681,6 @@
 									}
 								},
 								"url": "{{baseurl}}/yemert/secure/claims/123"
-							},
-							"response": []
-						},
-						{
-							"name": "Get Claims_needs_review",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "2c033784-29bb-4c07-9527-dbf0838a35c3",
-										"exec": [
-											"var resp = pm.response.json();",
-											"",
-											"pm.test(\"Status code should be 400\", function () {",
-											"    pm.response.to.have.status(400);",
-											"});",
-											"",
-											"pm.test(\"Invalid ID error message is returned\", function () {",
-											"    pm.expect(resp.message).to.eql(\"Admin with email already exists\");",
-											"    pm.expect(resp.success).to.eql(false);",
-											"});",
-											""
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								}
-							],
-							"id": "474c1cca-3895-4cea-b504-59b5870980dd",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{baseurl}}/farmers/claims/:yemertId",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"farmers",
-										"claims",
-										":yemertId"
-									],
-									"variable": [
-										{
-											"key": "yemertId",
-											"value": "5470"
-										}
-									]
-								}
 							},
 							"response": []
 						}
