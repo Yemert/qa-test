@@ -1,0 +1,12 @@
+{
+    "fullName": "Lonnie McCullough",
+    "crops": [
+        {
+            "cropName": "Cotton"
+        },
+        {
+            "cropName": "Fresh"
+        }
+    ],
+    "farmPhotos": ["https://example.com/farm1.jpg", "https://example.com/farm2.jpg"]
+}

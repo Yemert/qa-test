@@ -1,0 +1,222 @@
+[
+    {
+        "fullName": "Duane Osinski",
+        "gender": "male",
+        "ageRange": "819-862",
+        "nationalIdNumber": "540438606724",
+        "email": "Nolan95@gmail.com",
+        "phoneNumber": "+747-501-9836",
+        "whatsappNumber": "+770-286-4928",
+        "homeAddress": "640 Yesenia Rue",
+        "countyDistrict": "Vanuatu",
+        "country": "Zambia",
+        "farmLocation": "East Feliciastad",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Plastic"
+            },
+            {
+                "cropName": "Plastic"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": ["https://example.com/farm1.jpg", "https://example.com/farm2.jpg"],
+        "dataConsent": true
+    },
+    {
+        "fullName": "Virginia Kemmer",
+        "gender": "male",
+        "ageRange": "964-447",
+        "nationalIdNumber": "224209693362",
+        "email": "Oscar44@yahoo.com",
+        "phoneNumber": "+807-814-3783",
+        "whatsappNumber": "+354-405-1208",
+        "homeAddress": "34781 Price Grove",
+        "countyDistrict": "Kiribati",
+        "country": "Mauritania",
+        "farmLocation": "Santa Clarita",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Fresh"
+            },
+            {
+                "cropName": "Wooden"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": ["https://example.com/farm1.jpg", "https://example.com/farm2.jpg"],
+        "dataConsent": true
+    },
+    {
+        "fullName": "Tracey Will",
+        "gender": "male",
+        "ageRange": "720-836",
+        "nationalIdNumber": "162577983175",
+        "email": "Elenor_Marvin91@yahoo.com",
+        "phoneNumber": "+797-958-5822",
+        "whatsappNumber": "+892-952-0026",
+        "homeAddress": "42595 Stokes Isle",
+        "countyDistrict": "Costa Rica",
+        "country": "Sri Lanka",
+        "farmLocation": "Port Dewayne",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Soft"
+            },
+            {
+                "cropName": "Wooden"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": ["https://example.com/farm1.jpg", "https://example.com/farm2.jpg"],
+        "dataConsent": true
+    },
+    {
+        "fullName": "Loren O'Reilly",
+        "gender": "male",
+        "ageRange": "641-443",
+        "nationalIdNumber": "49581906496",
+        "email": "Salvatore.Tillman@gmail.com",
+        "phoneNumber": "+613-467-9730",
+        "whatsappNumber": "+324-564-3056",
+        "homeAddress": "59153 Mueller Port",
+        "countyDistrict": "Russian Federation",
+        "country": "Malaysia",
+        "farmLocation": "East Megane",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Cotton"
+            },
+            {
+                "cropName": "Fresh"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": ["https://example.com/farm1.jpg", "https://example.com/farm2.jpg"],
+        "dataConsent": true
+    },
+    {
+        "fullName": "Gabriel Little PhD",
+        "gender": "male",
+        "ageRange": "113-206",
+        "nationalIdNumber": "726223423889",
+        "email": "Marlene.Lindgren30@hotmail.com",
+        "phoneNumber": "+908-491-7632",
+        "whatsappNumber": "+784-948-2536",
+        "homeAddress": "34015 Quinten Mission",
+        "countyDistrict": "Guinea",
+        "country": "Nigeria",
+        "farmLocation": "West Salmamouth",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Wooden"
+            },
+            {
+                "cropName": "Wooden"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": ["https://example.com/farm1.jpg", "https://example.com/farm2.jpg"],
+        "dataConsent": true
+    }
+]

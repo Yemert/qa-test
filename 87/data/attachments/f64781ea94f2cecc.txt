@@ -1,0 +1,1 @@
+{"success":true,"message":"Market post updated successfully","data":{"market":{"id":4,"postId":"7955","cropName":"Raspberries","pricePerKG":"54","postNow":false,"isActive":false,"farmer":{"yemertId":3641,"fullName":"Jane Adabayo","phoneNumber":"23409160563943"}}}}

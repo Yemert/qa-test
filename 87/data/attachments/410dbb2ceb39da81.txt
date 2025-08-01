@@ -1,0 +1,44 @@
+{
+    "fullName": "Mr. Anne Murazik",
+    "gender": "male",
+    "ageRange": "641-720",
+    "nationalIdNumber": "439138227812",
+    "email": "Hadley.Kuhlman7@gmail.com",
+    "phoneNumber": "+1234567890",
+    "whatsappNumber": "+532-436-6678",
+    "homeAddress": "3160 Conner Shoals",
+    "countyDistrict": "San Marino",
+    "country": "Western Sahara",
+    "farmLocation": "Reillyland",
+    "farmSize": 5.2,
+    "actualFarmSize": "5.2 hectares",
+    "landOwnershipStatus": "Owned",
+    "yearsFarmingExperience": "10",
+    "crops": [
+        {
+            "cropName": "Soft"
+        },
+        {
+            "cropName": "Wooden"
+        }
+    ],
+    "averageAnnualYield": "20 tons",
+    "farmingPractices": "Organic farming, Mixed cropping",
+    "annualFarmingRevenue": "₦3,000,000",
+    "accessToCredit": "Yes",
+    "previousInsurance": "No",
+    "produceSaleLocation": "Local market",
+    "financialChallenge": "High input cost",
+    "recentChallenges": "Flooding, Pest invasion",
+    "soilManagement": "Crop rotation, Compost use",
+    "irrigationAccess": true,
+    "climateResilientProgram": true,
+    "sustainablePractices": "Use of compost, minimal tillage",
+    "carbonCreditProgram": false,
+    "cropInsuranceInterest": true,
+    "paymentFrequency": "Quarterly",
+    "insuranceConcerns": "High premium cost",
+    "recommendInsurance": "Yes, to fellow farmers",
+    "farmPhotos": ["https://example.com/farm1.jpg", "https://example.com/farm2.jpg"],
+    "dataConsent": true
+}
