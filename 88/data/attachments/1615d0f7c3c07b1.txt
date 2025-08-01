@@ -1,0 +1,12 @@
+{
+    "fullName": "Marc O'Connell",
+    "crops": [
+        {
+            "cropName": "Concrete"
+        },
+        {
+            "cropName": "Cotton"
+        }
+    ],
+    "farmPhotos": ["https://example.com/farm1.jpg", "https://example.com/farm2.jpg"]
+}

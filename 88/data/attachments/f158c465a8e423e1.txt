@@ -1,0 +1,222 @@
+[
+    {
+        "fullName": "Freda Collier",
+        "gender": "male",
+        "ageRange": "521-725",
+        "nationalIdNumber": "37226759339",
+        "email": "Noemy.Grimes@gmail.com",
+        "phoneNumber": "+416-904-5168",
+        "whatsappNumber": "+207-405-4523",
+        "homeAddress": "457 Reina Courts",
+        "countyDistrict": "Haiti",
+        "country": "Dominican Republic",
+        "farmLocation": "West Emmiefurt",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Granite"
+            },
+            {
+                "cropName": "Fresh"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": ["https://example.com/farm1.jpg", "https://example.com/farm2.jpg"],
+        "dataConsent": true
+    },
+    {
+        "fullName": "Orlando Bergnaum",
+        "gender": "male",
+        "ageRange": "448-821",
+        "nationalIdNumber": "76749214276",
+        "email": "Kade_Cummings61@hotmail.com",
+        "phoneNumber": "+974-209-3089",
+        "whatsappNumber": "+842-579-0032",
+        "homeAddress": "346 McKenzie Burg",
+        "countyDistrict": "Saint Pierre and Miquelon",
+        "country": "Belarus",
+        "farmLocation": "Parisianton",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Concrete"
+            },
+            {
+                "cropName": "Fresh"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": ["https://example.com/farm1.jpg", "https://example.com/farm2.jpg"],
+        "dataConsent": true
+    },
+    {
+        "fullName": "Cesar Ratke",
+        "gender": "male",
+        "ageRange": "800-591",
+        "nationalIdNumber": "251889757882",
+        "email": "Genesis_Jacobson30@hotmail.com",
+        "phoneNumber": "+574-234-2941",
+        "whatsappNumber": "+379-410-7514",
+        "homeAddress": "14142 Tom Landing",
+        "countyDistrict": "Tuvalu",
+        "country": "Andorra",
+        "farmLocation": "Lake Reynoldfurt",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Steel"
+            },
+            {
+                "cropName": "Wooden"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": ["https://example.com/farm1.jpg", "https://example.com/farm2.jpg"],
+        "dataConsent": true
+    },
+    {
+        "fullName": "Kyle Wiza",
+        "gender": "male",
+        "ageRange": "943-817",
+        "nationalIdNumber": "554281186885",
+        "email": "Lenore.Wiza83@hotmail.com",
+        "phoneNumber": "+993-960-9060",
+        "whatsappNumber": "+580-904-1256",
+        "homeAddress": "1880 Dickinson Inlet",
+        "countyDistrict": "Kenya",
+        "country": "Benin",
+        "farmLocation": "West Juana",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Soft"
+            },
+            {
+                "cropName": "Metal"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": ["https://example.com/farm1.jpg", "https://example.com/farm2.jpg"],
+        "dataConsent": true
+    },
+    {
+        "fullName": "Valerie Rohan",
+        "gender": "male",
+        "ageRange": "412-988",
+        "nationalIdNumber": "890975325496",
+        "email": "Mireille.Frami17@gmail.com",
+        "phoneNumber": "+280-752-9081",
+        "whatsappNumber": "+704-620-1081",
+        "homeAddress": "5810 Dexter Brooks",
+        "countyDistrict": "Saint Pierre and Miquelon",
+        "country": "South Georgia and the South Sandwich Islands",
+        "farmLocation": "North Geovanniview",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Concrete"
+            },
+            {
+                "cropName": "Frozen"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": ["https://example.com/farm1.jpg", "https://example.com/farm2.jpg"],
+        "dataConsent": true
+    }
+]

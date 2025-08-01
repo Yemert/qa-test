@@ -1,0 +1,4 @@
+{
+  "email": "Fabian.Sipes@yahoo.com",
+  "role": "ADMIN"
+}

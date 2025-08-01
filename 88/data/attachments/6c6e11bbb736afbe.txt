@@ -1,0 +1,1 @@
+{"success":true,"message":"Claim updated successfully","data":{"farmer":{"yemertId":3641,"fullName":"Jane Adabayo","phoneNumber":"23409160563943"},"claim":{"id":8,"type":"pillows","whatsapp":false,"number":null,"isActive":true,"farmer":{"yemertId":3641,"fullName":"Jane Adabayo","phoneNumber":"23409160563943"}}}}

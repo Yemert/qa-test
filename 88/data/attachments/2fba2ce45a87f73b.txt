@@ -1,0 +1,1 @@
+{"success":true,"message":"Admin created successfully. Please securely share the initial password with the new admin.","data":{"id":22,"adminId":536230,"role":"ADMIN","access":true,"email":"Fabian.Sipes@yahoo.com","createdAt":"2025-08-01T00:28:59.909Z","updatedAt":"2025-08-01T00:28:59.909Z","initialPassword":"2l9j1q4jQ6IG!"}}
