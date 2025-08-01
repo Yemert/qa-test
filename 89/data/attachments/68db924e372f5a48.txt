@@ -1,0 +1,12 @@
+{
+    "fullName": "Wm Hartmann PhD",
+    "crops": [
+        {
+            "cropName": "Soft"
+        },
+        {
+            "cropName": "Rubber"
+        }
+    ],
+    "farmPhotos": ["https://example.com/farm1.jpg", "https://example.com/farm2.jpg"]
+}

@@ -1,0 +1,1 @@
+{"success":true,"message":"Admin created successfully. Please securely share the initial password with the new admin.","data":{"id":23,"adminId":111485,"role":"ADMIN","access":true,"email":"Elvis99@yahoo.com","createdAt":"2025-08-01T20:43:49.013Z","updatedAt":"2025-08-01T20:43:49.013Z","initialPassword":"w283t8ua5O4C!"}}

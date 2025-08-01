@@ -1,0 +1,222 @@
+[
+    {
+        "fullName": "Sarah Dach",
+        "gender": "male",
+        "ageRange": "202-279",
+        "nationalIdNumber": "846874501512",
+        "email": "Liza_Hirthe6@yahoo.com",
+        "phoneNumber": "+652-878-2342",
+        "whatsappNumber": "+236-518-0832",
+        "homeAddress": "025 Deckow Unions",
+        "countyDistrict": "Trinidad and Tobago",
+        "country": "Gibraltar",
+        "farmLocation": "Luebury",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Steel"
+            },
+            {
+                "cropName": "Cotton"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": ["https://example.com/farm1.jpg", "https://example.com/farm2.jpg"],
+        "dataConsent": true
+    },
+    {
+        "fullName": "Mr. Kelly Jenkins",
+        "gender": "male",
+        "ageRange": "519-902",
+        "nationalIdNumber": "951241549892",
+        "email": "Amelie6@gmail.com",
+        "phoneNumber": "+954-435-1981",
+        "whatsappNumber": "+546-971-7389",
+        "homeAddress": "3328 Elbert Stream",
+        "countyDistrict": "Palau",
+        "country": "Pitcairn Islands",
+        "farmLocation": "Donnellychester",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Plastic"
+            },
+            {
+                "cropName": "Soft"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": ["https://example.com/farm1.jpg", "https://example.com/farm2.jpg"],
+        "dataConsent": true
+    },
+    {
+        "fullName": "Tony Hackett",
+        "gender": "male",
+        "ageRange": "178-600",
+        "nationalIdNumber": "224161183353",
+        "email": "Kip_Goldner@hotmail.com",
+        "phoneNumber": "+809-625-0955",
+        "whatsappNumber": "+745-647-9862",
+        "homeAddress": "333 Lisa Square",
+        "countyDistrict": "Finland",
+        "country": "Estonia",
+        "farmLocation": "Rowlett",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Soft"
+            },
+            {
+                "cropName": "Soft"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": ["https://example.com/farm1.jpg", "https://example.com/farm2.jpg"],
+        "dataConsent": true
+    },
+    {
+        "fullName": "Jimmie Waelchi",
+        "gender": "male",
+        "ageRange": "288-742",
+        "nationalIdNumber": "55153595669",
+        "email": "Kale_Boehm93@gmail.com",
+        "phoneNumber": "+852-851-9480",
+        "whatsappNumber": "+942-689-0076",
+        "homeAddress": "7183 Emmerich Junctions",
+        "countyDistrict": "Turks and Caicos Islands",
+        "country": "Belarus",
+        "farmLocation": "Lake Tayafurt",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Metal"
+            },
+            {
+                "cropName": "Soft"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": ["https://example.com/farm1.jpg", "https://example.com/farm2.jpg"],
+        "dataConsent": true
+    },
+    {
+        "fullName": "Willie Wiza",
+        "gender": "male",
+        "ageRange": "63-600",
+        "nationalIdNumber": "430875934947",
+        "email": "Americo63@yahoo.com",
+        "phoneNumber": "+824-319-2113",
+        "whatsappNumber": "+679-542-5114",
+        "homeAddress": "038 Mertz Field",
+        "countyDistrict": "Palau",
+        "country": "Cameroon",
+        "farmLocation": "Augustineview",
+        "farmSize": 5.2,
+        "actualFarmSize": "5.2 hectares",
+        "landOwnershipStatus": "Owned",
+        "yearsFarmingExperience": "10",
+        "crops": [
+            {
+                "cropName": "Concrete"
+            },
+            {
+                "cropName": "Rubber"
+            }
+        ],
+        "averageAnnualYield": "20 tons",
+        "farmingPractices": "Organic farming, Mixed cropping",
+        "annualFarmingRevenue": "₦3,000,000",
+        "accessToCredit": "Yes",
+        "previousInsurance": "No",
+        "produceSaleLocation": "Local market",
+        "financialChallenge": "High input cost",
+        "recentChallenges": "Flooding, Pest invasion",
+        "soilManagement": "Crop rotation, Compost use",
+        "irrigationAccess": true,
+        "climateResilientProgram": true,
+        "sustainablePractices": "Use of compost, minimal tillage",
+        "carbonCreditProgram": false,
+        "cropInsuranceInterest": true,
+        "paymentFrequency": "Quarterly",
+        "insuranceConcerns": "High premium cost",
+        "recommendInsurance": "Yes, to fellow farmers",
+        "farmPhotos": ["https://example.com/farm1.jpg", "https://example.com/farm2.jpg"],
+        "dataConsent": true
+    }
+]

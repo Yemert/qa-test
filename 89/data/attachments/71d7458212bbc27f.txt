@@ -1,0 +1,1 @@
+{"success":false,"message":"\nInvalid `prisma.farmer.findUnique()` invocation:\n\n{\n  where: {\n    yemertId: \"8788i\"\n              ~~~~~~~\n  }\n}\n\nArgument `yemertId`: Invalid value provided. Expected Int, provided String."}

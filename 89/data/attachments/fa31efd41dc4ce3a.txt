@@ -1,0 +1,1 @@
+{"success":false,"message":"Access denied. Only SUPER_ADMIN and ADMIN roles can view other admin details"}
